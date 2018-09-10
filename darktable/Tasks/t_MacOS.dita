@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kdb_kqz_ry">
+    <title>Installing on MacOS X</title>
+    <taskbody>
+        <context>You can install <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"
+            /> on Mac OS X 10.7 Lion and newer in the 64-bit architecture.<p/></context>
+        <steps>
+            <step>
+                <cmd  id="Github">Locate the newest <term
+                        conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> release at
+                        the<xref href="https://github.com/darktable-org/darktable/releases"
+                        format="html" scope="external"> github <term
+                            conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> download
+                        page</xref>. Then, download the installation file.</cmd>
+                <info>For MacOS, the extension is DMG.</info>
+            </step>
+            <step>
+                <cmd>Double click the DMG file to mount the DMG file.</cmd>
+            </step>
+            <step>
+                <cmd>Drag the <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/>
+                    icon into the <uicontrol>applications</uicontrol> folder.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

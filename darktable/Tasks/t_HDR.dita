@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_HDR">
+  <title>Creating HDR photos</title>
+
+  <taskbody>
+    <context><p>Only from a <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> shot, you can
+        make an <xref href="../Glossary/g_glossary.dita#HDR">HDR</xref> photo. Darktable stores the
+          <xref href="../Glossary/g_glossary.dita#HDR">HDR</xref> image into a file of the following
+        format.</p> *-hdr.dng<p/></context>
+
+    <steps>
+      <step>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+      </step>
+
+      <step>
+        <cmd>Open your photo in the <indexterm>lighttable</indexterm>lighttable view; then, select
+          your photo.</cmd>
+      </step>
+
+      <step>
+        <cmd>Expand <uicontrol>selectes image[s]</uicontrol></cmd>
+      </step>
+
+      <step>
+        <cmd>Click <uicontrol>create HDR</uicontrol></cmd>
+
+        <stepresult>You can now locate your <xref href="../Glossary/g_glossary.dita#HDR">HDR</xref> photo in the lighttable view.
+        You can recognize the file on hdr.dng in the full path</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="???">
+  <title>Adjusting the orientation</title>
+
+  <taskbody>
+    <context>You can turn your photo 90 degrees clockwise or counterclockwise
+    to change the orientation</context>
+
+    <steps>
+      <step>
+        <cmd><ph keyref="open_darkroom"/></cmd>
+      </step>
+
+      <step>
+        <cmd>Click the <uicontrol>basic group</uicontrol></cmd>
+      </step>
+
+      <step>
+        <cmd>Expand <uicontrol>orientation</uicontrol></cmd>
+      </step>
+
+      <step>
+        <cmd>Click one of the icons to rotate your photo counterclockwise or
+        clockwise.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

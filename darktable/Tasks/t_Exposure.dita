@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Exposure">
+  <title>Adjusting the exposure</title>
+
+  <taskbody>
+    <steps>
+      <step>
+        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+      </step>
+
+      <step>
+        <cmd>Open the basic group</cmd>
+      </step>
+
+      <step>
+        <cmd>Expand <uicontrol>exposure</uicontrol></cmd>
+
+        <stepresult>You have the following options <ul>
+            <li><uicontrol>black</uicontrol>, to adjust the black level</li>
+
+            <li><uicontrol>exposure</uicontrol>, to adjust the <indexterm>exposure</indexterm>
+              value</li>
+
+            <li><uicontrol>clipping threshold</uicontrol>, to adjust the percentage of
+                <indexterm>clipping</indexterm> bright values out. You can toggle the color pickle
+              to activate. The color pickle is located in the left panel.</li>
+          </ul></stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

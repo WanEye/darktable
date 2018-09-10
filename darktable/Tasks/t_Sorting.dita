@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Sorting">
+  <title>Sorting photos</title>
+
+  <taskbody>
+
+    <steps>
+      <step>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+      </step>
+
+      <step>
+        <cmd>Click the downward pointing triangle on the right side of
+        <uicontrol>sort by</uicontrol>.</cmd>
+      </step>
+
+      <step>
+        <cmd>Choose a <indexterm>sorting</indexterm>sorting criterion.</cmd>
+        <stepresult>This action changes the sequence of your photos in the lighttable
+          view.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

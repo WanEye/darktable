@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Tethering_verify">
+
+	<title>Verifying your camera for tethering (UNIX and Linux)</title>
+
+	<abstract>
+		<term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> uses
+			<indexterm>gphoto2</indexterm>gphoto2. Therefore, gphoto2 must fully support your
+		camera. <p><xref href="../Glossary/g_glossary.dita#tethering">Tethering</xref> is supported only for a limited number of cameras. </p>You need to
+		troubleshoot if you receive the following message in the <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref> view.<p/><msgph>no camera
+			with tethering support available for use</msgph></abstract>
+	
+<taskbody>
+<prereq>
+<p>Verify the following things.</p>
+<ul>
+<li>gphoto2 is installed on your computer.</li>
+<li>Your camera is connected to your computer.<p/></li>
+</ul>
+</prereq>
+	
+	<steps>
+	  <step><cmd>Verify that gphoto2 detects your camera</cmd>
+	  <info><codeblock>LANG=C gphoto2 --auto-detect</codeblock></info>
+	  <stepresult>You can see whether gphoto3 detects your camera.</stepresult>
+	  </step>
+	  
+  <step><cmd>Verify camera driver abilities</cmd>
+  	<info><codeblock>env LANG=C gphoto2 --port usb: --abilities</codeblock></info>
+  	<stepresult>Verify that <msgph>Capture choices</msgph>" ability supports Image and  that  <msgph>Configuration support</msgph> is <msgph>yes</msgph>.</stepresult>
+  	</step>	  
+	  
+	  
+    <step><cmd>Verify camera remote capture</cmd>
+  	<info><codeblock>env LANG=C gphoto2 --port usb: --capture-image-and-download</codeblock></info>
+  	<stepresult>This step captures an image and download it to your computer if your camera is supported.</stepresult>
+  	</step>
+  	
+  	<step><cmd>Verify camera tethered capture </cmd>
+     	<info><codeblock> env LANG=C gphoto2 --port usb: --capture-tethered</codeblock></info>
+     	<stepresult>This step downloads your images to your computer after you pushed the shutter on the camera.</stepresult>
+  	</step>
+  	
+	</steps>
+	
+	<postreq>For more information, see the  page <xref href="https://redmine.darktable.org/projects/users/wiki/Supported_cameras" format="html" scope="external">Supported cameras.</xref></postreq> 
+	
+	</taskbody>
+</task>

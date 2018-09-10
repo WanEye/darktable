@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Ubuntu">
+    <title>Installing on Linux Ubuntu</title>
+    
+  <taskbody>
+      <prereq/>
+                
+      <steps>
+      <step>
+        <cmd>Open a Terminal window: <uicontrol>Ctrl+Alt+T</uicontrol>.</cmd>
+      </step>
+        <step id="step_yt5_mqj_ky">
+        <cmd>Add<filepath> ppa:pmjdebruijn/darktable-release</filepath> to your system's software
+          sources.</cmd>
+        <info>type in the Terminal window
+          <codeblock>sudo add-apt-repository ppa:pmjdebruijn/darktable-release
+sudo apt update</codeblock>
+        </info>
+      </step>
+        <step>
+        <cmd>Install <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/></cmd>
+        <info>
+<codeblock>sudo apt install darktable</codeblock>
+        </info>
+      </step>
+          
+      </steps>
+   </taskbody>
+</task>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_Workflow">
+ <title>How <term conref="c_Overview.dita#c_Overview/product_name"/> works</title>
+ <conbody>
+        <p><term conref="c_Overview.dita#c_Overview/product_name"/> provides a
+                <indexterm>workflow</indexterm>workflow that consists of the following steps.</p>
+        <ol>
+            <li>Opening photos.</li>
+            <li>Editing photos.</li>
+            <li>Exporting photos.<p/></li>
+        </ol>
+        <p>The figure represents the workflow in detail. <ol>
+                <li>Opening photos into the <uicontrol>lighttable</uicontrol> view <b>(L)</b> from
+                    either a <xref href="c_Importing.dita#c_Importing">storage device</xref>
+                    <b>(I)</b> or through  <xref href="../Glossary/g_glossary.dita#tethering">Tethering</xref>.
+                    <b>(T)</b>. <ul>
+                        <li>Viewing <indexterm>geotagged</indexterm>geotagged photos on a geographic
+                                <indexterm>map</indexterm>map <b>(M)</b>.</li>
+                    </ul>
+                </li>
+                <li><xref href="c_Processing.dita#Editing_images">Processing photos</xref>
+                    <ul>
+                        <li>Creating <xref href="../Glossary/g_glossary.dita#HDR">HDR</xref> or editing with predefined steps
+                                <b>(H)</b></li>
+                        <li>Developing in the <uicontrol>darkroom</uicontrol> view <b>(D)</b></li>
+                    </ul>
+                </li>
+                <li>Exporting photos <b>(E)</b> to <indexterm>JPEG</indexterm>JPEG format or other
+                    format.<p/></li>
+                <li>Presenting photos <ul>
+                        <li>Presenting photos in a
+                                <indexterm>slideshow</indexterm>slideshow<b>(S)</b></li>
+                        <li>Printing photos <b>(P)</b><p/><p/></li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+        <fig expanse="page">
+            <title>Workflow</title>
+            <image href="../Images/Workflow.jpeg" height="2cm" width="8cm" placement="break"
+                id="image_r22_1b4_sy"/>
+        </fig>
+        <p/>
+    </conbody>
+</concept>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Getting_started">
+  <title>Getting started now</title>
+  <taskbody>
+    <prereq>You need to have a photo in <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> file format.</prereq>
+    <context>These steps give you an example how you can process a <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> photo. </context>
+    <steps>
+      <step>
+        <cmd>Open <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/></cmd>
+      </step>
+      <step>
+        <cmd>Expand <uicontrol>import</uicontrol>; then, click <uicontrol>image</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Navigate to your photo in the <uicontrol>import image</uicontrol> screen. Then, click
+            <uicontrol>open</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>basic group</uicontrol> in the right panel. </cmd>
+        <info>
+          <fig id="fig_hk3_mw2_wy">
+            <title>basic group</title>
+            <image placement="break" href="../Images/darkroomGroups.png" align="center"
+              id="image_ik3_mw2_wy"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Expand <uicontrol>contrast brightness saturation</uicontrol></cmd>
+        <info>
+          <fig id="fig_drv_xw2_wy">
+            <title>contrast brightness saturation tool</title>
+            <image placement="break" href="../Images/contrBrightSat.png" align="center"
+              id="image_erv_xw2_wy"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Move the sliders to adjust
+            the<indexterm>contrast</indexterm><indexterm>brightness</indexterm><indexterm>saturation</indexterm>
+          contrast, brightness, and saturation.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>correction group</uicontrol>.</cmd>
+        <info>
+          <fig id="fig_hjq_gx2_wy">
+            <title>correction group</title>
+            <image placement="break" href="../Images/correction_group.png" align="center"
+              id="image_ijq_gx2_wy"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Click the On Off button of the <indexterm>lens correction</indexterm><uicontrol>lens
+            correction</uicontrol> module to the On position.</cmd>
+        <info>
+          <fig id="fig_ydr_mx2_wy">
+            <title>lens correction tool</title>
+            <image placement="break" href="../Images/lens_correction.png" align="center"
+              id="image_zdr_mx2_wy"/>
+          </fig>
+        </info>
+      </step>
+      <step>
+        <cmd>Click the On Off button of the <uicontrol>chromatic
+            aberration</uicontrol> module to the On position.</cmd>
+      </step>
+      <step>
+        <cmd>Click <menucascade>
+            <uicontrol> presets &gt; denoise &amp; sharpen</uicontrol>
+          </menucascade> of the <indexterm>equalizer</indexterm> tool. <image placement="break"
+            href="../Images/equalizer.png" align="center" id="image_v4y_rmf_wy" scale="70"/></cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Ctrl+e</uicontrol> to export your photo.</cmd>
+      </step>
+    </steps>
+
+    <result>You processed a photo through <term
+        conref="../Concepts/c_Overview.dita#c_Overview/product_name"/>.</result>
+
+  </taskbody>
+
+</task>

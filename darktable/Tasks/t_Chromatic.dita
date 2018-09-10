@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Chromatic">
+  <title>Correcting for chromatic aberration</title>
+
+  <taskbody>
+
+    <steps>
+      <step>
+        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+      </step>
+
+      <step>
+        <cmd>Click the <uicontrol>correction group</uicontrol> icon.</cmd>
+      </step>
+
+      <step>
+        <cmd>Locate the <uicontrol>chromatic aberrations</uicontrol> tool in the right panel.</cmd>
+      </step>
+
+      <step>
+        <cmd>Click the <uicontrol>On Off</uicontrol> icon</cmd>
+
+        <stepresult>The tool applies the corrections
+        automatically</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

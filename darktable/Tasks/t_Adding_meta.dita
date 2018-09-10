@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="my_first_task">
+  <title>Adding metadata</title>
+
+  <taskbody>
+    <context><indexterm>metadata</indexterm>Metadata can be important to describe or identify the
+      photo.</context>
+
+    <steps>
+      <step>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+        <info id="info_pnj_hhm_ry">You can highlight multiple photos.</info>
+      </step>
+
+      <step>
+        <cmd>Expand the <uicontrol>metadata editor</uicontrol> at the right panel</cmd>
+      </step>
+
+      <step>
+        <cmd>Complete the fields manually or choose one of the
+        <uicontrol>presets</uicontrol>.</cmd>
+      </step>
+
+      <step>
+        <cmd>Click <uicontrol>apply</uicontrol> .</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

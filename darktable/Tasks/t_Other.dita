@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Other">
+    <title>Installing on other Linux and Unix</title>
+    
+    <taskbody>
+        <steps id="steps_fql_dsz_ry">
+            <step>
+                <cmd conref="t_MacOS.dita#task_kdb_kqz_ry/Github"/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

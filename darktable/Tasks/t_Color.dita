@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Color">
+  <title>Adjusting color impression: white balance</title>
+
+  <taskbody>
+    <steps id="steps_yxl_vjc_vy">
+      <step>
+        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+      </step>
+      <step>
+        <cmd>Click color group.</cmd>
+      </step>
+      <step>
+        <cmd>Expand <uicontrol>white balance</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Adjust the <xref href="../Glossary/g_glossary.dita#whitebalance">white balance</xref> through the sliders.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

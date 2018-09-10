@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Developing_edit">
+  <title>Development options</title>
+
+  <conbody>
+    <p>In the darkroom or development view, you can adjust and enhance your photo through the
+      various tools.</p>
+
+    <p>The tools are divided in the following groups.</p>
+
+    <ul>
+      <li conref="c_Processing.dita#Editing_images/li_jbf_crp_ry"/>
+      <li conref="c_Processing.dita#Editing_images/li_hkj_crp_ry"/>
+      <li conref="c_Processing.dita#Editing_images/li_dbp_crp_ry"/>
+      <li conref="c_Processing.dita#Editing_images/li_z4y_crp_ry"/>
+      <li conref="c_Processing.dita#Editing_images/li_fcd_drp_ry"/>
+    </ul>
+    <p>
+      <fig>
+        <image id="image_dnz_1sp_ry"/>
+        <image conref="c_Processing.dita#Editing_images/image_ty3_zrp_ry" id="image_scq_bsp_ry"/>
+      </fig>
+    </p>
+    <p>You can manage the tools into a <indexterm>favorite group</indexterm>favorite group. You can
+      arrange the tools that you use most often into this favorite group to minimize search efforts.
+      In the group bar, the second group from the left contains your favorite groups.</p>
+  </conbody>
+</concept>

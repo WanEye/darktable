@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Tethering_windows">
+    <title>Tethering under Windows</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Close <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"
+                    /></cmd>
+            </step>
+            <step>
+                <cmd>Install <xref href="http://zadig.akeo.ie" format="html" scope="external"
+                        >Zadig</xref> a tool for USB driver installation. </cmd>
+            </step>
+            <step>
+                <cmd>Use Zadig to replace the current Windows camera driver with the WinUSB
+                    driver.</cmd>
+                <info>Read the <xref href="https://github.com/pbatard/libwdi/wiki/Zadig"
+                        format="html" scope="external">Zadig user guide</xref>.</info>
+                <stepresult>Now you can try <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref>.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

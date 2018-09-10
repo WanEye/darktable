@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+"bookmap.dtd">
+<bookmap id="Darktable">
+  <booktitle>
+    <mainbooktitle>
+        <image href="Images/Front.jpg" height="9in"/></mainbooktitle>
+   </booktitle>
+
+  <bookmeta>
+    <author>Gunang Waney</author>
+
+    <authorinformation>
+      <personinfo>
+        <namedetails>
+          <personname>
+            <firstname>Gunang</firstname>
+
+            <lastname>Waney</lastname>
+
+            <otherinfo>Information Developer</otherinfo>
+          </personname>
+        </namedetails>
+
+        <emailaddresses>
+          <emailaddress>gunangwaney@gmail.com</emailaddress>
+        </emailaddresses>
+      </personinfo>
+    </authorinformation>
+
+    <bookrights>
+      <copyrfirst>
+        <year>2017</year>
+      </copyrfirst>
+
+      <bookowner>
+        <person>Gunang Waney</person>
+      </bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <booklists>
+      <toc/>
+    </booklists>
+
+
+    <preface href="preface.dita"/>
+  </frontmatter>
+
+  <chapter href="Concepts/c_Overview.dita" navtitle="Overview"/>
+
+  <chapter href="Concepts/c_Installing.dita" navtitle="Installation">
+    <topicref href="Tasks/t_MacOS.dita" navtitle="Installing on MacOS X"/>
+    <topicref href="Tasks/t_Ubuntu.dita" navtitle="Installing on Ubuntu"/>
+    <topicref href="Tasks/t_Other.dita" navtitle="Installing on other Linux and Unix"/>
+    <topicref href="Tasks/t_Windows.dita" navtitle="Installing on Windows"/>
+  </chapter>
+  
+  <chapter href="Tasks/t_Getting_started.dita" locktitle="yes"/>
+
+  <chapter href="Concepts/c_Workflow.dita" locktitle="yes">
+    <topicref href="Concepts/c_Views.dita" navtitle="Darktable views"/>
+  </chapter>
+
+  <chapter href="Concepts/c_Importing.dita" navtitle="Importing options">
+    <topicref href="Tasks/t_Images.dita" navtitle="Importing individual photos"/>
+    <topicref href="Tasks/t_Folders.dita" navtitle="Importing entire folders"/>
+    <topicref href="Tasks/t_Media.dita" navtitle="Importing from camera or external storage"/>
+  </chapter>
+
+  <chapter href="Concepts/c_Managing.dita" navtitle="Management options">
+    <topicref href="Tasks/t_Filter.dita" navtitle="Filtering files"/>
+    <topicref href="Tasks/t_Sorting.dita" navtitle="Sorting files"/>
+    <topicref href="Tasks/t_Rating.dita" navtitle="Rating files"/>
+    <topicref href="Tasks/t_EXIF.dita" navtitle="Viewing EXIF information"/>
+    <topicref href="Tasks/t_Adding_meta.dita" navtitle="Adding metadata"/>
+    <topicref href="Tasks/t_Focus.dita" type="task" navtitle="Identifying areas in focus"/>
+  </chapter>
+
+  <chapter href="Concepts/c_Processing.dita" navtitle="Processing options">
+    <topicref href="Tasks/t_HDR.dita" navtitle="Creating HDR photos"/>
+    <topicref href="Concepts/c_Developing_edit.dita" navtitle="Development options">
+      <topicref href="Tasks/t_Composition.dita" navtitle="Adjusting the composition"/>
+      <topicref href="Tasks/t_BlackWhite.dita" navtitle="Changing color to black and white"/>
+      <topicref href="Tasks/t_Exposure.dita" navtitle="Adjusting the exposure"/>
+      <topicref href="Tasks/t_Color.dita" navtitle="Adjusting color impression (white balance)"/>
+      <topicref href="Concepts/c_Correcting.dita" navtitle="Corrections to lens flaws">
+        <topicref href="Tasks/t_Distortion.dita" navtitle="Correcting for distortion"/>
+        <topicref href="Tasks/t_Chromatic.dita" navtitle="Correcting for chromatic aberration"/>
+      </topicref>
+      <topicref href="Tasks/t_Denoise.dita" navtitle="Reducing noise and sharpening photo"/>
+    </topicref>
+  </chapter>
+
+  <chapter href="Tasks/t_Exporting.dita" navtitle="Exporting images to new files"/>
+
+  <chapter href="Concepts/c_Tethering.dita" navtitle="Tethered shooting">
+    <topicref href="Tasks/t_Tethering_verify.dita"
+      navtitle="Verifying your camera for tethering (UNIX and Linux)" type="task" platform="linux">
+      <topicref href="Tasks/t_Tethering_windows.dita" navtitle="Tethering under Windows"/>
+    </topicref>
+  </chapter>
+
+  <chapter href="Concepts/c_Map.dita" navtitle="Locations on map">
+    <topicref href="Tasks/t_mapView.dita" navtitle="Viewing geotagged photos on map"/>
+    <topicref href="Tasks/t_mapPlace_photo.dita" navtitle="Placing photos on map"/>
+  </chapter>
+
+  <chapter href="Concepts/c_Presentation.dita" navtitle="Presentation">
+    <topicref href="Tasks/t_Slideshow.dita" navtitle="Presenting in slideshow"/>
+    <topicref href="Tasks/t_Print.dita" navtitle="Printing photos"/>
+  </chapter>
+  <chapter href="Concepts/c_Integrations.dita" locktitle="yes">
+    <topicref href="Tasks/t_IntegrationShotwell.dita"
+      navtitle="Opening photo from Shotwell photo manager"/>
+    <topicref href="Tasks/t_IntegrationRistretto.dita"
+      navtitle="Opening photo from Ristretto viewer"/>
+  </chapter>
+
+  <backmatter>
+    <booklists>
+      <glossarylist>
+        <topicref href="Glossary/g_glossary.dita" navtitle="Glossary"/>
+      </glossarylist>
+      <indexlist/>
+    </booklists>
+  </backmatter>
+  <reltable title="Related content">
+    <relheader>
+      <relcolspec id="relcolspec_klz_ldm_ry" type="concept"/>
+      <relcolspec type="task"/>
+    </relheader>
+    <relrow>
+      <relcell>
+        <topicref href="Concepts/c_Managing.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="Tasks/t_mapView.dita"/>
+        <topicref href="Tasks/t_mapPlace_photo.dita"/>
+      </relcell>
+    </relrow>
+    <relrow>
+      <relcell>
+        <topicref href="Concepts/c_Developing_edit.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="Tasks/t_HDR.dita"/>
+      </relcell>
+    </relrow>
+    <relrow>
+      <relcell>
+        <topicref href="Concepts/c_Importing.dita"/>
+        <topicref href="Concepts/c_Processing.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="Tasks/t_Getting_started.dita"/>
+      </relcell>
+    </relrow>
+    <relrow>
+      <relcell>
+        <topicref href="Concepts/c_Workflow.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="Tasks/t_Images.dita"/>
+        <topicref href="Tasks/t_Folders.dita"/>
+        <topicref href="Tasks/t_Media.dita"/>
+        <topicref href="Tasks/t_mapView.dita"/>
+        <topicref href="Tasks/t_Exporting.dita"/>
+        <topicref href="Tasks/t_HDR.dita"/>
+        <topicref href="Tasks/t_Slideshow.dita"/>
+        <topicref href="Tasks/t_Print.dita"/>
+      </relcell>
+    </relrow>
+    <relrow>
+      <relcell>
+        <topicref href="Concepts/c_Importing.dita"/>
+      </relcell>
+      <relcell>
+        <topicref href="Tasks/t_Tethering_verify.dita"/>
+      </relcell>
+    </relrow>
+  </reltable>
+
+
+</bookmap>

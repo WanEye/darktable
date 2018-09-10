@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="glossgroup_glossary">
+<title>Glossary</title> 
+<glossentry id="chromaticaberration"> 
+  <glossterm>chromatic aberration</glossterm> 
+  <glossdef>Effect of lens that refracts light of different colors to different extends.  For example, your lens bends a blue light ray more than a red light ray. The consequence is that the blue ray hits the camera sensor at a different spot than the red ray. You might see a red spot and a blue spot. However, in reality the light ray is a single ray.
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="EXIF"> 
+  <glossterm>EXIF</glossterm> 
+  <glossdef>Stands for Exchangeable Image File Format EXIF is a standard that specifies the formats for information from digital cameras. Among other things, the EXIF file provides you the following information about your photo shot.  Shutter speedFilm speed (ISO)ApertureFocal lengthLens typeGeolocation.
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="HDR"> 
+  <glossterm>HDR</glossterm> 
+  <glossdef>Stands for high dynamic range In an HDR photo, you see more contrast in lighter parts and darker parts of your photo than in a standard photo. HDR photos can give a surrealistic appearance to photos. Also, for medicinal and surveillance purposes, photographers apply HDR to extend the contrast range. A alternative to the HDR function in darktable is a tool that is dedicated to HDR imaging. An example is  Luminance HDR You van make HDR photos through the following shots.  A set of JPG shots of the same subject that have different exposure values. A RAW shot. This format is the only format that darktable supports.
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="opticaldistortion"> 
+  <glossterm>optical distortion</glossterm> 
+  <glossdef>Or optical aberration is the effect that deforms straight lines. In the photo, the lines look curvy and right angles are no longer right. The design of the lens is the cause of the distortion.
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="RAW"> 
+  <glossterm>RAW</glossterm> 
+  <glossdef>Your camera's raw image file contains minimally processed data from the image sensor. The name raw comes from the fact that your camera did not yet process the image data. Camera manufacturers store RAW images in proprietary formats. The following table shows examples of these formats. Manufacturer RAW format Canon CIFF Nikon NPX Olympus ORF
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="tethering"> 
+  <glossterm>tethering</glossterm> 
+  <glossdef>Shooting from a remote device. Here, that device is a computer. You connect your camera
+      to your computer. <p/><p>When you shoot your photo, you bypass the camera and save your photo
+        directly on your computer.</p>
+      <p>Tethered shooting has the following advantages.</p>
+      <ul id="ul_ehw_k1m_wy">
+        <li>You can see your shot on a bigger screen.</li>
+        <li>You have more storage at your disposal.</li>
+        <li>Your imaging software has direct access to your photo. You can immediately verify your
+          shot. </li>
+        <li>You can take backups through your computer software.</li>
+      </ul>
+      <p>The word tethering originally means fastening an animal with a rope or chain to limit the
+        animal's freedom of movement.</p>" </glossdef>
+  
+</glossentry> 
+ 
+<glossentry id="vignetting"> 
+  <glossterm>vignetting</glossterm> 
+  <glossdef>arkening of the edges of a photo in comparison to the center. Sometimes photographers use vignetting to draw the attention of the viewer to the center. Sometimes photographers consider vignetting as a lens flaw.
+</glossdef>
+</glossentry> 
+ 
+<glossentry id="whitebalance"> 
+  <glossterm>white balance</glossterm> 
+  <glossdef>Balance of the colors that make up white. When you adjust the white balance, you remove unrealistic color casts. Things that are white in the real world, now appear white in your photo. 
+</glossdef>
+</glossentry> 
+ 
+</glossgroup>

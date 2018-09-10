@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Distortion">
+  <title>Correcting for distortion</title>
+
+  <taskbody>
+    <steps>
+      <step>
+        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+      </step>
+
+      <step>
+        <cmd>Click the <uicontrol>correction group</uicontrol> icon.</cmd>
+        <info><image conref="../Images/i_CorrectionGroup.dita#ReusableComponent_q54_fpx_vy/image_uvz_y4x_vy"
+          id="image_kx4_fpx_vy"/></info> 
+      </step>
+
+      <step>
+        <cmd>Locate the <uicontrol>lens correction</uicontrol> tool in the
+        right panel.</cmd>
+      </step>
+    </steps>
+    <result id="result_e4m_t3c_vy">The tool applies the corrections automatically <p/><p/><fig>
+        <title>(1) BEFORE (2) AFTER</title>
+      </fig>
+      <image placement="break" href="../Images/BEFORE_AFTER.jpg" scale="50" align="center"
+        id="image_rqh_1n2_wy"/></result>
+  </taskbody>
+</task>

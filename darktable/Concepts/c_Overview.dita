@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Overview">
+  <title>Overview and legal stuff</title>
+
+  <conbody>
+    <p><term id= "product_name">darktable</term> is a photography workflow application for Linux and Mac OSx.
+      Broadly speaking, you can do the following things.</p>
+    <p/>
+    <p>
+      <ul id="ul_md4_ttn_5y">
+        <li>Managing your digital images.</li>
+        <li>Viewing your digital images.</li>
+        <li>Developing <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> images.</li>
+        <li>Doing <indexterm>tethered</indexterm>tethered shooting.</li>
+        <li>Managing printing.</li>
+        <li>Viewing <indexterm>geotagged</indexterm> photos on a map.</li>
+      </ul>
+    </p>
+    <p><term conref="#c_Overview/product_name"/> always keeps your original file that contains your photo.</p>
+    <p/>
+
+    <p><term conref="#c_Overview/product_name"/> is free software. <indexterm>license</indexterm>
+      The license falls under the terms of the <indexterm>General Public License</indexterm><indexterm>GNU</indexterm>
+      <xref format="html" href="https://www.gnu.org/software/software.en.html" scope="external">
+        General Public License (GNU) as published by the Free Software Foundation</xref>.</p>
+  </conbody>
+</concept>

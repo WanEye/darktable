@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_gbq_hq5_5y">
+    <title>Opening photo from Ristretto viewer</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Open your photo in <indexterm>Ristretto</indexterm>Ristretto.</cmd>
+            </step>
+            <step>
+                <cmd>Right click <menucascade>
+                        <uicontrol>Open with > Darktable</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+        </steps>
+        <result id="result_ktr_1r5_5y">Your photo is open in the
+                <indexterm>lighttable</indexterm><uicontrol>lighttable</uicontrol> view.</result>
+    </taskbody>
+</task>

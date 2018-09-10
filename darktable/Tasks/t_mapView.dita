@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Navigatiing">
+    <title>View geotagged photos on map</title>
+  
+    <taskbody>
+        <prereq id="prereq_h5s_prl_ry">Select a photo with a geotag in the lighttable view.</prereq>
+        <context id="context_pzm_lrl_ry">You can view the location where you shot the photo on a
+                <indexterm>map</indexterm>. </context>
+        <steps id="steps_lft_trl_ry">
+            <step>
+                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_rs2_4sl_ry"/>
+            </step>
+            <step>
+                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_pxj_4sl_ry"/>
+            </step>
+            <step>
+                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_avq_4sl_ry"/>
+            </step>
+            <step>
+                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_hhx_4sl_ry"/>
+            </step>
+            <step>
+                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_sxg_nsl_ry"/>
+            </step>
+            <step>
+                <cmd>Locate your photo on the map.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_EXIF">
+  <title>Viewing EXIF information</title>
+
+  <taskbody>
+    <context><p>The lighttable view contains the <xref href="../Glossary/g_glossary.dita#EXIF">EXIF</xref>information of the photo.</p></context>
+
+    <steps>
+      <step>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+      </step>
+
+      <step>
+        <cmd>Expand <uicontrol>image information</uicontrol>.</cmd>
+
+        <stepresult>Now, you see the <xref href="../Glossary/g_glossary.dita#EXIF">EXIF</xref> information.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

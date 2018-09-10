@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Tethering">
+  <title>Tethered shooting</title>
+
+  <conbody>
+    <p>In <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref>, you can control your camera through i<term
+        conref="c_Overview.dita#c_Overview/product_name"/>.</p>
+
+    <p><term conref="c_Overview.dita#c_Overview/product_name"/> uses
+        <indexterm>libgphoto2</indexterm>libgphoto2 for <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref>. Therefore,
+        <indexterm>gphoto2</indexterm>gphoto2 must support your camera fully to do tethered
+      shooting. For now, gphoto2 supports only a few cameras for tethered shooting. For more
+      information see <xref format="html"
+        href="http://gphoto.sourceforge.net/proj/libgphoto2/support.php" scope="external">Projects
+        :: libgphoto2 :: supported cameras</xref>.</p>
+    <p/>
+    <ol id="ol_enh_klh_cfb">
+      <li>Plug your camera into your computer. </li>
+      <li>Press <uicontrol>T</uicontrol> to switch to the <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref> view.</li>
+    </ol>
+  </conbody>
+</concept>

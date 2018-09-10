@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Correcting">
+  <title>Corrections to lens flaws</title>
+
+  <conbody>
+    <p>The darkroom view provides tools to correct for the following lens
+    faults.</p>
+
+    <ul>
+      <li><xref href="../Glossary/g_glossary.dita#opticaldistortion">Optical distortion</xref></li>
+
+      <li><xref href="../Glossary/g_glossary.dita#chromaticaberration">Chromatic aberration</xref>s</li>
+
+      <li><xref href="../Glossary/g_glossary.dita#vignetting">Vignetting</xref>.</li>
+    </ul>
+
+    <p>The tool identifies the camera lens combination automatically, but you
+    can change the combination yourself manually.</p>
+
+    <note><term conref="c_Overview.dita#c_Overview/product_name"/> identifies only camera lens
+      combinations that <term conref="c_Overview.dita#c_Overview/product_name"/> supports.</note>
+  </conbody>
+</concept>

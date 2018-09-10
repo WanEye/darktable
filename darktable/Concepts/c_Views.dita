@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Views">
+  <title><term conref="c_Overview.dita#c_Overview/product_name"/> views</title>
+
+  <shortdesc><term conref="c_Overview.dita#c_Overview/product_name"/> provides views that offer
+    different functions</shortdesc>
+
+  <conbody>
+    <p>The following table gives you an overview of the <term
+        conref="c_Overview.dita#c_Overview/product_name"/> views.</p>
+
+    <table>
+      <tgroup cols="3">
+        <colspec colname="COLSPEC0" colwidth="76*"/>
+
+        <colspec colname="COLSPEC1" colwidth="121*"/>
+
+        <colspec colname="COLSPEC2" colwidth="76*"/>
+
+        <thead>
+          <row>
+            <entry colname="COLSPEC0" valign="top">View</entry>
+
+            <entry colname="COLSPEC1" valign="top">Description</entry>
+
+            <entry colname="COLSPEC2" valign="top">Shortkey</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry><indexterm>lighttable</indexterm>lighttable</entry>
+
+            <entry>Managing photos: rating, tagging, importing, exporting photos</entry>
+
+            <entry><uicontrol>l</uicontrol></entry>
+          </row>
+
+          <row>
+            <entry><indexterm>darkroom</indexterm>darkroom</entry>
+
+            <entry>Developing photos</entry>
+
+            <entry><uicontrol>d</uicontrol></entry>
+          </row>
+
+          <row>
+            <entry><indexterm/><xref href="../Glossary/g_glossary.dita#tethering"
+              >tethering</xref></entry>
+
+            <entry>Shooting with a camera that you connected to a computer</entry>
+
+            <entry><uicontrol>t</uicontrol></entry>
+          </row>
+
+          <row>
+            <entry><indexterm>map</indexterm>map</entry>
+
+            <entry>Viewing geotagged photos on a map</entry>
+
+            <entry><uicontrol>m</uicontrol></entry>
+          </row>
+
+          <row>
+            <entry><indexterm>slideshow</indexterm>slideshow</entry>
+
+            <entry>Presenting photos in a slideshow</entry>
+
+            <entry><uicontrol>s</uicontrol></entry>
+          </row>
+
+          <row>
+            <entry><indexterm>print</indexterm>print</entry>
+
+            <entry>Managing print jobs</entry>
+
+            <entry><uicontrol>p</uicontrol></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+    <p>You have two ways to switch between the views.</p>
+
+    <ul>
+      <li>Clicking the view name at the top of the right panel</li>
+
+      <li>Typing the shortkey character of the view</li>
+    </ul>
+  </conbody>
+</concept>

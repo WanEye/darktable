@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Windows">
+    <title>Installing on Windows</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p/>
+        </context>
+        <steps>
+            <step>
+                <cmd  conref="t_MacOS.dita#task_kdb_kqz_ry/Github"/>
+                <info>For Windows, the extension is EXE.</info>
+            </step>
+            <step>
+                <cmd>Run the EXE file.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

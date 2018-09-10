@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Composition">
+  <title>Adjusting the composition</title>
+
+  <taskbody>
+    <context>The <indexterm>composition</indexterm>composition is important for your photo. You
+        can<indexterm> crop and rotate</indexterm>crop and rotate your photos and follow the
+        <indexterm>golden-section</indexterm> and <indexterm>rule of third</indexterm>.</context>
+
+    <steps>
+      <step>
+        <cmd id="darkroom_view">Click <uicontrol>D</uicontrol> to open the darkroom or development view.</cmd>
+      </step>
+
+      <step>
+        <cmd>Click the <uicontrol>basic group</uicontrol> icon.</cmd>
+      </step>
+
+      <step>
+        <cmd>Expand the <uicontrol>crop and rotate</uicontrol> tool.</cmd>
+        <stepresult>Now, you can apply the options to adjust your compostion.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

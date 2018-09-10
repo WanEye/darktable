@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Place_photo_map">
+    <title>Placing photo on map</title>
+   
+    <taskbody>
+        <context id="context_lv3_tnl_ry">If you place a file onto a map, the file gets a geotag.
+            This <indexterm>geotag</indexterm>geotag consists of the coordinates of the
+                <indexterm>map</indexterm>map, the latitude and longitude. </context>
+        <steps id="steps_ol3_34l_ry">
+            <step>
+                <cmd id="cmd_rs2_4sl_ry">Press <uicontrol>M</uicontrol> to open the map view.</cmd>
+            </step>
+            <step>
+                <cmd id="cmd_pxj_4sl_ry">Expand <uicontrol>map settings</uicontrol></cmd>
+            </step>
+            <step>
+                <cmd id="cmd_avq_4sl_ry">Select <uicontrol>show OSD</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd id="cmd_hhx_4sl_ry">Choose the <uicontrol>map source</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd id="cmd_sxg_nsl_ry">Zoom in or zoom out the map to discover the location.</cmd>
+            </step>
+            <step>
+                <cmd>Drag your photo to that location on the map.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Filter">
+    <title>Filtering photos</title>
+    
+    <taskbody>
+        <steps id="steps_bvj_sdw_sy">
+            <step>
+                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>all</uicontrol> right from <uicontrol>view</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the number of stars.</cmd>
+            </step>
+            <step>
+                <cmd>Select the operator.</cmd>
+            </step>
+        </steps>
+        <example>&lt; *** yields all photos with 2, 1, and 0 star
+            <indexterm>rating</indexterm>rating.</example>
+    </taskbody>
+</task>

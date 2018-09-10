@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_Exporting">
+    <title>Exporting images to new files</title>
+
+    <taskbody>
+        <context>
+            <p>When you're done with processing your photo, you can export your photo to another
+                file. <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> retains
+                your original file and writes the processed photo into a new file. </p>
+            <p><term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> supports the
+                following formats among other formats.<ul id="ul_gdm_ymj_ry">
+                    <li><indexterm>JPEG</indexterm>JPEG</li>
+                    <li><indexterm>PDF</indexterm>PDF</li>
+                    <li><indexterm>TIFF</indexterm>TIFF</li>
+                    <li><indexterm>PNG</indexterm>PNG</li>
+                </ul></p>
+            <p>The default format is JPEG, but you can set other formats in the lighttable view
+                under <uicontrol>format options</uicontrol> on the right pane of the view.</p>
+            <p>Exporting consists of a single step.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Press<uicontrol> Ctrl+e</uicontrol> to export your photo.</cmd>
+                <stepresult>During the <indexterm>export</indexterm>export procedure, you see the
+                    path of your export file on the screen.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+"task.dtd">
+<task id="t_Rating">
+  <title>Rating photos</title>
+
+  <taskbody>
+    <context>You can give your photos a 1-, 2-, 3-, 4-, or 5-star rating. You can sort and filter
+      your photos by rating.</context>
+
+    <steps>
+      <step>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+      </step>
+
+      <step>
+        <cmd>Select a photo.</cmd>
+      </step>
+
+      <step>
+        <cmd>Click <uicontrol>show image overlays</uicontrol> the star icon on
+        the right upper part of the view.</cmd>
+
+        <stepresult>You see five empty stars at the bottom of each
+        photo</stepresult>
+      </step>
+
+      <step>
+        <cmd>Click the star that corresponds to your <indexterm>rating</indexterm>rating that you
+          want to give.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

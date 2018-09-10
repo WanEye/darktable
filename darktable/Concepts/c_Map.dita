@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Map">
+  <title>Locations on map</title>
+
+  <conbody>
+    <p>You can view <indexterm>geotagged</indexterm> geotagged photos pinned on a map. You can also
+      manually place photos without geotag onto the map.</p>
+
+    <p>Newer cameras, including smartphones, have <indexterm>GPS</indexterm>GPS receivers and tag
+      the image files with the coordinates. </p>
+
+    <p><term conref="c_Overview.dita#c_Overview/product_name"/> takes maps from open map sources on
+      the internet. </p>
+  </conbody>
+</concept>

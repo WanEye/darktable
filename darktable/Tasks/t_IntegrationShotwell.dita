@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_aqq_335_5y">
+    <title>Opening photo from Shotwell photo manager</title>
+    
+    <taskbody>
+        <prereq id="prereq_ws5_5k5_5y">Open one or more photos in <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> format in
+                <indexterm>Shotwell</indexterm> Shotwell.<p/><p>First, configure
+            Shotwell.</p><p/></prereq>
+        <steps>
+            <step>
+                <cmd>Click <menucascade>
+                        <uicontrol>Edit > Preferences</uicontrol>
+                    </menucascade> .</cmd>
+            </step>
+            <step>
+                <cmd>Cick <uicontrol>External Editors</uicontrol></cmd>
+            </step>
+            <step>
+                <cmd>Choose <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/>
+                    from the dropdown box <uicontrol>External Raw Editor</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Close the dialog <uicontrol>Shotwell Preferences</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_hq3_gm5_5y">To open a photo in <term
+                conref="../Concepts/c_Overview.dita#c_Overview/product_name"/>, right click your
+            photo; then, click <uicontrol>Open With RAW Editor</uicontrol>.</result>
+    </taskbody>
+</task>

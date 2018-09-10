@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_cyp_1jk_ty">
+    <title>Identifying areas in focus</title>
+    <taskbody>
+        <context>
+            <p>A photo can have areas that are in focus and areas out of focus. You want to see whether your main subject is in focus.</p>
+            <note>This trick works only for <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> photos.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+            </step>
+            <step>
+                <cmd>Press <uicontrol>Ctrl+z.</uicontrol></cmd>
+                <stepresult>You fully zoom into your photo and see the areas that are in focus as
+                    rounded rectangles. </stepresult>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="preface">
+  <title>What this book is for</title>
+
+  <body>
+    <p>This book is for new users of <term conref="Concepts/c_Overview.dita#c_Overview/product_name"
+      />. You can look up things that you want to do in the table of contents.</p>
+    <p/>
+    <p>After a while, you can find your way in <term
+        conref="Concepts/c_Overview.dita#c_Overview/product_name"/> yourself and discover other
+      stuff that you need. See the <xref format="html"
+        href="http://www.darktable.org/usermanual/index.html.php" scope="external">official
+        darktable manual on darktable.org</xref> for further reading. </p>
+    <p/>
+    <p>If you want to make your first steps, you can read the chapter about <xref
+        href="Concepts/c_Installing.dita#c_Installing"/> to continue with the <xref
+        href="Tasks/t_Getting_started.dita#t_Getting_started"/> tutorial. Then, you get your first
+      edited photo quickly.</p>
+    <p/>
+    <p>Have fun.</p>
+    <p/>
+    <p><i>Gunang Waney</i></p>
+    <p><i>Information Developer</i></p>
+    <p><i>gunangwaney@gmail.com</i></p>
+  </body>
+</topic>

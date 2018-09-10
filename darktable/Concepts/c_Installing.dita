@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+"concept.dtd">
+<concept id="c_Installing">
+  <title>Installation</title>
+
+  <shortdesc/>
+
+  <conbody>
+    <p>You can install <term conref="c_Overview.dita#c_Overview/product_name"/> on the following
+      operating systems.</p>
+    <ul id="ul_bhp_pbh_cfb">
+      <li><indexterm>UNIX</indexterm>UNIX and <indexterm>Linux</indexterm>Linux, for example
+          <indexterm>Ubuntu</indexterm>Ubuntu, </li>
+      <li><indexterm>Mac OS X</indexterm>Mac OS X preferably on 64-bit
+          <indexterm>architecture</indexterm>architecture,</li>
+      <li>Microsoft Windows.</li>
+    </ul>
+    <p/>
+
+    <p>You can install <term conref="c_Overview.dita#c_Overview/product_name"/> either from
+      <indexterm>installation</indexterm>installation packages or from source code. For more
+      information, see the <xref format="html" href="http://www.darktable.org/install/"
+        scope="external" id="xref_yyl_211_sy">chapter Install on darktable.org. </xref></p>
+    <p/>
+
+    <note>Since release 2.4.0r2, <term conref="c_Overview.dita#c_Overview/product_name"/> supports
+        <indexterm>Microsoft</indexterm><indexterm>Windows</indexterm>Microsoft Windows.</note>
+  </conbody>
+</concept>
