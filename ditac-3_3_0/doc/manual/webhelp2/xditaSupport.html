@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Appendix B, Section 1. XDITA support</title><link href="resources/webhelp.css" rel="stylesheet" type="text/css" /><meta content="XMLmind DITA Converter fully supports XDITA, which is basically a very small subset of DITA XML, plus new audio and video elements." name="description" />
+      <meta content="XMLmind DITA Converter 3.3.0" name="generator" />
+   <script charset="UTF-8" defer="defer" src="_wh/snowball_en.min.js" type="text/javascript"></script><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+    </script><script charset="UTF-8" src="_wh/wh.min.js" type="text/javascript">
+    </script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript">
+    </script><link href="_wh/user/header_footer.css" rel="stylesheet" type="text/css" /></head>
+   
+<body>
+    <div id="wh-header">
+    <table id="page-header" style="border-spacing: 0; width: 100%;">
+      <tr>
+        <td style="vertical-align: middle; width: 110px;"><a href="http://www.xmlmind.com/"><img alt="XMLmind logo" height="50" src="_wh/user/header_footer_files/logo100x50.png" style="border-style: none;" width="100" /></a></td>
+
+        <td style="vertical-align: middle;"><h1 id="page-header-title">XMLmind
+        DITA Converter Manual</h1></td>
+
+        <td style="vertical-align: middle; width: 110px;"> </td>
+      </tr>
+    </table></div>
+
+    <div id="wh-body">
+      <div id="wh-navigation">
+        <div id="wh-navigation-form">
+          <span id="wh-search-group">
+            <span id="wh-do-search" title="Search"></span><input id="wh-search-field" placeholder="Search" type="text" /><span id="wh-cancel-search" title="Stop searching"></span>
+          </span>
+        </div>
+        <div id="wh-toc-pane">
+          <script charset="UTF-8" src="_wh/toc.js" type="text/javascript"></script>
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-content">
+      
+      <section class="topic" id="xditaSupport" lang="en-US" xml:lang="en-US">
+         <h2 class="section1-title">1. XDITA support <span class="topic-navigation-bar"><img alt="Previous topic" class="navigation-icon-disabled" height="16" src="resources/previous_disabled.png" title="Previous topic" width="16" /> <a class="navigation-link" href="lwditaSupport.html#lwditaSupport" title="Parent topic: Appendix B. Lightweight DITA support"><img alt="Parent topic" class="navigation-icon" height="16" src="resources/parent.png" width="16" /></a> <img alt="Child topic" class="navigation-icon-disabled" height="16" src="resources/child_disabled.png" title="Child topic" width="16" /> <a class="navigation-link" href="hditaSupport.html#hditaSupport" title="Next topic: Section 2. HDITA support"><img alt="Next topic" class="navigation-icon" height="16" src="resources/next.png" width="16" /></a></span></h2>
+         <p class="shortdesc">XMLmind DITA Converter fully supports <a class="xref" href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-xdita" target="_blank">XDITA <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>, which is basically a very small subset of
+            DITA XML, plus <a class="xref" href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#new-elements-and-attributes" target="_blank">new audio and video elements <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>.
+         </p>
+         <div class="body">
+            <div class="p">Template of an XDITA topic (<a class="xref" href="../lwdita_templates/xdita_topic.dita" target="_blank">lwdita_templates/xdita_topic.dita <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>):
+            </div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE topic PUBLIC &quot;-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN&quot;
+&quot;lw-topic.dtd&quot;&gt;</span>
+<span class="hl-tag">&lt;topic</span> <span class="hl-attribute">id</span>=<span class="hl-value">&quot;???&quot;</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;title&gt;</span><span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;shortdesc&gt;</span><span class="hl-tag">&lt;/shortdesc&gt;</span>
+  <span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+  <span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/topic&gt;</span></pre><div class="p">Template of an XDITA map (<a class="xref" href="../lwdita_templates/xdita_map.ditamap" target="_blank">lwdita_templates/xdita_map.dita <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>):
+            </div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE map PUBLIC &quot;-//OASIS//DTD LIGHTWEIGHT DITA Map//EN&quot;
+&quot;lw-map.dtd&quot;&gt;</span>
+<span class="hl-tag">&lt;map&gt;</span>
+  <span class="hl-tag">&lt;topicmeta&gt;</span>
+    <span class="hl-tag">&lt;navtitle&gt;</span><span class="hl-tag">&lt;/navtitle&gt;</span>
+  <span class="hl-tag">&lt;/topicmeta&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;???&quot;</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;???&quot;</span><span class="hl-tag">/&gt;</span>
+  <span class="hl-tag">&lt;/topicref&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;???&quot;</span><span class="hl-tag">/&gt;</span>
+<span class="hl-tag">&lt;/map&gt;</span></pre></div>
+      </section>
+   </div>
+    </div>
+
+    <div id="wh-footer">
+    <p id="page-footer">Web Help generated using <a href="http://www.xmlmind.com/ditac/" target="_blank">XMLmind DITA Converter</a>.</p></div>
+  </body></html>

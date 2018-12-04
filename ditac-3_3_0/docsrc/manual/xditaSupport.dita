@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN"
+"lw-topic.dtd">
+<topic id="xditaSupport">
+  <title>XDITA support</title>
+
+  <shortdesc>XMLmind DITA Converter fully supports <xref format="html"
+  href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-xdita"
+  scope="external">XDITA</xref>, which is basically a very small subset of
+  DITA XML, plus <xref format="html"
+  href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#new-elements-and-attributes"
+  scope="external">new audio and video elements</xref>.</shortdesc>
+
+  <body>
+    <p>Template of an XDITA topic (<xref format="dita"
+    href="lwdita_templates/xdita_topic.dita"
+    scope="external">lwdita_templates/xdita_topic.dita</xref>):</p>
+
+    <pre outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN"
+"lw-topic.dtd"&gt;
+&lt;topic id="???"&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;shortdesc&gt;&lt;/shortdesc&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/topic&gt;</pre>
+
+    <p>Template of an XDITA map (<xref format="ditamap"
+    href="lwdita_templates/xdita_map.ditamap"
+    scope="external">lwdita_templates/xdita_map.dita</xref>):</p>
+
+    <pre outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Map//EN"
+"lw-map.dtd"&gt;
+&lt;map&gt;
+  &lt;topicmeta&gt;
+    &lt;navtitle&gt;&lt;/navtitle&gt;
+  &lt;/topicmeta&gt;
+  &lt;topicref href="???"&gt;
+    &lt;topicref href="???"/&gt;
+  &lt;/topicref&gt;
+  &lt;topicref href="???"/&gt;
+&lt;/map&gt;</pre>
+  </body>
+</topic>

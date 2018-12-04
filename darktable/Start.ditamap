@@ -3,13 +3,11 @@
 "bookmap.dtd">
 <bookmap id="Darktable">
   <booktitle>
-    <mainbooktitle>
-        <image href="Images/Front.jpg" height="9in"/></mainbooktitle>
-   </booktitle>
+    <mainbooktitle>The portable darktable <image href="Images/Front.jpg" scalefit="yes"
+      /></mainbooktitle>
+  </booktitle>
 
   <bookmeta>
-    <author>Gunang Waney</author>
-
     <authorinformation>
       <personinfo>
         <namedetails>
@@ -56,7 +54,7 @@
     <topicref href="Tasks/t_Other.dita" navtitle="Installing on other Linux and Unix"/>
     <topicref href="Tasks/t_Windows.dita" navtitle="Installing on Windows"/>
   </chapter>
-  
+
   <chapter href="Tasks/t_Getting_started.dita" locktitle="yes"/>
 
   <chapter href="Concepts/c_Workflow.dita" locktitle="yes">

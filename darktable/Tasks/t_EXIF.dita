@@ -5,11 +5,12 @@
   <title>Viewing EXIF information</title>
 
   <taskbody>
-    <context><p>The lighttable view contains the <xref href="../Glossary/g_glossary.dita#EXIF">EXIF</xref>information of the photo.</p></context>
+    <context><p>The <uicontrol conref="../conref/conref.dita#conref/lighttLC"/> view contains the <xref
+          href="../Glossary/g_glossary.dita#EXIF">EXIF</xref> information of the photo.</p></context>
 
     <steps>
       <step>
-        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable">.</cmd>
       </step>
 
       <step>

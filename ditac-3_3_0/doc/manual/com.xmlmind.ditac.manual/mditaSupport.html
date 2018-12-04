@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><title>MDITA support</title><link rel="stylesheet" type="text/css" href="resources/eclipsehelp.css"></link><meta name="description" content="XMLmind DITA Converter fully supports MDITA, which specifies how to write DITA topics and maps in Markdown."></meta><meta name="generator" content="XMLmind DITA Converter 3.3.0"></meta></head><body><div id="mditaSupport" xml:lang="en-US" lang="en-US" class="topic"><h2 class="section1-title">MDITA support</h2><p class="shortdesc">XMLmind DITA Converter fully supports <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-mdita" class="xref" target="_blank">MDITA <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>, which specifies how to write DITA topics and maps in <a href="https://daringfireball.net/projects/markdown/" class="xref" target="_blank">Markdown <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</p><div class="body"><div class="p">Template of an MDITA topic <a href="lwdita_templates/mdita_topic.md" class="xref" target="_blank">lwdita_templates/mdita_topic.md <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>:</div><pre class="pre">---
+id: ???
+---
+
+# Topic title here
+
+Short description here.
+
+Topic body starts here.
+</pre><div class="p">Template of an MDITA map <a href="lwdita_templates/mdita_map.md" class="xref" target="_blank">lwdita_templates/mdita_map.md <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>:</div><pre class="pre"># Map title here {.map}
+   
+- [???](???)
+  - [???](???)
+  - [???](???)
+- [???](???)
+</pre><div class="p">Notice the <code class="codeph">{.map}</code> <code class="codeph">class</code> attribute added to the title of the map. Without it, the above template would be translated to a DITA <code class="codeph">topic</code>.</div><div id="mditaSupport__I_dqpp11_" class="section"><h3 class="section-title">Implementation specificities</h3><ul class="ul"><li class="li">
+<div class="p">Adding a <code class="codeph">{.concept}</code> <code class="codeph">class</code> attribute to the title of an MDITA topic may be used to generate a DITA concept rather than a DITA topic.</div>
+</li><li class="li">
+<div class="p">Out of the box, ditac supports the so-called <i class="i">Extended Profile</i>.</div>
+<div class="p">This Extended Profile may be customized by the means of <a href="commandLine.html#commandLine__load_params" class="xref"><code class="codeph">-p load.mdita.XXX</code> parameters</a>. These <code class="codeph">load.mdita.XXX</code> parameters are documented <a href="#mditaSupport__load_params" class="xref">below</a>.</div>
+</li></ul></div><div id="mditaSupport__I_93wsms_" class="section"><h3 class="section-title">Limitations</h3><ul class="ul"><li class="li">Without a <code class="codeph">{.map}</code> <code class="codeph">class</code> attribute added to the title of an MDITA map, this map is confused with a topic.</li></ul></div><div id="mditaSupport__I_n1sfdf_" class="section"><h3 class="section-title"><code class="codeph">load.mdita.XXX</code> parameters</h3><div id="mditaSupport__load_params" class="p">Parameter <code class="codeph">-p load.mdita.extended-profile true</code> is implicitely passed to <code class="codeph">ditac</code>. This parameter is simply a shorthand for:</div><pre class="pre">-p load.mdita.abbreviation true
+-p load.mdita.admonition true
+-p load.mdita.attributes true
+-p load.mdita.definition true
+-p load.mdita.footnotes true
+-p load.mdita.gfm-strikethrough true
+-p load.mdita.ins true
+-p load.mdita.superscript true
+-p load.mdita.tables true
+-p load.mdita.typographic true
+-p load.mdita.yaml-front-matter true
+</pre><div class="p">where abbreviation, admonition, attributes, etc, are all <i class="i">Markdown extensions</i>, documented in <a href="markdownExtensions.html#Markdown_extensions" class="xref">Markdown extensions</a>.</div><div class="p">If for example, you don’t like the stock Extended Profile and prefer to use a simpler one, plus the <code class="codeph">autolink</code> Markdown extension<a href="#mditaSupport____FN1" class="fn-link"><sup class="fn-callout">(1)</sup></a>, then pass:</div><pre class="pre">-p load.mdita.core-profile true
+-p load.mdita.autolink true
+</pre><div class="p">to <code class="codeph">ditac</code>.</div><div class="p">Parameter <code class="codeph">-p load.mdita.core-profile true</code> is simply a shorthand for:</div><pre class="pre">-p load.mdita.gfm-strikethrough true
+-p load.mdita.tables true
+-p load.mdita.yaml-front-matter true
+</pre><div class="div"></div></div></div></div><hr class="footnote-separator"></hr><table class="fn-layout"><tr><td valign="baseline">&nbsp;<sup class="fn-callout">(1)</sup></td><td valign="baseline" id="mditaSupport____FN1" class="fn">Turns plain text URLs and email addresses into <code class="codeph">&lt;xref href="..."&gt;</code> elements.</td></tr></table></body></html>

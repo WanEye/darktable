@@ -2,33 +2,37 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="t_Media">
     <title>Importing from camera or external storage</title>
-    
+
     <taskbody>
         <prereq id="prereq_wc1_mbh_sy">Connect your camera or other external storage. Then,
                 <indexterm>mount</indexterm><cmdname>mount</cmdname> the storage.</prereq>
-        <context id="context_qsh_ybh_sy">You can <indexterm>import</indexterm> from an external
-            medium including your digital camera through a USB port.</context>
+        <context id="context_qsh_ybh_sy">You can import<indexterm>import</indexterm> from an
+            external medium including your digital camera through a USB port.</context>
         <steps id="steps_wtn_dch_sy">
             <step>
-                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenLib"/></cmd>
             </step>
             <step>
                 <cmd>Click <uicontrol>scan for devices</uicontrol>.</cmd>
             </step>
             <step>
-                <cmd>Click <uicontrol>import from camera</uicontrol>.</cmd>
-                <stepresult>The dialog <wintitle>import from images from camera</wintitle>
-                    opens.</stepresult>
+                <cmd>Click <wintitle conref="../conref/conref.dita#conref/impFromWT"/><indexterm
+                        conref="../conref/conref.dita#conref/impFromIDX"/>.</cmd>
+                <stepresult>The dialog <wintitle
+                        conref="../conref/conref.dita#conref/impFromCameraWT"/><indexterm
+                        conref="../conref/conref.dita#conref/impFromCameraIDX"/> opens.</stepresult>
             </step>
             <step>
-                <cmd>Select the photos that you want to import. Use the <uicontrol>Ctrl</uicontrol>
-                    key to select more photos.</cmd>
+                <cmd>Select the photos that you want to import<ph
+                        conref="../conref/conref.dita#conref/importLC"/>. Use the
+                        <uicontrol>Ctrl</uicontrol> key to select more photos.</cmd>
             </step>
             <step>
-                <cmd>Click <uicontrol>import</uicontrol>.</cmd>
+                <cmd>Click <uicontrol conref="../conref/conref.dita#conref/importUI"/>.</cmd>
                 <stepresult/>
             </step>
         </steps>
-        <result conref="t_Images.dita#t_Images/result_lighttable" id="result_kp2_1t2_wy"/>
+        <result id="resLT">The photos open in the <uicontrol
+                conref="../conref/conref.dita#conref/lighttLC"/> view.</result>
     </taskbody>
 </task>

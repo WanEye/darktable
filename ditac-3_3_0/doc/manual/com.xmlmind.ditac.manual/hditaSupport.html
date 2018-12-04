@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><title>HDITA support</title><link rel="stylesheet" type="text/css" href="resources/eclipsehelp.css"></link><meta name="description" content="XMLmind DITA Converter fully supports HDITA, which specifies how to write DITA topics and maps in HTML5."></meta><meta name="generator" content="XMLmind DITA Converter 3.3.0"></meta></head><body><div id="hditaSupport" xml:lang="en-US" lang="en-US" class="topic"><h2 class="section1-title">HDITA support</h2><p class="shortdesc">XMLmind DITA
+  Converter fully supports <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-hdita" class="xref">HDITA</a>, which specifies how to write DITA topics and maps
+  in <a href="https://www.w3.org/TR/html/" class="xref">HTML5</a>.</p><div class="body"><div class="note"><table class="note-layout"><tr><td class="note-icon"><img src="resources/important.png" alt="Important" width="32" height="32"></img></td><td class="note-text"><h5 class="note-head">Important</h5><div class="note-body"><div class="p">Only <i class="i">XHTML5</i>, that is,
+  the XML syntax of HTML5, is supported. Plain HTML5 is <i class="i">not</i>
+  supported.</div><div class="p">In practice, this means that all tags must be closed (e.g.
+  <code class="codeph">&lt;img/&gt;</code> and not <code class="codeph">&lt;img&gt;</code>), all attributes
+  must have a quoted value (e.g. <code class="codeph">controls=""</code> and not
+  <code class="codeph">controls</code>) and that elements like <code class="codeph">head</code> and
+  <code class="codeph">body</code> may not be omitted.</div></div></td></tr></table></div><div class="p">Template of an HDITA topic
+  (<a href="lwdita_templates/hdita_topic.html" class="xref" target="_blank"><code class="codeph">lwdita_templates/hdita_topic.html</code> <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>):</div><pre class="pre language-xml"><span class="hl-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hl-tag">&lt;html</span> <span class="hl-attribute">xmlns</span>=<span class="hl-value">"http://www.w3.org/1999/xhtml"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;head&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attribute">charset</span>=<span class="hl-value">"UTF-8"</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span>Topic title here<span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;/head&gt;</span>
+  <span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-tag">&lt;article</span> <span class="hl-attribute">id</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;h1&gt;</span>Topic title here<span class="hl-tag">&lt;/h1&gt;</span>
+      <span class="hl-tag">&lt;p&gt;</span>Short description here.<span class="hl-tag">&lt;/p&gt;</span>
+      <span class="hl-tag">&lt;p&gt;</span>Topic body starts here.<span class="hl-tag">&lt;/p&gt;</span>
+    <span class="hl-tag">&lt;/article&gt;</span>
+  <span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></pre><div class="p">Template of an HDITA map (<a href="lwdita_templates/hdita_map.html" class="xref" target="_blank"><code class="codeph">lwdita_templates/hdita_map.html</code> <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>):</div><pre class="pre language-xml"><span class="hl-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hl-tag">&lt;html</span> <span class="hl-attribute">xmlns</span>=<span class="hl-value">"http://www.w3.org/1999/xhtml"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;head&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attribute">charset</span>=<span class="hl-value">"UTF-8"</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span>Map title here<span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;/head&gt;</span>
+  <span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-tag">&lt;nav&gt;</span>
+      <span class="hl-tag">&lt;h1&gt;</span>Map title here<span class="hl-tag">&lt;/h1&gt;</span>
+      <span class="hl-tag">&lt;ul&gt;</span>
+       <span class="hl-tag">&lt;li&gt;</span><span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;a</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span><span class="hl-tag">&lt;/a&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+         <span class="hl-tag">&lt;ul&gt;</span>
+           <span class="hl-tag">&lt;li&gt;</span><span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;a</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span><span class="hl-tag">&lt;/a&gt;</span><span class="hl-tag">&lt;/p&gt;</span><span class="hl-tag">&lt;/li&gt;</span>
+           <span class="hl-tag">&lt;li&gt;</span><span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;a</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span><span class="hl-tag">&lt;/a&gt;</span><span class="hl-tag">&lt;/p&gt;</span><span class="hl-tag">&lt;/li&gt;</span>
+         <span class="hl-tag">&lt;/ul&gt;</span>
+       <span class="hl-tag">&lt;/li&gt;</span>
+       <span class="hl-tag">&lt;li&gt;</span><span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;a</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span><span class="hl-tag">&lt;/a&gt;</span><span class="hl-tag">&lt;/p&gt;</span><span class="hl-tag">&lt;/li&gt;</span>
+     <span class="hl-tag">&lt;/ul&gt;</span>
+    <span class="hl-tag">&lt;/nav&gt;</span>
+  <span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></pre><div id="hditaSupport__I_scr7zc_" class="section"><h3 class="section-title">Implementation specificities</h3><ul class="ul"><li class="li">Adding attribute <code class="codeph">data-class="concept"</code> to the top-level
+      <code class="codeph">article</code> element may be used to generate a DITA
+      <code class="codeph">concept</code> rather than a DITA <code class="codeph">topic</code>.</li><li class="li">A footnote may be represented by
+      <code class="codeph">&lt;div&nbsp;data-class="fn"&gt;</code>, in addition to
+      <code class="codeph">&lt;span&nbsp;data-class="fn"&gt;</code>.<div class="p">A footnote reference may be
+      represented by
+      <code class="codeph">&lt;a&nbsp;href="#FOOTNOTE_ID"&gt;&lt;/a&gt;</code>.</div></li><li class="li">An internal link may be specified as
+      <code class="codeph">&lt;a&nbsp;href="#TARGET_ID"&gt;</code>. Notice that there is no need
+      to specify, like in DITA XML, <code class="codeph">&lt;a&nbsp;href="#./TARGET_ID"&gt;</code>
+      or <code class="codeph">&lt;a&nbsp;href="#TOPIC_ID/TARGET_ID"&gt;</code>.</li><li class="li">Only the <code class="codeph">meta</code> elements having the following names are
+      translated to their DITA equivalent (that is, elements contained in the
+      <code class="codeph">prolog</code> of a DITA <code class="codeph">topic</code> or the
+      <code class="codeph">topicmeta</code> of a DITA <code class="codeph">map</code>):<ul class="ul compact-ul"><li class="li"><code class="codeph">audience</code></li><li class="li"><code class="codeph">author</code></li><li class="li"><code class="codeph">category</code></li><li class="li"><code class="codeph">created</code> or <code class="codeph">dcterms.created</code> (maps to
+          <code class="codeph">&lt;critdates&gt;/&lt;created&gt;</code>)</li><li class="li"><code class="codeph">keyword</code> (maps to
+          <code class="codeph">&lt;keywords&gt;/&lt;keyword&gt;</code>)</li><li class="li"><code class="codeph">permissions</code></li><li class="li"><code class="codeph">publisher</code> or <code class="codeph">dcterms.publisher</code></li><li class="li"><code class="codeph">resourceid</code></li><li class="li"><code class="codeph">revised</code> or <code class="codeph">dcterms.modified</code> (maps to
+          <code class="codeph">&lt;critdates&gt;/&lt;revised&gt;</code>)</li><li class="li"><code class="codeph">source</code></li></ul><div class="p">A <code class="codeph">meta</code> element having any other name is
+      translated to DITA element <code class="codeph">data</code>.</div></li><li class="li">While most HTML5 elements are faithfully translated to their DITA
+      equivalent,<ul class="ul"><li class="li">some elements (<code class="codeph">br</code>, <code class="codeph">hr</code>,
+          <code class="codeph">iframe</code>, <code class="codeph">script</code>, etc) are simply
+          ignored;</li><li class="li">some other elements are translated to a DITA <code class="codeph">ph</code> or
+          <code class="codeph">div</code> having an <code class="codeph">outputclass</code> attribute
+          reflecting their HTML5 origin. <div class="p">Example 1: element
+          <code class="codeph">small</code> is translated to DITA
+          <code class="codeph">&lt;ph&nbsp;outputclass="role-small"&gt;</code>. </div><div class="p">Example 2:
+          an <code class="codeph">h1</code> element other than the very first one (specifying
+          the title of the topic) is translated to DITA
+          <code class="codeph">&lt;div&nbsp;outputclass="role-h1"&gt;</code>. </div><div class="p">Example 3:
+          nested sections are translated to DITA
+          <code class="codeph">&lt;div&nbsp;outputclass="role-section"&gt;</code>.</div></li></ul></li></ul></div><div id="hditaSupport__I_37ayro_" class="section"><h3 class="section-title">Limitations</h3><ul class="ul"><li class="li">Only <i class="i">XHTML5</i>, that is, the XML syntax of HTML5, is
+      supported. Plain HTML5 is <i class="i">not</i> supported.</li><li class="li">Using attribute <code class="codeph">rowspan</code> in <code class="codeph">td</code> or
+      <code class="codeph">th</code> elements will generally cause an incorrect DITA table to
+      be generated.</li></ul></div></div></div></body></html>

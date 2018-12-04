@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Appendix B, Section 3.1. Markdown extensions</title><link href="resources/webhelp.css" rel="stylesheet" type="text/css" /><meta content="XMLmind DITA Converter 3.3.0" name="generator" />
+   <script charset="UTF-8" defer="defer" src="_wh/snowball_en.min.js" type="text/javascript"></script><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+    </script><script charset="UTF-8" src="_wh/wh.min.js" type="text/javascript">
+    </script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript">
+    </script><link href="_wh/user/header_footer.css" rel="stylesheet" type="text/css" /></head>
+   
+<body>
+    <div id="wh-header">
+    <table id="page-header" style="border-spacing: 0; width: 100%;">
+      <tr>
+        <td style="vertical-align: middle; width: 110px;"><a href="http://www.xmlmind.com/"><img alt="XMLmind logo" height="50" src="_wh/user/header_footer_files/logo100x50.png" style="border-style: none;" width="100" /></a></td>
+
+        <td style="vertical-align: middle;"><h1 id="page-header-title">XMLmind
+        DITA Converter Manual</h1></td>
+
+        <td style="vertical-align: middle; width: 110px;"> </td>
+      </tr>
+    </table></div>
+
+    <div id="wh-body">
+      <div id="wh-navigation">
+        <div id="wh-navigation-form">
+          <span id="wh-search-group">
+            <span id="wh-do-search" title="Search"></span><input id="wh-search-field" placeholder="Search" type="text" /><span id="wh-cancel-search" title="Stop searching"></span>
+          </span>
+        </div>
+        <div id="wh-toc-pane">
+          <script charset="UTF-8" src="_wh/toc.js" type="text/javascript"></script>
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-content">
+      
+      <section class="topic" id="Markdown_extensions" lang="en-US" xml:lang="en-US">
+         <h2 class="section2-title">3.1. Markdown extensions <span class="topic-navigation-bar"><img alt="Previous topic" class="navigation-icon-disabled" height="16" src="resources/previous_disabled.png" title="Previous topic" width="16" /> <a class="navigation-link" href="mditaSupport.html#mditaSupport" title="Parent topic: Section 3. MDITA support"><img alt="Parent topic" class="navigation-icon" height="16" src="resources/parent.png" width="16" /></a> <img alt="Child topic" class="navigation-icon-disabled" height="16" src="resources/child_disabled.png" title="Child topic" width="16" /> <img alt="Next topic" class="navigation-icon-disabled" height="16" src="resources/next_disabled.png" title="Next topic" width="16" /></span></h2>
+         <div class="body">
+            <section class="section" id="Markdown_extensions__I_nlluk6_">
+               <h3 class="section-title">Abbreviations</h3>
+               <div class="p" id="Markdown_extensions__ext-abbreviation">Converts plain text abbreviations (e.g. IBM) to <code class="codeph">&lt;abbr&gt;</code> elements.
+               </div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.abbreviation false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">The HTML specification is maintained by the W3C.
+
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;p&gt;</span>The <span class="hl-tag">&lt;keyword&gt;</span>HTML<span class="hl-tag">&lt;/keyword&gt;</span> specification is maintained 
+by  the <span class="hl-tag">&lt;keyword&gt;</span>W3C<span class="hl-tag">&lt;/keyword&gt;</span>.<span class="hl-tag">&lt;/p&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="p">The <span class="keyword">HTML</span> specification is maintained by the <span class="keyword">W3C</span>.
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_xp4vm9_">
+               <h3 class="section-title">Admonitions</h3>
+               <div class="p" id="Markdown_extensions__ext-admonition">Syntax for creating admonitions such as notes, tips, warnings, etc.</div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.admonition false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">After the &quot;<code class="codeph">!!!</code>&quot; tag, the admonition type must be one of &quot;<code class="codeph">note</code>&quot;, &quot;<code class="codeph">attention</code>&quot;,&quot;<code class="codeph">caution</code>&quot;, &quot;<code class="codeph">danger</code>&quot;, &quot;<code class="codeph">fastpath</code>&quot;, &quot;<code class="codeph">important</code>&quot;, &quot;<code class="codeph">notice</code>&quot;, &quot;<code class="codeph">remember</code>&quot;, &quot;<code class="codeph">restriction</code>&quot;, &quot;<code class="codeph">tip</code>&quot;,&quot;<code class="codeph">trouble</code>&quot;, &quot;<code class="codeph">warning</code>&quot;.
+               </div>
+               <div class="p">A note example not having a title:</div><pre class="pre">!!! note &quot;&quot;
+    Support is limited to bug reports.
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;note&gt;</span>
+  <span class="hl-tag">&lt;p&gt;</span>Support is limited to bug reports.<span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/note&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="note">
+                  <table class="note-layout">
+                     <tr>
+                        <td class="note-icon"><img alt="Note" height="32" src="resources/note.png" width="32" /></td>
+                        <td class="note-text">
+                           <h5 class="note-head">Note</h5>
+                           <div class="note-body">
+                              
+                              <div class="p">Support is limited to bug reports.</div>
+                              
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="p">A tip example having a title:</div><pre class="pre">!!! tip &quot;How do you do a hard reboot on an iPad?&quot;
+    Press and hold both the **Home** and **Power** buttons 
+    until your iPad&amp;reg; reboots.
+
+    You can release both buttons when you see Apple&amp;reg; logo.
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;note</span> <span class="hl-attribute">type</span>=<span class="hl-value">&quot;tip&quot;</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attribute">outputclass</span>=<span class="hl-value">&quot;note-title role-h4&quot;</span><span class="hl-tag">&gt;</span>How do you
+  do a hard reboot on an iPad?<span class="hl-tag">&lt;/div&gt;</span>
+
+  <span class="hl-tag">&lt;p&gt;</span>Press and hold both the <span class="hl-tag">&lt;b&gt;</span>Home<span class="hl-tag">&lt;/b&gt;</span> and <span class="hl-tag">&lt;b&gt;</span>Power<span class="hl-tag">&lt;/b&gt;</span> 
+  buttons until your iPad® reboots.<span class="hl-tag">&lt;/p&gt;</span>
+
+  <span class="hl-tag">&lt;p&gt;</span>You can release both buttons when you see 
+  Apple® logo.<span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/note&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="note">
+                  <table class="note-layout">
+                     <tr>
+                        <td class="note-icon"><img alt="Tip" height="32" src="resources/tip.png" width="32" /></td>
+                        <td class="note-text">
+                           <h5 class="note-head">Tip</h5>
+                           <div class="note-body">
+                              
+                              <div class="div note-title role-h4">How do you do a hard reboot on an iPad?</div>
+                              
+                              <div class="p">Press and hold both the <b class="b">Home</b> and <b class="b">Power</b> buttons until your iPad® reboots.
+                              </div>
+                              
+                              <div class="p">You can release both buttons when you see Apple® logo.</div>
+                              
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_yqs2pa_">
+               <h3 class="section-title">Attributes</h3>
+               <div class="p" id="Markdown_extensions__ext-attributes">Syntax for adding attributes to the generated <span class="keyword">HTML</span> elements:
+               </div><pre class="pre">attributes -&gt; '{' attribute_spec ( S attribute_spec)* '}'
+
+attribute_spec -&gt;   name=value
+                  | name='value'
+                  | name=&quot;value&quot;
+                  | #id
+                  |.class
+
+</pre><div class="note">
+                  <table class="note-layout">
+                     <tr>
+                        <td class="note-icon"><img alt="Remember" height="32" src="resources/remember.png" width="32" /></td>
+                        <td class="note-text">
+                           <h5 class="note-head">Remember</h5>
+                           <div class="note-body">
+                              
+                              <div class="div note-title role-h4">An easy rule to remember</div>
+                              
+                              <div class="p">If an <code class="codeph">{...}</code> specification is separated by space characters from some plain text (e.g. <code class="codeph">some plain text {...}</code>) then the attributes are added to the parent element of the text.
+                              </div>
+                              
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.attributes false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">The *circumference { .first-term }* is the length of one circuit along the
+circle, or the distance around the circle. {#circumference}
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;p</span> <span class="hl-attribute">id</span>=<span class="hl-value">&quot;circumference&quot;</span><span class="hl-tag">&gt;</span>The <span class="hl-tag">&lt;i</span> <span class="hl-attribute">outputclass</span>=<span class="hl-value">&quot;first-term&quot;</span><span class="hl-tag">&gt;</span>circumference<span class="hl-tag">&lt;/i&gt;</span> 
+is the length of one circuit along the circle, or the distance around 
+the circle.<span class="hl-tag">&lt;/p&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="p" id="Markdown_extensions__circumference">The <i class="i first-term">circumference</i> is the length of one circuit along the circle, or the distance around the circle.
+               </div>
+               <div class="note">
+                  <table class="note-layout">
+                     <tr>
+                        <td class="note-icon"><img alt="Attention" height="32" src="resources/attention.png" width="32" /></td>
+                        <td class="note-text">
+                           <h5 class="note-head">Attention</h5>
+                           <div class="note-body">
+                              
+                              <div class="div note-title role-h4">Pitfall</div>
+                              
+                              <div class="p">By default, heading IDs are not “rendered” in <span class="keyword">HTML</span> (which is somewhat counterintuitive). You must pass <code class="codeph">-p load.mdita.renderer.RENDER_HEADER_ID true</code> to <code class="codeph">ditac</code> get them “rendered”.
+                              </div>
+                              
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_vp6ykw_">
+               <h3 class="section-title">Automatic links</h3>
+               <div class="p" id="Markdown_extensions__ext-autolink">Turns plain text URLs and email addresses into <code class="codeph">&lt;a href=&quot;...&quot;&gt;</code> elements.
+               </div>
+               <div class="p">This Markdown syntax extension is disabled by default. In order to enable it, pass
+                  parameter <code class="codeph">-p load.mdita.autolink true</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">Please send your bug reports to support@xmlmind.com, a public,
+moderated, mailing list. More information in https://xmlmind.com/.
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;p&gt;</span>Please send your bug reports to <span class="hl-tag">&lt;xref</span> 
+<span class="hl-attribute">href</span>=<span class="hl-value">&quot;mailto:support@xmlmind.com&quot;</span><span class="hl-tag">&gt;</span>support@xmlmind.com<span class="hl-tag">&lt;/xref&gt;</span>,
+a public, moderated, mailing list. More information in <span class="hl-tag">&lt;xref</span>
+<span class="hl-attribute">href</span>=<span class="hl-value">&quot;https://xmlmind.com/&quot;</span><span class="hl-tag">&gt;</span>https://xmlmind.com/<span class="hl-tag">&lt;/xref&gt;</span>.<span class="hl-tag">&lt;/p&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="p">Please send your bug reports to support@xmlmind.com, a public, moderated, mailing
+                  list. More information in https://www.xmlmind.com/.
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_uvzqse_">
+               <h3 class="section-title">Definition lists</h3>
+               <div class="p" id="Markdown_extensions__ext-definition">Syntax for creating definition lists, that is <code class="codeph">&lt;dl&gt;</code>, <code class="codeph">&lt;dt&gt;</code> and <code class="codeph">&lt;dd&gt;</code> elements.
+               </div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.definition false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">Glossary:
+
+LED
+: Light emitting diode.
+
+ABS
+: Antilock braking system.
+
+ESC
+ESP
+: Electronic stability control, also known as Electronic Stability Program.
+
+: On motorcycles, ESC/ESP is called *Traction Control*.
+
+  &gt; Ducati was one of the first to introduce a true competition-level 
+  &gt; traction control system (**DTC**) on a production motorcycle.
+
+EBA
+: Emergency brake assist.
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;p&gt;</span>Glossary:<span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;dl&gt;</span>
+   <span class="hl-tag">&lt;dlentry&gt;</span>
+     <span class="hl-tag">&lt;dt&gt;</span>LED<span class="hl-tag">&lt;/dt&gt;</span>
+     <span class="hl-tag">&lt;dd&gt;</span>
+       <span class="hl-tag">&lt;p&gt;</span>Light emitting diode.<span class="hl-tag">&lt;/p&gt;</span>
+     <span class="hl-tag">&lt;/dd&gt;</span>
+   <span class="hl-tag">&lt;/dlentry&gt;</span>
+   <span class="hl-tag">&lt;dlentry&gt;</span>
+     <span class="hl-tag">&lt;dt&gt;</span>ABS<span class="hl-tag">&lt;/dt&gt;</span>
+     <span class="hl-tag">&lt;dd&gt;</span>
+       <span class="hl-tag">&lt;p&gt;</span>Antilock braking system.<span class="hl-tag">&lt;/p&gt;</span>
+     <span class="hl-tag">&lt;/dd&gt;</span>
+   <span class="hl-tag">&lt;/dlentry&gt;</span>
+   <span class="hl-tag">&lt;dlentry&gt;</span>
+     <span class="hl-tag">&lt;dt&gt;</span>ESC<span class="hl-tag">&lt;/dt&gt;</span>
+     <span class="hl-tag">&lt;dt&gt;</span>ESP<span class="hl-tag">&lt;/dt&gt;</span>
+     <span class="hl-tag">&lt;dd&gt;</span>
+       <span class="hl-tag">&lt;p&gt;</span>Electronic stability control, also known as
+       Electronic Stability Program.<span class="hl-tag">&lt;/p&gt;</span>
+     <span class="hl-tag">&lt;/dd&gt;</span>
+     <span class="hl-tag">&lt;dd&gt;</span>
+       <span class="hl-tag">&lt;p&gt;</span>On motorcycles, ESC/ESP is called <span class="hl-tag">&lt;i&gt;</span>Traction Control<span class="hl-tag">&lt;/i&gt;</span>.<span class="hl-tag">&lt;/p&gt;</span>
+       <span class="hl-tag">&lt;lq&gt;</span>
+         <span class="hl-tag">&lt;p&gt;</span>Ducati was one of the first to introduce a
+         true competition-level traction control system 
+         (<span class="hl-tag">&lt;b&gt;</span>DTC<span class="hl-tag">&lt;/b&gt;</span>) on a production motorcycle.<span class="hl-tag">&lt;/p&gt;</span>
+       <span class="hl-tag">&lt;/lq&gt;</span>
+     <span class="hl-tag">&lt;/dd&gt;</span>
+   <span class="hl-tag">&lt;/dlentry&gt;</span>
+   <span class="hl-tag">&lt;dlentry&gt;</span>
+     <span class="hl-tag">&lt;dt&gt;</span>EBA<span class="hl-tag">&lt;/dt&gt;</span>
+     <span class="hl-tag">&lt;dd&gt;</span>
+       <span class="hl-tag">&lt;p&gt;</span>Emergency brake assist.<span class="hl-tag">&lt;/p&gt;</span>
+     <span class="hl-tag">&lt;/dd&gt;</span>
+   <span class="hl-tag">&lt;/dlentry&gt;</span>
+ <span class="hl-tag">&lt;/dl&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="p">Glossary:</div>
+               <dl class="dl">
+                  <dt class="dt">LED</dt>
+                  <dd class="dd">
+                     
+                     <div class="p">Light emitting diode.</div>
+                     
+                  </dd>
+                  <dt class="dt">ABS</dt>
+                  <dd class="dd">
+                     
+                     <div class="p">Antilock braking system.</div>
+                     
+                  </dd>
+                  <dt class="dt">ESC</dt>
+                  <dt class="dt">ESP</dt>
+                  <dd class="dd">
+                     
+                     <div class="p">Electronic stability control, also known as Electronic Stability Program.</div>
+                     
+                  </dd>
+                  <dd class="dd">
+                     
+                     <div class="p">On motorcycles, ESC/ESP is called <i class="i">Traction Control</i>.
+                     </div>
+                     
+                     <blockquote class="lq">
+                        <div>
+                           
+                           <div class="p">Ducati was one of the first to introduce a true competition-level traction control
+                              system (<b class="b">DTC</b>) on a production motorcycle.
+                           </div>
+                           
+                        </div>
+                     </blockquote>
+                     
+                  </dd>
+                  <dt class="dt">EBA</dt>
+                  <dd class="dd">
+                     
+                     <div class="p">Emergency brake assist.</div>
+                     
+                  </dd>
+               </dl>
+               <div class="note">
+                  <table class="note-layout">
+                     <tr>
+                        <td class="note-icon"><img alt="Remember" height="32" src="resources/remember.png" width="32" /></td>
+                        <td class="note-text">
+                           <h5 class="note-head">Remember</h5>
+                           <div class="note-body">
+                              
+                              <div class="p">Remember that:</div>
+                              
+                              <ul class="ul compact-ul">
+                                 <li class="li">The leading &quot;<code class="codeph">:</code>&quot; character of a definition must be followed by one or more space characters.
+                                 </li>
+                                 <li class="li">Terms must be separated from the previous definition by a blank line.</li>
+                                 <li class="li">A blank line is not allowed between two consecutive terms.</li>
+                                 <li class="li">A blank line is allowed before a definition.</li>
+                              </ul>
+                              
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_kvl00j_">
+               <h3 class="section-title">Footnotes</h3>
+               <div class="p" id="Markdown_extensions__ext-footnotes">Syntax for creating footnotes and footnote references.</div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.footnotes false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">The differences between the programming languages C++[^1] and Java can be
+traced to their heritage.
+
+[^1]: The C++ Programming Language by Bjarne Stroustrup.
+
+C++[^1] was designed for systems and applications programming, extending the
+procedural programming language C[^2].
+
+[^2]: The C Programming Language by Brian Kernighan and Dennis Ritchie.
+
+      Originally published in 1978.
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;p&gt;</span>The differences between the programming languages
+C++<span class="hl-tag">&lt;xref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;#./__FN1&quot;</span> <span class="hl-attribute">type</span>=<span class="hl-value">&quot;fn&quot;</span><span class="hl-tag">/&gt;</span> and Java can
+be traced to their heritage.<span class="hl-tag">&lt;/p&gt;</span>
+
+<span class="hl-tag">&lt;div&gt;</span>
+  <span class="hl-tag">&lt;fn</span> <span class="hl-attribute">id</span>=<span class="hl-value">&quot;__FN1&quot;</span><span class="hl-tag">&gt;</span>The C++ Programming Language by
+  Bjarne Stroustrup.<span class="hl-tag">&lt;/fn&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+
+<span class="hl-tag">&lt;p&gt;</span>C++<span class="hl-tag">&lt;xref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;#./__FN1&quot;</span> <span class="hl-attribute">type</span>=<span class="hl-value">&quot;fn&quot;</span><span class="hl-tag">/&gt;</span> was designed 
+for systems and applications programming, extending 
+the procedural programming 
+language C<span class="hl-tag">&lt;xref</span> <span class="hl-attribute">href</span>=<span class="hl-value">&quot;#./__FN2&quot;</span> <span class="hl-attribute">type</span>=<span class="hl-value">&quot;fn&quot;</span><span class="hl-tag">/&gt;</span>.<span class="hl-tag">&lt;/p&gt;</span>
+
+<span class="hl-tag">&lt;div&gt;</span>
+  <span class="hl-tag">&lt;fn</span> <span class="hl-attribute">id</span>=<span class="hl-value">&quot;__FN2&quot;</span><span class="hl-tag">&gt;</span>The C Programming Language by 
+  Brian Kernighan and Dennis Ritchie. 
+  <span class="hl-tag">&lt;p&gt;</span>Originally published in 1978.<span class="hl-tag">&lt;/p&gt;</span> <span class="hl-tag">&lt;/fn&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="p">The differences between the programming languages C++<a class="fn-link" href="#Markdown_extensions____FN1"><sup class="fn-callout">(1)</sup></a> and Java can be traced to their heritage.
+               </div>
+               <div class="div"></div>
+               <div class="p">C++<a class="fn-link" href="#Markdown_extensions____FN1"><sup class="fn-callout">(1)</sup></a> was designed for systems and applications programming, extending the procedural programming
+                  language C<a class="fn-link" href="#Markdown_extensions____FN2"><sup class="fn-callout">(2)</sup></a>.
+               </div>
+               <div class="div"></div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_2tmnpd_">
+               <h3 class="section-title">Strikethrough and subscript</h3>
+               <div class="p" id="Markdown_extensions__ext-gfm-strikethrough">Converts</div>
+               <ul class="ul compact-ul">
+                  <li class="li">tagged text &quot;<code class="codeph">~~something deleted~~</code>&quot; to <code class="codeph">&lt;del&gt;something deleted&lt;/del&gt;</code>, which is rendered as: <span class="ph role-del">something deleted</span></li>
+                  <li class="li">tagged text &quot;<code class="codeph">~a subscript~</code>&quot; to <code class="codeph">&lt;sub&gt;a subscript&lt;sub/&gt;</code>, which is rendered as: <sub class="sub">a subscript</sub></li>
+               </ul>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Core Profile and the MDITA
+                  Extended Profile, is enabled by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.gfm-strikethrough false</code> to <code class="codeph">ditac</code>.
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_q0rjpn_">
+               <h3 class="section-title">Ins</h3>
+               <div class="p" id="Markdown_extensions__ext-ins">Converts tagged text &quot;<code class="codeph">++something new++</code>&quot; to <code class="codeph">&lt;ins&gt;something new&lt;/ins&gt;</code>, which is rendered as: <span class="ph role-ins">something new</span></div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.ins false</code> to <code class="codeph">ditac</code>.
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_aocol3_">
+               <h3 class="section-title">Superscript</h3>
+               <div class="p" id="Markdown_extensions__ext-superscript">Converts tagged text &quot;<code class="codeph">^a superscript^</code>&quot; to <code class="codeph">&lt;sup&gt;a superscript&lt;/sup&gt;</code>, which is rendered as: <sup class="sup">a superscript</sup></div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.superscript false</code> to <code class="codeph">ditac</code>.
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_28ctml_">
+               <h3 class="section-title">Tables</h3>
+               <div class="p" id="Markdown_extensions__ext-tables">Converts pipe &quot;<code class="codeph">|</code>&quot; delimited text to <code class="codeph">&lt;table&gt;</code> elements.
+               </div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Core Profile and the MDITA
+                  Extended Profile, is enabled by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.tables false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Simple table example:</div><pre class="pre">| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1,1 | Cell 1,2 | Cell 1,3 |
+| Cell 2,1 | Cell 2,2 | Cell 2,3 |
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;table &gt;</span>
+  <span class="hl-tag">&lt;tgroup</span> <span class="hl-attribute">cols</span>=<span class="hl-value">&quot;3&quot;</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;thead&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/thead&gt;</span>
+    <span class="hl-tag">&lt;tbody&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 1,1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 1,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 1,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 2,1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 2,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 2,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/tbody&gt;</span>
+  <span class="hl-tag">&lt;/tgroup&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="table" id="Markdown_extensions__I_lyrrb7_">
+                  <table border="1" class="tgroup" style="width: 100%;">
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 1</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 2</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 3</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" style="vertical-align: middle;">Cell 1,1</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 1,2</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 1,3</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" style="vertical-align: middle;">Cell 2,1</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 2,2</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 2,3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">Table example having centered and right-aligned columns:</div><pre class="pre">| Header 1 | Header 2        | Table Header 3 |
+| -------- | :-------------: | -------------: |
+| Cell 1,1 | Table cell 1,2  | Cell 1,3       |
+| Cell 2,1 | Cell 2,2        | Cell 2,3       |
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;table&gt;</span>
+  <span class="hl-tag">&lt;tgroup</span> <span class="hl-attribute">cols</span>=<span class="hl-value">&quot;3&quot;</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;thead&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;right&quot;</span><span class="hl-tag">&gt;</span>Table Header
+        3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/thead&gt;</span>
+    <span class="hl-tag">&lt;tbody&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 1,1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Table cell
+        1,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;right&quot;</span><span class="hl-tag">&gt;</span>Cell 1,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 2,1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Cell 2,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;right&quot;</span><span class="hl-tag">&gt;</span>Cell 2,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/tbody&gt;</span>
+  <span class="hl-tag">&lt;/tgroup&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="table" id="Markdown_extensions__I_i2qm2k_">
+                  <table border="1" class="tgroup" style="width: 100%;">
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 1</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 2</td>
+                           <td class="entry" style="text-align: right;vertical-align: middle;">Table Header 3</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" style="vertical-align: middle;">Cell 1,1</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Table cell 1,2</td>
+                           <td class="entry" style="text-align: right;vertical-align: middle;">Cell 1,3</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" style="vertical-align: middle;">Cell 2,1</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Cell 2,2</td>
+                           <td class="entry" style="text-align: right;vertical-align: middle;">Cell 2,3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">Table example having cells spanning several columns and a caption:</div><pre class="pre">| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1,1 + 1,2     || Cell 1,3 |
+| Cell 2,1 + 2,2 + 2,3         |||
+| Cell 3,1 | Cell 3,2 | Cell 3,3 |
+[Table caption here]
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;table&gt;</span>
+  <span class="hl-tag">&lt;title&gt;</span>Table caption here<span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;tgroup</span> <span class="hl-attribute">cols</span>=<span class="hl-value">&quot;3&quot;</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;colspec</span> <span class="hl-attribute">colname</span>=<span class="hl-value">&quot;c1&quot;</span> <span class="hl-attribute">rowheader</span>=<span class="hl-value">&quot;headers&quot;</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;colspec</span> <span class="hl-attribute">colname</span>=<span class="hl-value">&quot;c2&quot;</span> <span class="hl-attribute">rowheader</span>=<span class="hl-value">&quot;headers&quot;</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;colspec</span> <span class="hl-attribute">colname</span>=<span class="hl-value">&quot;c3&quot;</span> <span class="hl-attribute">rowheader</span>=<span class="hl-value">&quot;headers&quot;</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;thead&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">align</span>=<span class="hl-value">&quot;center&quot;</span><span class="hl-tag">&gt;</span>Header 3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/thead&gt;</span>
+    <span class="hl-tag">&lt;tbody&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">nameend</span>=<span class="hl-value">&quot;c2&quot;</span> <span class="hl-attribute">namest</span>=<span class="hl-value">&quot;c1&quot;</span><span class="hl-tag">&gt;</span>Cell 1,1
+        + 1,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 1,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry</span> <span class="hl-attribute">nameend</span>=<span class="hl-value">&quot;c3&quot;</span> <span class="hl-attribute">namest</span>=<span class="hl-value">&quot;c1&quot;</span><span class="hl-tag">&gt;</span>Cell 2,1
+        + 2,2 + 2,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+      <span class="hl-tag">&lt;row</span> <span class="hl-attribute">valign</span>=<span class="hl-value">&quot;middle&quot;</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 3,1<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 3,2<span class="hl-tag">&lt;/entry&gt;</span>
+        <span class="hl-tag">&lt;entry&gt;</span>Cell 3,3<span class="hl-tag">&lt;/entry&gt;</span>
+      <span class="hl-tag">&lt;/row&gt;</span>
+    <span class="hl-tag">&lt;/tbody&gt;</span>
+  <span class="hl-tag">&lt;/tgroup&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span>
+</pre><div class="p">which is rendered as:</div>
+               <div class="table" id="Markdown_extensions__I_mj52om_">
+                  <h4 class="table-title">Table B-1. Table caption here</h4>
+                  <table border="1" class="tgroup" style="width: 100%;">
+                     <colgroup class="colspec"></colgroup>
+                     <colgroup class="colspec"></colgroup>
+                     <colgroup class="colspec"></colgroup>
+                     <thead class="thead table-header-style">
+                        <tr class="row">
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 1</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 2</td>
+                           <td class="entry" style="text-align: center;vertical-align: middle;">Header 3</td>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" colspan="2" style="vertical-align: middle;">Cell 1,1 + 1,2</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 1,3</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" colspan="3" style="vertical-align: middle;">Cell 2,1 + 2,2 + 2,3</td>
+                        </tr>
+                        <tr class="row">
+                           <td class="entry" style="vertical-align: middle;">Cell 3,1</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 3,2</td>
+                           <td class="entry" style="vertical-align: middle;">Cell 3,3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </section>
+            <section class="section" id="Markdown_extensions__I_97vj9v_">
+               <h3 class="section-title">Typographic characters</h3>
+               <div class="p" id="Markdown_extensions__ext-typographic">Converts</div>
+               <ul class="ul compact-ul">
+                  <li class="li">&quot;<code class="codeph">'</code>&quot; to apostrophe <code class="codeph">&amp;rsquo;</code>, which is rendered as in word: &quot;don’t&quot;
+                  </li>
+                  <li class="li">&quot;<code class="codeph">...</code>&quot; and &quot;<code class="codeph">. . .</code>&quot; to ellipsis <code class="codeph">&amp;hellip;</code>, which are both rendered as: …
+                  </li>
+                  <li class="li">&quot;<code class="codeph">--</code>&quot; to en dash <code class="codeph">&amp;ndash;</code>, which is rendered as: –
+                  </li>
+                  <li class="li">&quot;<code class="codeph">---</code>&quot; to em dash <code class="codeph">&amp;mdash;</code>, which is rendered as: —
+                  </li>
+                  <li class="li">single quoted <code class="codeph">'some text'</code> to <code class="codeph">&amp;lsquo;some text&amp;rsquo;</code>, which is rendered as: ‘some text’
+                  </li>
+                  <li class="li">double quoted <code class="codeph">&quot;some text&quot;</code> to <code class="codeph">&amp;ldquo;some text&amp;rdquo;</code>, which is rendered as: “some text”
+                  </li>
+                  <li class="li">double angle quoted <code class="codeph">&lt;&lt;some text&gt;&gt;</code> to <code class="codeph">&amp;laquo;some text&amp;raquo;</code>, which is rendered as: «some text»
+                  </li>
+               </ul>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Extended Profile, is enabled
+                  by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.typographic false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">If you don’t want some of the above plain text sequences to be processed, specify:</div>
+               <dl class="dl">
+                  <dt class="dt"><code class="codeph">-p load.mdita.typographic.ENABLE_QUOTES false</code></dt>
+                  <dd class="dd">Do not process single quotes, double quotes, double angle quotes.</dd>
+                  <dt class="dt"><code class="codeph">-p load.mdita.typographic.ENABLE_SMARTS false</code></dt>
+                  <dd class="dd">Do not process &quot;<code class="codeph">'</code>&quot;, &quot;<code class="codeph">...</code>&quot;, &quot;<code class="codeph">. . .</code>&quot;, &quot;<code class="codeph">--</code>&quot;, &quot;<code class="codeph">---</code>&quot;.
+                  </dd>
+               </dl>
+            </section>
+            <section class="section" id="Markdown_extensions__I_3fjtee_">
+               <h3 class="section-title">YAML front matter</h3>
+               <div class="p" id="Markdown_extensions__ext-yaml-front-matter">Syntax for adding metadata to the generated DITA topic or map, that is, for populating
+                  the <code class="codeph">&lt;prolog&gt;</code> element of a DITA topic and the <code class="codeph">&lt;topicmeta&gt;</code> element of a DITA map.
+               </div>
+               <div class="p">These metadata are specified by key/value pairs written using a subset of the <a class="xref" href="https://en.wikipedia.org/wiki/YAML" target="_blank">YAML <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a> (see also <a class="xref" href="http://yaml.org/">http://yaml.org/</a>) syntax.
+               </div>
+               <div class="p">Supported metadata are:</div>
+               <ul class="ul compact-ul">
+                  <li class="li"><code class="codeph">audience</code></li>
+                  <li class="li"><code class="codeph">author</code></li>
+                  <li class="li"><code class="codeph">category</code></li>
+                  <li class="li"><code class="codeph">created</code> (maps to <code class="codeph">&lt;critdates&gt;/&lt;created&gt;</code>)
+                  </li>
+                  <li class="li"><code class="codeph">keyword</code> (maps to <code class="codeph">&lt;keywords&gt;/&lt;keyword&gt;</code>)
+                  </li>
+                  <li class="li"><code class="codeph">permissions</code></li>
+                  <li class="li"><code class="codeph">publisher</code></li>
+                  <li class="li"><code class="codeph">resourceid</code></li>
+                  <li class="li"><code class="codeph">revised</code> (maps to <code class="codeph">&lt;critdates&gt;/&lt;revised&gt;</code>)
+                  </li>
+                  <li class="li"><code class="codeph">source</code></li>
+               </ul>
+               <div class="p">Any other metadata is translated to DITA element <code class="codeph">&lt;data&gt;</code>.
+               </div>
+               <div class="p">This Markdown syntax extension, which is part of the MDITA Core Profile and the MDITA
+                  Extended Profile, is enabled by default. In order to disable it, pass parameter <code class="codeph">-p load.mdita.yaml-front-matter false</code> to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Example:</div><pre class="pre">---
+author:
+  - Brian W. Kernighan
+  - Dennis Ritchie
+publisher: Prentice Hall
+created: 1978/01/01
+revised: 1988/01/01
+---
+</pre><div class="p">is converted to:</div><pre class="pre language-xml"><span class="hl-tag">&lt;prolog&gt;</span>
+  <span class="hl-tag">&lt;author&gt;</span>Brian W. Kernighan<span class="hl-tag">&lt;/author&gt;</span>
+  <span class="hl-tag">&lt;author&gt;</span>Dennis Ritchie<span class="hl-tag">&lt;/author&gt;</span>
+  <span class="hl-tag">&lt;publisher&gt;</span>Prentice Hall<span class="hl-tag">&lt;/publisher&gt;</span>
+  <span class="hl-tag">&lt;critdates&gt;</span>
+    <span class="hl-tag">&lt;created</span> <span class="hl-attribute">date</span>=<span class="hl-value">&quot;1978/01/01&quot;</span><span class="hl-tag">/&gt;</span>
+    <span class="hl-tag">&lt;revised</span> <span class="hl-attribute">modified</span>=<span class="hl-value">&quot;1988/01/01&quot;</span><span class="hl-tag">/&gt;</span>
+  <span class="hl-tag">&lt;/critdates&gt;</span>
+<span class="hl-tag">&lt;/prolog&gt;</span>
+</pre></section>
+            <section class="section" id="Markdown_extensions__I_40r4i5_">
+               <h3 class="section-title">Other extensions</h3>
+               <div class="p" id="Markdown_extensions__other_extensions">The following Markdown syntax extensions are also supported:</div>
+               <ul class="ul compact-ul">
+                  <li class="li">anchorlink</li>
+                  <li class="li">aside</li>
+                  <li class="li">emoji</li>
+                  <li class="li">enumerated-reference</li>
+                  <li class="li">gfm-issues</li>
+                  <li class="li">gfm-tasklist</li>
+                  <li class="li">gfm-users</li>
+                  <li class="li">toc</li>
+                  <li class="li">wikilink</li>
+                  <li class="li">youtube-embedded</li>
+               </ul>
+               <div class="p">All the above extensions are disabled by default. In order to enable an extension,
+                  pass parameter <code class="codeph">-p load.mdita.EXTENSION_NAME true</code> to <code class="codeph">ditac</code>. For example: <code class="codeph">-p load.mdita.emoji true</code></div>
+               <div class="p">Any extension listed in this section may be parameterized by passing parameter <code class="codeph">-p load.mdita.EXTENSION_NAME.PARAMETER_NAME PARAMETER_VALUE</code><a class="fn-link" href="#Markdown_extensions____FN0xA7_a"><sup class="fn-callout">(3)</sup></a> to <code class="codeph">ditac</code>. Examples:
+               </div>
+               <ul class="ul compact-ul">
+                  <li class="li"><code class="codeph">-p load.mdita.emoji.ATTR_IMAGE_SIZE 16</code></li>
+                  <li class="li"><code class="codeph">-p load.mdita.emoji.ATTR_ALIGN &quot;&quot;</code></li>
+                  <li class="li"><code class="codeph">-p load.mdita.emoji.USE_IMAGE_TYPE IMAGE_ONLY</code></li>
+                  <li class="li"><code class="codeph">-p load.mdita.emoji.ROOT_IMAGE_PATH https://www.webpagefx.com/tools/emoji-cheat-sheet/graphics/emojis/</code></li>
+               </ul>
+               <div class="p">More generally, the Markdown parser (pseudo <i class="i">EXTENSION_NAME</i> is &quot;<code class="codeph">parser</code>&quot;) and the <span class="keyword">HTML</span> renderer (pseudo <i class="i">EXTENSION_NAME</i> is &quot;<code class="codeph">renderer</code>&quot;) may also be parameterized this way. For example, automatically generate an ID for
+                  all headings not already having an ID <b class="b">and</b> “render” all heading IDs in <span class="keyword">HTML</span><a class="fn-link" href="#Markdown_extensions____FN0xA7_b"><sup class="fn-callout">(4)</sup></a>:
+               </div><pre class="pre">-p load.mdita.renderer.GENERATE_HEADER_ID true
+-p load.mdita.renderer.RENDER_HEADER_ID true
+</pre><div class="p">More information about extensions and their parameters in <a class="xref" href="https://github.com/vsch/flexmark-java/wiki/Extensions" target="_blank">Extensions <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a> (<a class="xref" href="https://github.com/vsch/flexmark-java" target="_blank">flexmark-java <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a> is the software component used by ditac to parse Markdown and convert it to <span class="keyword">HTML</span>).
+               </div>
+               <div class="div"></div>
+               <div class="div"></div>
+            </section>
+         </div>
+      </section>
+      <hr class="footnote-separator" />
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(1)</sup></td>
+            <td class="fn" id="Markdown_extensions____FN1" style="vertical-align: baseline;">The C++ Programming Language by Bjarne Stroustrup.</td>
+         </tr>
+      </table>
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(2)</sup></td>
+            <td class="fn" id="Markdown_extensions____FN2" style="vertical-align: baseline;">The C Programming Language by Brian Kernighan and Dennis Ritchie.
+               
+               <div class="p">Originally published in 1978.</div>
+               
+            </td>
+         </tr>
+      </table>
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(3)</sup></td>
+            <td class="fn" id="Markdown_extensions____FN0xA7_a" style="vertical-align: baseline;">The only types supported for <i class="i">PARAMETER_VALUE</i> are: string, boolean (<code class="codeph">true</code> or <code class="codeph">false</code>), integer and any enumerated type.
+            </td>
+         </tr>
+      </table>
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(4)</sup></td>
+            <td class="fn" id="Markdown_extensions____FN0xA7_b" style="vertical-align: baseline;">By default, heading IDs are not “rendered” in <span class="keyword">HTML</span>, which is somewhat counterintuitive.
+            </td>
+         </tr>
+      </table>
+   </div>
+    </div>
+
+    <div id="wh-footer">
+    <p id="page-footer">Web Help generated using <a href="http://www.xmlmind.com/ditac/" target="_blank">XMLmind DITA Converter</a>.</p></div>
+  </body></html>

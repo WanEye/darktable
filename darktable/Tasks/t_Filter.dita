@@ -6,7 +6,7 @@
     <taskbody>
         <steps id="steps_bvj_sdw_sy">
             <step>
-                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+                <cmd conref="t_Images.dita#t_Images/open_lighttable">.</cmd>
             </step>
             <step>
                 <cmd>Click <uicontrol>all</uicontrol> right from <uicontrol>view</uicontrol>.</cmd>

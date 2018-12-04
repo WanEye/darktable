@@ -10,7 +10,7 @@
 
     <steps>
       <step>
-        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+        <cmd>Click <uicontrol>D</uicontrol> to open the darkroom or development view.</cmd>
       </step>
 
       <step>
@@ -24,22 +24,22 @@
           </chhead>
 
           <chrow>
-            <choption><uicontrol>basic group</uicontrol></choption>
+            <choption><uicontrol conref="../conref/conref.dita#conref/basicgUI"/><indexterm
+                conref="../conref/conref.dita#conref/basicGroupUI"/></choption>
 
             <chdesc><ol>
-                <li>Expand <uicontrol>contrast, brightness,
-                saturation</uicontrol></li>
+                <li>Expand <uicontrol>contrast, brightness, saturation</uicontrol>.</li>
 
-                <li>Slide the <uicontrol>saturation</uicontrol> all the way to
-                the left</li>
+                <li>Slide the <uicontrol>saturation</uicontrol> all the way to the left.</li>
               </ol></chdesc>
           </chrow>
 
           <chrow>
-            <choption><uicontrol>color group</uicontrol></choption>
+            <choption><uicontrol conref="../conref/conref.dita#conref/colorgUI"/><indexterm
+                conref="../conref/conref.dita#conref/colorgIDX"/></choption>
 
             <chdesc><ol>
-                <li>Expand <uicontrol>monochrome</uicontrol></li>
+                <li>Expand <uicontrol>monochrome</uicontrol>.</li>
 
                 <li>Click the <uicontrol>On Off</uicontrol> button.</li>
               </ol></chdesc>

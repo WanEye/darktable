@@ -8,15 +8,18 @@
         </context>
         <steps>
             <step>
-                <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+                <cmd>Click <uicontrol>D</uicontrol> to open the <uicontrol
+                        conref="../conref/conref.dita#conref/darkroomUI"/><indexterm
+                        conref="../conref/conref.dita#conref/darkroomIDX"/>.</cmd>
             </step>
             <step>
-                <cmd>Click the <uicontrol>correction group</uicontrol> icon.</cmd>
-                   <info><image conref="../Images/i_CorrectionGroup.dita#ReusableComponent_q54_fpx_vy/image_uvz_y4x_vy"
-                        id="image_tfz_gpx_vy"/></info>
+                <cmd>Click the <uicontrol conref="../conref/conref.dita#conref/correcUI"/>
+                    <indexterm conref="../conref/conref.dita#conref/correcIDX"/>icon.</cmd>
+                <info><image href="../Images/correction_group.png" id="image_nfh_mqr_yfb"/></info>
             </step>
             <step>
-                <cmd>Expand the <uicontrol>equalizer</uicontrol> tool.</cmd>
+                <cmd>Expand the <uicontrol conref="../conref/conref.dita#conref/eqUI"/><indexterm
+                        conref="../conref/conref.dita#conref/eqIDX"/> tool.</cmd>
             </step>
             <step>
                 <cmd>Click <menucascade>

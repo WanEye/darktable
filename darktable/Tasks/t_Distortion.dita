@@ -7,18 +7,18 @@
   <taskbody>
     <steps>
       <step>
-        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+        <cmd><ph conref="../conref/conref.dita#conref/OpenDark"/></cmd>
       </step>
 
       <step>
-        <cmd>Click the <uicontrol>correction group</uicontrol> icon.</cmd>
-        <info><image conref="../Images/i_CorrectionGroup.dita#ReusableComponent_q54_fpx_vy/image_uvz_y4x_vy"
-          id="image_kx4_fpx_vy"/></info> 
+        <cmd>Click the <uicontrol conref="../conref/conref.dita#conref/correcUI"/>
+          <indexterm conref="../conref/conref.dita#conref/correcIDX"/>icon.</cmd>
+        <info><image href="../Images/correction_group.png" id="image_pgq_4qr_yfb"/></info>
       </step>
 
       <step>
-        <cmd>Locate the <uicontrol>lens correction</uicontrol> tool in the
-        right panel.</cmd>
+        <cmd>Locate the <uicontrol conref="../conref/conref.dita#conref/lenscorrUI"/><indexterm
+          conref="../conref/conref.dita#conref/lenscorrIDX"/> tool in the right panel.</cmd>
       </step>
     </steps>
     <result id="result_e4m_t3c_vy">The tool applies the corrections automatically <p/><p/><fig>

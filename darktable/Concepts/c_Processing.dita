@@ -5,26 +5,32 @@
   <title>Processing options</title>
 
   <conbody>
-    <p><term conref="c_Overview.dita#c_Overview/product_name"/> provides tools to process a
-      particular aspect of your photo. An example is the <uicontrol>crop and rotate</uicontrol>
-      tool. With this tool you can crop your photo and turn your photo in any angle.</p>
+    <p><ph conref="../conref/conref.dita#conref/prdName"/> provides tools to process a particular
+      aspect of your photo. An example is the <uicontrol>crop and rotate</uicontrol> tool. With this
+      tool you can crop your photo and turn your photo in any angle.</p>
 
     <p>You can find most editing tools in the darkroom view.</p>
-    <p>The <uicontrol>lighttable</uicontrol> or library view contains the following tools.</p>
+    <p>The <uicontrol conref="../conref/conref.dita#conref/lighttLC"/> view contains the following
+      tools.</p>
     <p>
       <ul>
-        <li>Creating <xref href="../Glossary/g_glossary.dita#HDR">HDR</xref></li>
-        <li>Editing from existing history stack</li>
+        <li>Creating <ph conref="../conref/conref.dita#conref/HDR">.</ph></li>
+        <li>Editing from existing history stack.</li>
       </ul>
     </p>
-    <p>The <uicontrol>darkroom</uicontrol> or development view divides the editing tools in four
-      groups.</p>
+    <p>The <uicontrol conref="../conref/conref.dita#conref/darkroomUI"/> view<indexterm
+        conref="../conref/conref.dita#conref/darkroomIDX"/> divides the editing tools in groups.</p>
     <ul>
-      <li id="li_jbf_crp_ry"><indexterm>basic group</indexterm>basic group</li>
-      <li id="li_hkj_crp_ry"><indexterm>tone group</indexterm>tone group</li>
-      <li id="li_dbp_crp_ry"><indexterm>color group</indexterm>color group</li>
-      <li id="li_z4y_crp_ry"><indexterm>correction group</indexterm>correction group</li>
-      <li id="li_fcd_drp_ry"><indexterm>effects group</indexterm>effects group</li>
+      <li id="li_jbf_crp_ry"><uicontrol conref="../conref/conref.dita#conref/basicgUI"/><indexterm
+          conref="../conref/conref.dita#conref/basicGroupUI"/>.</li>
+      <li id="li_hkj_crp_ry"><uicontrol conref="../conref/conref.dita#conref/tonegUI"/><indexterm
+          conref="../conref/conref.dita#conref/toneGrIDX"/>.</li>
+      <li id="li_dbp_crp_ry"><uicontrol conref="../conref/conref.dita#conref/colorgUI"/><indexterm
+          conref="../conref/conref.dita#conref/colorgIDX"/>.</li>
+      <li id="li_z4y_crp_ry"><uicontrol conref="../conref/conref.dita#conref/correcUI"/><indexterm
+          conref="../conref/conref.dita#conref/correcIDX"/>.</li>
+      <li id="li_fcd_drp_ry"><uicontrol conref="../conref/conref.dita#conref/effectsgUI"/><indexterm
+          conref="../conref/conref.dita#conref/effectsgIDX"/>.</li>
     </ul>
     <fig expanse="page">
       <title>tools groups</title>
@@ -32,12 +38,12 @@
     </fig>
     <p>Each tool has two, three, or four <indexterm>switches</indexterm>switches.</p>
     <ul>
-      <li id="li_jmp_mxp_ry">On off</li>
-      <li id="li_s2v_mxp_ry">Presets</li>
-      <li id="li_wqd_nxp_ry">Reset parameters</li>
-      <li id="li_wm3_nxp_ry">Multiple instance actions</li>
+      <li id="li_jmp_mxp_ry"><uicontrol>On Off</uicontrol>.</li>
+      <li id="li_s2v_mxp_ry"><uicontrol>Presets</uicontrol>.</li>
+      <li id="li_wqd_nxp_ry"><uicontrol>Reset parameters</uicontrol>.</li>
+      <li id="li_wm3_nxp_ry"><uicontrol>Multiple instance actions</uicontrol>.</li>
     </ul>
-    
+
     <fig id="fig_hlp_mtp_ry" expanse="page">
       <title>four switches of the shadows and highlights tool</title>
       <image id="image_rrm_wsp_ry" href="../Images/Switches.png"/>

@@ -8,15 +8,17 @@
 
     <steps>
       <step>
-        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+        <cmd>Click <uicontrol>D</uicontrol> to open the darkroom or development view.</cmd>
       </step>
 
       <step>
-        <cmd>Click the <uicontrol>correction group</uicontrol> icon.</cmd>
+        <cmd>Click the <uicontrol conref="../conref/conref.dita#conref/correcUI"/><indexterm
+            conref="../conref/conref.dita#conref/correcIDX"/> icon.</cmd>
       </step>
 
       <step>
-        <cmd>Locate the <uicontrol>chromatic aberrations</uicontrol> tool in the right panel.</cmd>
+        <cmd>Locate the <xref conref="../conref/conref.dita#conref/chromAbXREF"/><indexterm
+            conref="../conref/conref.dita#conref/chromAbIDX"/> tool in the right panel.</cmd>
       </step>
 
       <step>

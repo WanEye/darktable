@@ -4,27 +4,35 @@
     <title>Placing photo on map</title>
    
     <taskbody>
-        <context id="context_lv3_tnl_ry">If you place a file onto a map, the file gets a geotag.
-            This <indexterm>geotag</indexterm>geotag consists of the coordinates of the
-                <indexterm>map</indexterm>map, the latitude and longitude. </context>
+        <context id="context_lv3_tnl_ry">If you place a file onto a map, the file gets a <ph
+                conref="../conref/conref.dita#conref/geotagLC"/>. This <ph
+                conref="../conref/conref.dita#conref/geotagLC"/> consists of the coordinates of the
+                <indexterm>map</indexterm>map, the latitude and longitude.</context>
         <steps id="steps_ol3_34l_ry">
+            
             <step>
-                <cmd id="cmd_rs2_4sl_ry">Press <uicontrol>M</uicontrol> to open the map view.</cmd>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenMapView"/></cmd>
             </step>
             <step>
-                <cmd id="cmd_pxj_4sl_ry">Expand <uicontrol>map settings</uicontrol></cmd>
+                <cmd id="cmd_pxj_4sl_ry">Expand  <uicontrol
+                        conref="../conref/conref.dita#conref/mapset"/><indexterm
+                        conref="../conref/conref.dita#conref/mapsetUI"/></cmd>
             </step>
             <step>
-                <cmd id="cmd_avq_4sl_ry">Select <uicontrol>show OSD</uicontrol>.</cmd>
+                <cmd id="cmd_avq_4sl_ry">Select <uicontrol conref="../conref/conref.dita#conref/showOSDui"
+                        /><indexterm conref="../conref/conref.dita#conref/showOSDidx"/>.</cmd>
             </step>
             <step>
-                <cmd id="cmd_hhx_4sl_ry">Choose the <uicontrol>map source</uicontrol>.</cmd>
+                <cmd id="cmd_hhx_4sl_ry">Choose the <uicontrol
+                    conref="../conref/conref.dita#conref/mapsourceUI"/><indexterm
+                        conref="../conref/conref.dita#conref/mapsourceIDX"/>.</cmd>
             </step>
             <step>
-                <cmd id="cmd_sxg_nsl_ry">Zoom in or zoom out the map to discover the location.</cmd>
+                <cmd id="cmd_sxg_nsl_ry">Zoom in or zoom out the map<indexterm>map</indexterm> to
+                    discover the location.</cmd>
             </step>
             <step>
-                <cmd>Drag your photo to that location on the map.</cmd>
+                <cmd>Drag your photo to that location on the map<indexterm>map</indexterm>.</cmd>
             </step>
         </steps>
     </taskbody>

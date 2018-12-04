@@ -8,7 +8,7 @@
 
     <steps>
       <step>
-        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable">.</cmd>
       </step>
 
       <step>

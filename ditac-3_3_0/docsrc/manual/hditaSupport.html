@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>HDITA support</title>
+  </head>
+
+  <body><article id="hditaSupport"><h1>HDITA support</h1><p>XMLmind DITA
+  Converter fully supports <a
+  href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-hdita"
+  target="_blank">HDITA</a>, which specifies how to write DITA topics and maps
+  in <a href="https://www.w3.org/TR/html/" target="_blank">HTML5</a>.</p><div
+  data-class="note" data-type="important"><p>Only <em>XHTML5</em>, that is,
+  the XML syntax of HTML5, is supported. Plain HTML5 is <em>not</em>
+  supported.</p><p>In practice, this means that all tags must be closed (e.g.
+  <code>&lt;img/&gt;</code> and not <code>&lt;img&gt;</code>), all attributes
+  must have a quoted value (e.g. <code>controls=""</code> and not
+  <code>controls</code>) and that elements like <code>head</code> and
+  <code>body</code> may not be omitted.</p></div><p>Template of an HDITA topic
+  (<a href="lwdita_templates/hdita_topic.html" rel="external"
+  type="html"><code>lwdita_templates/hdita_topic.html</code></a>):</p><pre
+  class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"/&gt;
+    &lt;title&gt;Topic title here&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article id="???"&gt;
+      &lt;h1&gt;Topic title here&lt;/h1&gt;
+      &lt;p&gt;Short description here.&lt;/p&gt;
+      &lt;p&gt;Topic body starts here.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre><p>Template of an HDITA map (<a
+  href="lwdita_templates/hdita_map.html" rel="external"
+  type="html"><code>lwdita_templates/hdita_map.html</code></a>):</p><pre
+  class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"/&gt;
+    &lt;title&gt;Map title here&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;nav&gt;
+      &lt;h1&gt;Map title here&lt;/h1&gt;
+      &lt;ul&gt;
+       &lt;li&gt;&lt;p&gt;&lt;a href="???"&gt;&lt;/a&gt;&lt;/p&gt;
+         &lt;ul&gt;
+           &lt;li&gt;&lt;p&gt;&lt;a href="???"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;p&gt;&lt;a href="???"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+       &lt;/li&gt;
+       &lt;li&gt;&lt;p&gt;&lt;a href="???"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre><h2>Implementation specificities</h2><ul>
+      <li>Adding attribute <code>data-class="concept"</code> to the top-level
+      <code>article</code> element may be used to generate a DITA
+      <code>concept</code> rather than a DITA <code>topic</code>.</li>
+
+      <li>A footnote may be represented by
+      <code>&lt;div data-class="fn"&gt;</code>, in addition to
+      <code>&lt;span data-class="fn"&gt;</code>.<p>A footnote reference may be
+      represented by
+      <code>&lt;a href="#FOOTNOTE_ID"&gt;&lt;/a&gt;</code>.</p></li>
+
+      <li>An internal link may be specified as
+      <code>&lt;a href="#TARGET_ID"&gt;</code>. Notice that there is no need
+      to specify, like in DITA XML, <code>&lt;a href="#./TARGET_ID"&gt;</code>
+      or <code>&lt;a href="#TOPIC_ID/TARGET_ID"&gt;</code>.</li>
+
+      <li>Only the <code>meta</code> elements having the following names are
+      translated to their DITA equivalent (that is, elements contained in the
+      <code>prolog</code> of a DITA <code>topic</code> or the
+      <code>topicmeta</code> of a DITA <code>map</code>):<ul
+          class="compact-ul">
+          <li><code>audience</code></li>
+
+          <li><code>author</code></li>
+
+          <li><code>category</code></li>
+
+          <li><code>created</code> or <code>dcterms.created</code> (maps to
+          <code>&lt;critdates&gt;/&lt;created&gt;</code>)</li>
+
+          <li><code>keyword</code> (maps to
+          <code>&lt;keywords&gt;/&lt;keyword&gt;</code>)</li>
+
+          <li><code>permissions</code></li>
+
+          <li><code>publisher</code> or <code>dcterms.publisher</code></li>
+
+          <li><code>resourceid</code></li>
+
+          <li><code>revised</code> or <code>dcterms.modified</code> (maps to
+          <code>&lt;critdates&gt;/&lt;revised&gt;</code>)</li>
+
+          <li><code>source</code></li>
+        </ul><p>A <code>meta</code> element having any other name is
+      translated to DITA element <code>data</code>.</p></li>
+
+      <li>While most HTML5 elements are faithfully translated to their DITA
+      equivalent,<ul>
+          <li>some elements (<code>br</code>, <code>hr</code>,
+          <code>iframe</code>, <code>script</code>, etc) are simply
+          ignored;</li>
+
+          <li>some other elements are translated to a DITA <code>ph</code> or
+          <code>div</code> having an <code>outputclass</code> attribute
+          reflecting their HTML5 origin. <p>Example 1: element
+          <code>small</code> is translated to DITA
+          <code>&lt;ph outputclass="role-small"&gt;</code>. </p><p>Example 2:
+          an <code>h1</code> element other than the very first one (specifying
+          the title of the topic) is translated to DITA
+          <code>&lt;div outputclass="role-h1"&gt;</code>. </p><p>Example 3:
+          nested sections are translated to DITA
+          <code>&lt;div outputclass="role-section"&gt;</code>.</p></li>
+        </ul></li>
+    </ul><h2>Limitations</h2><ul>
+      <li>Only <em>XHTML5</em>, that is, the XML syntax of HTML5, is
+      supported. Plain HTML5 is <em>not</em> supported.</li>
+
+      <li>Using attribute <code>rowspan</code> in <code>td</code> or
+      <code>th</code> elements will generally cause an incorrect DITA table to
+      be generated.</li>
+    </ul></article></body>
+</html>

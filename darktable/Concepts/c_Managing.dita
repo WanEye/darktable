@@ -1,61 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
 "concept.dtd">
 <concept id="c_Viewing_editing">
   <title>Management options</title>
 
   <conbody>
-    <p>After you imported your photos, you can make a selection of which
-    photos you want to develop. To make your selection easier, you can do the
-    following actions.</p>
+    <p>After you imported your photos, you can make a selection of which photos you want to develop.
+      To make your selection easier, you can do the following actions.</p>
 
     <ul>
-      <li>Assigning <indexterm>star ratings</indexterm>star ratings</li>
+      <li>Assigning <indexterm>star ratings</indexterm>star ratings.</li>
 
-      <li>Assigning <indexterm>color labels</indexterm>color labels</li>
+      <li>Assigning <indexterm>color labels</indexterm>color labels.</li>
 
-      <li>Adding to groups</li>
+      <li>Adding to groups.</li>
 
-      <li>Moving and copying to another folder</li>
+      <li>Moving and copying to another folder.</li>
 
-      <li>Adding and changing geo-information</li>
+      <li>Adding and changing geo-information.</li>
     </ul>
 
     <p><indexterm>sorting</indexterm>Sorting can set your priorities easier. You can sort your
       photos by the following properties.</p>
 
     <ul>
-      <li>Filename</li>
+      <li>Filename.</li>
 
-      <li>Time</li>
+      <li>Time.</li>
 
-      <li>Rating</li>
+      <li>Rating.</li>
 
-      <li>ID</li>
+      <li>ID.</li>
 
-      <li>color label</li>
+      <li>Color label.</li>
 
-      <li>group</li>
+      <li>Group.</li>
 
-      <li>full path</li>
+      <li>Full path.</li>
     </ul>
 
-    <p>You can <indexterm>filter</indexterm>filter your photos through the number of stars. The
-      following operators are available.</p>
-
-    <ul>
-      <li>Less than</li>
-
-      <li>Less than or equal</li>
-
-      <li>Equal</li>
-
-      <li>Greater than or equal</li>
-
-      <li>Greater than</li>
-
-      <li>Not equal</li>
-    </ul>
-    <p></p>
-    </conbody>
+    <p>You can <indexterm>filter</indexterm>filter your photos through the number of stars. </p>
+    <p/>
+  </conbody>
 </concept>

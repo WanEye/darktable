@@ -13,7 +13,7 @@
                     </menucascade>.</cmd>
             </step>
         </steps>
-        <result id="result_ktr_1r5_5y">Your photo is open in the
-                <indexterm>lighttable</indexterm><uicontrol>lighttable</uicontrol> view.</result>
+        <result id="result_ktr_1r5_5y">Your photo is open in the <uicontrol
+            conref="../conref/conref.dita#conref/lighttLC"/> view.</result>
     </taskbody>
 </task>

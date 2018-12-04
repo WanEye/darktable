@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="lwditaSupport">
+  <title>Lightweight DITA support</title>
+
+  <body>
+    <p>XMLmind DITA Converter fully supports <xref format="html"
+    href="http://docs.oasis-open.org/dita/LwDITA/v1.0/LwDITA-v1.0.html"
+    scope="external">Lightweight DITA</xref> (AKA LwDITA) support, whether
+    <xref format="html"
+    href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-xdita"
+    scope="external">XDITA</xref> (very small subset of DITA XML, plus new
+    <xmlelement>audio</xmlelement> and <xmlelement>video</xmlelement>
+    elements), <xref format="html"
+    href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-hdita"
+    scope="external">HDITA</xref> (topics and maps written in <xref
+    format="html" href="https://www.w3.org/TR/html/"
+    scope="external">HTML5</xref>) or <xref format="html"
+    href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-mdita"
+    scope="external">MDITA</xref> Extended Profile (topics and maps written in
+    <xref format="html" href="https://daringfireball.net/projects/markdown/"
+    scope="external">Markdown</xref>).</p>
+
+    <p>XMLmind DITA Converter can of course process DITA documents comprising
+    a mix of XDITA, HDITA, MDITA and (full) DITA topics and
+    maps.<indexterm>Lightweight
+    DITA</indexterm><indexterm>LwDITA<index-see>Lightweight
+    DITA</index-see></indexterm><indexterm>XDITA</indexterm><indexterm>HDITA</indexterm><indexterm>MDITA</indexterm><indexterm>Markdown</indexterm></p>
+
+    <p>You'll find in the following sections some templates to start writing
+    topics and maps in XDITA, HDITA and MDITA. You'll also find the list of
+    HDITA and MDITA implementation specificities and limitations.</p>
+
+    <note id="mdita_requires_java8" type="remember"><p>MDITA support requires
+    using Java 1.8+ to run XMLmind DITA Converter.</p></note>
+  </body>
+</topic>

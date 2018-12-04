@@ -2,29 +2,34 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="t_Navigatiing">
     <title>View geotagged photos on map</title>
-  
+
     <taskbody>
-        <prereq id="prereq_h5s_prl_ry">Select a photo with a geotag in the lighttable view.</prereq>
+        <prereq id="prereq_h5s_prl_ry">Select a photo with a <ph
+                conref="../conref/conref.dita#conref/geotagLC"/> in the <uicontrol
+                conref="../conref/conref.dita#conref/lighttLC"/> view.</prereq>
         <context id="context_pzm_lrl_ry">You can view the location where you shot the photo on a
-                <indexterm>map</indexterm>. </context>
+                map<indexterm>map</indexterm>. </context>
         <steps id="steps_lft_trl_ry">
             <step>
-                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_rs2_4sl_ry"/>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenMapView"/></cmd>
             </step>
             <step>
-                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_pxj_4sl_ry"/>
+                <cmd>Expand <uicontrol conref="../conref/conref.dita#conref/mapset"/><indexterm
+                        conref="../conref/conref.dita#conref/mapsetUI"/>.</cmd>
             </step>
             <step>
-                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_avq_4sl_ry"/>
+                <cmd>Select <uicontrol conref="../conref/conref.dita#conref/showOSDui"/><indexterm
+                        conref="../conref/conref.dita#conref/showOSDidx"/>.</cmd>
             </step>
             <step>
-                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_hhx_4sl_ry"/>
+                <cmd>Choose the <uicontrol conref="../conref/conref.dita#conref/mapsourceUI"
+                        /><indexterm conref="../conref/conref.dita#conref/mapsourceIDX"/>.</cmd>
             </step>
             <step>
-                <cmd conref="t_mapPlace_photo.dita#t_Place_photo_map/cmd_sxg_nsl_ry"/>
+                <cmd>Zoom in or zoom out the  map to discover the location.</cmd>
             </step>
             <step>
-                <cmd>Locate your photo on the map.</cmd>
+                <cmd>Locate your photo on the map<indexterm>map</indexterm>.</cmd>
             </step>
         </steps>
     </taskbody>

@@ -10,7 +10,7 @@
 				<cmd conref="t_Images.dita#t_Images/open_lighttable"/>
 			</step>
      <step>
-				<cmd>Press <uicontrol>P</uicontrol> to open the print view.</cmd>
+				<cmd><ph conref="../conref/conref.dita#conref/OpenPrintView"/></cmd>
 			</step>
      <step>
 				<cmd>Expand <uicontrol>printer settings</uicontrol>.</cmd>
@@ -20,8 +20,10 @@
 					settings.</cmd>
 			</step>
      <step><cmd>Click <uicontrol>print</uicontrol>.</cmd>
-        <stepresult>Now, the printer prints your photo.<note>Printing might be unavailable under
-						Windows.</note></stepresult>
+        <stepresult>Now, the printer prints your photo.<note>Check the <xref
+							href="https://www.darktable.org/about/faq/" format="html"
+							scope="external">darktable FAQ pages</xref> for the status of printing
+						under Windows<indexterm>Windows</indexterm>.</note></stepresult>
      </step>
 	    
 	</steps>

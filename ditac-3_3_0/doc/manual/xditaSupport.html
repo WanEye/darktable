@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Appendix B, Section 1. XDITA support</title><link rel="stylesheet" type="text/css" href="resources/basic.css" /><meta name="description" content="XMLmind DITA Converter fully supports XDITA, which is basically a very small subset of DITA XML, plus new audio and video elements." />
+      <meta name="generator" content="XMLmind DITA Converter 3.3.0" />
+   </head>
+   <body>
+      <div class="page-navigation-header">
+         <table class="page-navigation-layout" width="100%">
+            <tr>
+               <td align="left" valign="top"><a href="index.html" class="navigation-link" title="First page: XMLmind DITA Converter Manual"><img class="navigation-icon" src="resources/first.png" alt="First page" width="16" height="16" /></a></td>
+               <td align="left" valign="top"><a href="lwditaSupport.html" class="navigation-link" title="Previous page: Appendix B. Lightweight DITA support"><img class="navigation-icon" src="resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+               <td width="25%" align="left" valign="top"><span class="page-navigation-previous">Appendix B. Lightweight DITA support</span></td>
+               <td width="40%" align="center" valign="top"><span class="page-navigation-current">Appendix B, Section 1. XDITA support</span> <span class="page-navigation-page">(26 / 32)</span></td>
+               <td width="25%" align="right" valign="top"><span class="page-navigation-next">Appendix B, Section 2. HDITA support</span></td>
+               <td align="right" valign="top"><a href="hditaSupport.html" class="navigation-link" title="Next page: Appendix B, Section 2. HDITA support"><img class="navigation-icon" src="resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+               <td align="right" valign="top"><a href="manual-8.html" class="navigation-link" title="Last page: Index"><img class="navigation-icon" src="resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+            </tr>
+         </table>
+      </div>
+      <div id="xditaSupport" xml:lang="en-US" lang="en-US" class="topic">
+         <h2 class="section1-title">1. XDITA support</h2>
+         <p class="shortdesc">XMLmind DITA Converter fully supports <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-xdita" class="xref" target="_blank">XDITA <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10" /></a>, which is basically a very small subset of
+            DITA XML, plus <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#new-elements-and-attributes" class="xref" target="_blank">new audio and video elements <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10" /></a>.
+         </p>
+         <div class="body">
+            <div class="p">Template of an XDITA topic (<a href="lwdita_templates/xdita_topic.dita" class="xref" target="_blank">lwdita_templates/xdita_topic.dita <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10" /></a>):
+            </div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN"
+"lw-topic.dtd"&gt;</span>
+<span class="hl-tag">&lt;topic</span> <span class="hl-attribute">id</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;title&gt;</span><span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;shortdesc&gt;</span><span class="hl-tag">&lt;/shortdesc&gt;</span>
+  <span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+  <span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/topic&gt;</span></pre><div class="p">Template of an XDITA map (<a href="lwdita_templates/xdita_map.ditamap" class="xref" target="_blank">lwdita_templates/xdita_map.dita <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10" /></a>):
+            </div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Map//EN"
+"lw-map.dtd"&gt;</span>
+<span class="hl-tag">&lt;map&gt;</span>
+  <span class="hl-tag">&lt;topicmeta&gt;</span>
+    <span class="hl-tag">&lt;navtitle&gt;</span><span class="hl-tag">&lt;/navtitle&gt;</span>
+  <span class="hl-tag">&lt;/topicmeta&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">/&gt;</span>
+  <span class="hl-tag">&lt;/topicref&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">/&gt;</span>
+<span class="hl-tag">&lt;/map&gt;</span></pre></div>
+         <div class="unordered-members-linkpool">
+            <p class="link">‣ <span class="parent-topic-link-item">Parent topic: </span><a href="lwditaSupport.html#lwditaSupport">Appendix B. Lightweight DITA support</a></p>
+         </div>
+      </div>
+      <div class="page-navigation-footer">
+         <table class="page-navigation-layout" width="100%">
+            <tr>
+               <td align="left" valign="top"><a href="index.html" class="navigation-link" title="First page: XMLmind DITA Converter Manual"><img class="navigation-icon" src="resources/first.png" alt="First page" width="16" height="16" /></a></td>
+               <td align="left" valign="top"><a href="lwditaSupport.html" class="navigation-link" title="Previous page: Appendix B. Lightweight DITA support"><img class="navigation-icon" src="resources/previous.png" alt="Previous page" width="16" height="16" /></a></td>
+               <td width="25%" align="left" valign="top"><span class="page-navigation-previous">Appendix B. Lightweight DITA support</span></td>
+               <td width="40%" align="center" valign="top"><span class="page-navigation-current">Appendix B, Section 1. XDITA support</span> <span class="page-navigation-page">(26 / 32)</span></td>
+               <td width="25%" align="right" valign="top"><span class="page-navigation-next">Appendix B, Section 2. HDITA support</span></td>
+               <td align="right" valign="top"><a href="hditaSupport.html" class="navigation-link" title="Next page: Appendix B, Section 2. HDITA support"><img class="navigation-icon" src="resources/next.png" alt="Next page" width="16" height="16" /></a></td>
+               <td align="right" valign="top"><a href="manual-8.html" class="navigation-link" title="Last page: Index"><img class="navigation-icon" src="resources/last.png" alt="Last page" width="16" height="16" /></a></td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

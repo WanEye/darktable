@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="codeblocks">
+  <title>Fancy code blocks</title>
+
+  <shortdesc>This section explains how you can automatically add line numbers,
+  “expand” tab characters and colorize the source code contained in
+  <xmlelement>pre</xmlelement>, <xmlelement>codeblock</xmlelement> or any
+  other element specializing <xmlelement>pre</xmlelement>.</shortdesc>
+
+  <body>
+    <p>Adding line numbers, “expanding” tab characters and colorizing the
+    source code <indexterm>syntax highlighting</indexterm> contained in
+    <xmlelement>pre</xmlelement>, <xmlelement>codeblock</xmlelement> or any
+    other element specializing <xmlelement>pre</xmlelement> is done by adding
+    one or more of the following classes to the <xmlatt>outputclass</xmlatt>
+    attribute <indexterm>outputclass, implementation specificity</indexterm>of
+    this element:</p>
+
+    <dl>
+      <dlentry>
+        <dt><tt>line-numbers</tt></dt>
+
+        <dt><tt>line-numbers-<i>N</i></tt> (where <i>N</i> is an integer &gt;
+        0)</dt>
+
+        <dt><tt>show-line-numbers</tt></dt>
+
+        <dd><p>Give a number to the lines contained in the
+        <xmlelement>pre</xmlelement> element.</p></dd>
+
+        <dd><p>By default, first line number is 1. This first line may be
+        specified using the second form of the <tt>line-numbers</tt> class,
+        for example, <tt>line-numbers-100</tt> specifies that lines are to be
+        numbered and that first line number is 100.</p></dd>
+
+        <dd><p><tt>show-line-numbers</tt>, an alias for
+        <tt>line-numbers-1</tt>, is also accepted for <xref format="html"
+        href="http://www.dita-ot.org/3.1/reference/extended-functionality.html"
+        scope="external">compatibility with the DITA-OT</xref>.</p></dd>
+      </dlentry>
+
+      <dlentry>
+        <dt><tt>language-<i>L</i></tt> (where <i>L</i> is language name)</dt>
+
+        <dd><p>Colorize the source code contained in the
+        <xmlelement>pre</xmlelement> element. <i>L</i>, a “programming
+        language” such as <tt>c</tt>, <tt>java</tt>, <tt>css</tt>,
+        <tt>xml</tt>, specifies how the source code should be
+        colorized.</p></dd>
+
+        <dd><p>More information about this feature, commonly called
+        <term>syntax highlighting</term>, in <xref
+        href="syntaxHighlighting.dita">next section</xref>.</p></dd>
+      </dlentry>
+
+      <dlentry>
+        <dt><tt>tab-width-<i>W</i></tt> (<i>where W</i> is an integer &gt;=
+        0)</dt>
+
+        <dt><tt>normalize-space</tt></dt>
+
+        <dd><p>Specifies whether tab characters should be expanded to a number
+        of space characters. <i>W</i> is the maximum number of space
+        characters for an expanded tab character, hence this value specifies
+        the location of “tab stops”. Examples: <tt>tab-width-4</tt> means:
+        expand tabs to up to 4 space characters; <tt>tab-width-0</tt> means:
+        do not replace tabs by space characters.</p></dd>
+
+        <dd><p>In addition to replacing tab characters by a number of space
+        characters, <tt>tab-width-<i>W</i></tt> (where <i>W</i> &gt; 0) also
+        removes the space characters which are common to the beginning of all
+        text lines. That is, it removes the superfluous “indentation” in the
+        <xmlelement>pre</xmlelement> element, if any. See <xref
+        href="#./tab_width_8_unindents">example below</xref>.</p></dd>
+
+        <dd><p>Moreover <tt>tab-width-<i>W</i></tt> (where <i>W</i> &gt; 0)
+        also removes the (useless) space characters found just before newline
+        characters.</p><p><tt>normalize-space</tt>, an alias for
+        <tt>tab-width-8</tt>, is also accepted for <xref format="html"
+        href="http://www.dita-ot.org/3.1/reference/extended-functionality.html"
+        scope="external">compatibility with the DITA-OT</xref>.</p></dd>
+      </dlentry>
+    </dl>
+
+    <note type="remember"><p>When the <xmlelement>outputclass</xmlelement>
+    attribute of any element specializing <xmlelement>pre</xmlelement>
+    contains class <tt>line-numbers</tt>/<tt>line-numbers-<i>N</i></tt> and/or
+    class <tt>language-<i>L</i></tt> , then class <tt>tab-width-8</tt> is
+    implicitly specified too, that is, whitespace normalization is
+    automatically performed. If this is not what you want, please explicitly
+    add class <tt>tab-width-0</tt> to <xmlatt>outputclass</xmlatt>.</p></note>
+
+    <example><title>Example: a simple C program featuring line numbering and
+    syntax highlighting</title><p>In the following C program, lines are
+    indented using tab characters.</p><codeblock
+    outputclass="language-xml line-numbers">&lt;pre class="language-c line-numbers tab-width-4"&gt;/* Hello World */
+#include &amp;lt;stdio.h&amp;ght;
+
+int main()
+{
+	printf("Hello World\n");
+	return 0;
+}&lt;/pre&gt;</codeblock><p>is rendered as:</p><codeblock
+    outputclass="language-c line-numbers tab-width-4">/* Hello World */
+#include &lt;stdio.h&gt;
+
+int main()
+{
+	printf("Hello World\n");
+	return 0;
+}</codeblock></example>
+
+    <example id="tab_width_8_unindents"><title>Example: superfluous
+    indentation is removed by <tt>tab-width-<i>N</i></tt> (where <i>N</i> &gt;
+    0)</title><p>Attribute <xmlatt>outputclass</xmlatt> implicitly also
+    contains <tt>tab-width-8</tt>. First line "<tt>    /tmp/</tt>" starts with
+    4 space characters.</p><pre outputclass="language-xml line-numbers">&lt;pre outputclass="line-numbers"&gt;    /tmp/
+    /usr/                            
+	bin/
+	lib/
+	&lt;b&gt;local/&lt;/b&gt;
+		&lt;b&gt;bin/&lt;/b&gt;
+		&lt;b&gt;lib/&lt;/b&gt;
+		&lt;b&gt;src/&lt;/b&gt;
+	src/
+    /var/                            
+&lt;/pre&gt;</pre><p>is rendered as:</p><pre outputclass="line-numbers">    /tmp/
+    /usr/
+	bin/
+	lib/
+	<b>local/</b>
+		<b>bin/</b>
+		<b>lib/</b>
+		<b>src/</b>
+	src/
+    /var/
+</pre></example>
+  </body>
+</topic>

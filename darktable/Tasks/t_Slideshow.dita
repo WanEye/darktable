@@ -3,28 +3,29 @@
 <task id="Presenting">
 	<title>Presenting in slideshow</title>
     <taskbody>
-        <context id="context_wrf_k5l_ry">Make a <indexterm>slideshow</indexterm>slideshow from a
-            photo collection.</context>
+        <context id="context_wrf_k5l_ry">Make a <ph
+                conref="../conref/conref.dita#conref/slideshowLC"/> from a photo
+            collection.</context>
         <steps id="steps_kbj_45l_ry">
             <step>
-                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenLib"/></cmd>
             </step>
             <step>
                 <cmd>Expand <uicontrol>collect images</uicontrol>.</cmd>
             </step>
             <step>
-                <cmd>Expand the left selection box; then, select the filter.</cmd>
+                <cmd>Expand the left selection box. Then, select the filter.</cmd>
             </step>
             <step>
-                <cmd>Double click an item in the list; then, choose the filter value.</cmd>
-                <stepxmp>camera, NIKON CORPORATION NIKON D3300</stepxmp>
+                <cmd>Double click an item in the list. Then, choose the filter value.</cmd>
             </step>
             <step>
-                <cmd>Expand the right selection box; then, change your collection.</cmd>
+                <cmd>Expand the right selection box. Then, change your collection.</cmd>
             </step>
             <step>
-                <cmd>Press <uicontrol>S</uicontrol>.</cmd>
-                <stepresult>Your slideshow starts.</stepresult>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenSlideShowUI"/></cmd>
+                <stepresult>Your <ph conref="../conref/conref.dita#conref/slideshowLC"/>
+                    starts.</stepresult>
             </step>
         </steps>
     </taskbody>

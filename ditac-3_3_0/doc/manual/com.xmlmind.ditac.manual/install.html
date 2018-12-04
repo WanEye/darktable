@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><title>Installing XMLmind DITA Converter</title><link rel="stylesheet" type="text/css" href="resources/eclipsehelp.css"></link><meta name="generator" content="XMLmind DITA Converter 3.3.0"></meta></head><body><div id="install" xml:lang="en-US" lang="en-US" class="task"><h2 class="chapter-title">Installing XMLmind DITA Converter</h2><div class="taskbody"><div id="install__I_x01ga_" class="prereq"><h3 class="prereq-title">Before you begin</h3><div class="p">XMLmind DITA Converter (<i class="i">ditac</i> for short) requires the
+    Oracle or Apple <span class="tm">Java™</span> runtime 1.6 or above. However
+    <a href="mditaSupport.html#mditaSupport" class="xref">MDITA support</a> requires using a Java
+    1.8+ runtime.</div><div class="p">On Unix, make sure that the Java
+    <code class="filepath">bin/</code> directory is referenced in the <tt class="tt">$PATH</tt>
+    and, at the same time, check that the Java runtime in the <tt class="tt">$PATH</tt>
+    has the right version:</div><pre class="screen">$ java -version</pre><div class="p">On Windows
+    and on the Mac, this verification is in principle not needed as the
+    <code class="cmdname">java</code> executable is automatically found in the
+    <tt class="tt">$PATH</tt> when Java has been properly installed.</div></div><div class="steps"><h3 class="steps-title">Procedure</h3><ol class="step-list"><li class="required-step"><span class="cmd">Unzip the distribution in any directory you want.</span><div class="stepxmp"><pre class="screen">C:\&gt; mkdir ditac
+C:\&gt; cd ditac
+C:\ditac&gt; unzip ditac-3_3_0.zip
+C:\ditac&gt; dir ditac-3_3_0
+... &lt;DIR&gt; bin
+... &lt;DIR&gt; doc
+... &lt;DIR&gt; docsrc
+...</pre></div><div class="stepresult">XMLmind DITA Converter is intended to be used directly
+        from the <code class="filepath">ditac-3_3_0/</code> directory. That is, you can
+        run the <code class="cmdname">ditac</code> command by simply executing (in a
+        Command Prompt on windows, a terminal on Unix):<pre class="screen">C:\ditac&gt; ditac-3_3_0\bin\ditac</pre></div></li><li class="optional-step"><span class="cmd">Depending the output formats you want to generate, you'll need to
+        download and install third-party external tools.</span><ul class="choices"><li class="choice"><div class="p">If you want to generate PDF or PostScript®, download
+          and install <a href="http://xmlgraphics.apache.org/fop/" class="xref" target="_blank">Apache
+          FOP <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</div><div class="p">Alternatively, you may prefer to purchase <a href="http://www.renderx.com/tools/xep.html" class="xref" target="_blank">RenderX XEP <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a> or <a href="https://www.antennahouse.com/antenna1/formatter/" class="xref" target="_blank">Antenna House Formatter <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>. Note that <a href="http://www.renderx.com/download/personal.html" class="xref" target="_blank">RenderX XEP Personal Edition <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a> is free to
+          use.</div><div class="note"><table class="note-layout"><tr><td class="note-icon"><img src="resources/warning.png" alt="WARNING" width="32" height="32"></img></td><td class="note-text"><h5 class="note-head">WARNING</h5><div class="note-body">Please install and use either Apache
+          FOP 1.1 or <a href="https://xmlgraphics.apache.org/fop/" class="xref" target="_blank">FOP
+          2.1+ <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>. Please do <i class="i">not</i> install and use Apache <a href="https://xmlgraphics.apache.org/fop/2.0/" class="xref" target="_blank">FOP 2.0 <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a> as we have found this version to
+          have a severe bug (<a href="https://issues.apache.org/jira/browse/FOP-2461" class="xref" target="_blank">FOP-2461 <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>).</div></td></tr></table></div><div class="note"><table class="note-layout"><tr><td class="note-icon"><img src="resources/note.png" alt="Note" width="32" height="32"></img></td><td class="note-text"><h5 class="note-head">Note</h5><div class="note-body">If you have installed
+          Apache FOP and your DITA document contain <a href="http://www.w3.org/TR/MathML2/" class="xref" target="_blank">MathML <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>,
+          you'll want to also install the <a href="http://jeuclid.sourceforge.net/jeuclid-fop/index.html" class="xref" target="_blank">JEuclid FOP plug-in <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>. This plug-in is needed
+          to add MathML support to Apache FOP.</div></td></tr></table></div></li><li class="choice"><div class="p">If you want to generate RTF (can be opened in Word
+          2000+), WordprocessingML (can be opened in Word 2003+), Office Open
+          XML (<tt class="tt">.docx</tt>, can be opened in Word 2007+) or OpenOffice
+          (<tt class="tt">.odt</tt>, can be opened in OpenOffice/LibreOffice 2+), then
+          you need to purchase <a href="http://www.xmlmind.com/foconverter/" class="xref" target="_blank">XMLmind
+          XSL-FO Converter Professional Edition <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</div><div class="p">You can give
+          XMLmind XSL-FO Converter a try by downloading Evaluation Edition
+          from <a href="http://www.xmlmind.com/foconverter/" class="xref" target="_blank">XMLmind XSL-FO Converter web site <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>. Do not be
+          surprised because XMLmind XSL-FO Converter Evaluation Edition
+          generates output containing <i class="i">random duplicate letters</i>. Of
+          course, this does not happen with Professional Edition!</div></li><li class="choice"><div class="p">If you want to generate HTML Help, download and install
+          the <a href="http://www.microsoft.com/downloads/" class="xref" target="_blank">HTML Help Workshop <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a> (contains
+          <code class="filepath">hhc.exe</code>).</div></li><li class="choice"><div class="p">If you want to generate Java Help, download and install
+          <a href="http://java.sun.com/javase/technologies/desktop/javahelp/" class="xref" target="_blank">Java Help <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a> (contains
+          <code class="filepath">jhindexer</code> and
+          <code class="filepath">jhindexer.bat</code>).</div></li></ul></li><li class="optional-step"><span class="cmd">If you have installed any of the above external tools, you need
+        now to instruct ditac where to find them. This can be done using the
+        following command line options: <a href="commandLine.html#commandLine__option-fop" class="xref"><code class="option">-fop</code></a>,
+        <a href="commandLine.html#commandLine__option-xep" class="xref"><code class="option">-xep</code></a>,
+        <a href="commandLine.html#commandLine__option-ahf" class="xref"><code class="option">-ahf</code></a>,
+        <a href="commandLine.html#commandLine__option-xfc" class="xref"><code class="option">-xfc</code></a>,
+        <a href="commandLine.html#commandLine__option-jhindexer" class="xref"><code class="option">-jhindexer</code></a>,
+        <a href="commandLine.html#commandLine__option-hhc" class="xref"><code class="option">-hhc</code></a>.
+        However, it is much more convenient to specify these command-line
+        options once for all in a
+        <code class="filepath">ditac.options</code><a id="install__I_od2kwf_" name="install__I_od2kwf_"></a> file.</span><ol class="substeps"><li class="substep"><span class="cmd">Create <code class="filepath">ditac.options</code>, a plain text file
+            encoded using the native encoding of the platform (e.g.
+            <tt class="tt">Windows-1252</tt> on a Western Windows PC), in the ditac user
+            preferences directory.</span><div id="install__ditac_user_preferences_dir" class="info"><div class="p">The ditac user
+            preferences directory is:</div><ul class="compact-ul"><li class="li"><div class="p"><code class="filepath"><var class="varname">$HOME</var>/.ditac/</code>
+                on Linux.</div></li><li class="li"><div class="p"><code class="filepath"><var class="varname">$HOME</var>/Library/Application
+                Support/XMLmind/ditac/</code> on the Mac.</div></li><li class="li"><div class="p"><code class="filepath"><var class="varname">%APPDATA%</var>\XMLmind\ditac\</code>
+                on XP, Vista, 7, 8, 10.</div><div class="p">Example: <code class="filepath">C:\Documents
+                and Settings\john\Application Data\XMLmind\ditac\</code>
+                on Windows XP.
+                <code class="filepath">C:\Users\john\AppData\Roaming\XMLmind\ditac\</code>
+                on Windows Vista, 7, 8, 10.</div></li></ul></div></li><li class="substep"><span class="cmd">Add the equivalent of a command-line option for each external
+            tool installed in the preceding step. Use one or more newline
+            characters to separate the options. More information in <a href="commandLine.html#commandLine__ditac_options_file" class="xref">The
+    <code class="filepath">ditac.options</code> file</a>.</span><div class="stepxmp"><pre class="pre">-fop E:\opt\fop-2.3\fop\fop.bat
+
+-xfc E:\opt\xfc_eval_java-5_5_0\bin\fo2rtf.bat
+
+-jhindexer E:\opt\javahelp\javahelp\bin\jhindexer.bat
+
+-hhc "C:\Program Files\HTML Help Workshop\hhc.exe"</pre></div></li></ol></li></ol></div></div></div></body></html>

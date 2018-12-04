@@ -5,23 +5,26 @@
     <shortdesc></shortdesc>
     <taskbody>
         <context>
-            <p></p>
+            <p/>
         </context>
         <steps>
             <step>
-                <cmd>Close <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"
-                    /></cmd>
+                <cmd>Close <ph conref="../conref/conref.dita#conref/prdName"/>.</cmd>
             </step>
             <step>
                 <cmd>Install <xref href="http://zadig.akeo.ie" format="html" scope="external"
-                        >Zadig</xref> a tool for USB driver installation. </cmd>
+                        >Zadig</xref> a tool for USB driver<indexterm>USB driver</indexterm>
+                    installation. </cmd>
             </step>
             <step>
-                <cmd>Use Zadig to replace the current Windows camera driver with the WinUSB
+                <cmd>Use Zadig<indexterm>Zadig </indexterm> to replace the current
+                        Windows<indexterm>Windows</indexterm> camera driver with the WinUSB
                     driver.</cmd>
                 <info>Read the <xref href="https://github.com/pbatard/libwdi/wiki/Zadig"
                         format="html" scope="external">Zadig user guide</xref>.</info>
-                <stepresult>Now you can try <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref>.</stepresult>
+                <stepresult>Now you can try <xref
+                        conref="../conref/conref.dita#conref/tetheringXREF"/><indexterm
+                        conref="../conref/conref.dita#conref/tetheringIDX"/>.</stepresult>
             </step>
         </steps>
     </taskbody>

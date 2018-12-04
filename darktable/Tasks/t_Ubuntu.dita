@@ -13,15 +13,16 @@
         <step id="step_yt5_mqj_ky">
         <cmd>Add<filepath> ppa:pmjdebruijn/darktable-release</filepath> to your system's software
           sources.</cmd>
-        <info>type in the Terminal window
+        <info>Type in the Terminal window the following commands.
           <codeblock>sudo add-apt-repository ppa:pmjdebruijn/darktable-release
 sudo apt update</codeblock>
         </info>
       </step>
         <step>
-        <cmd>Install <term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/></cmd>
+        <cmd>Install <ph conref="../conref/conref.dita#conref/prdName"/> through the following
+          command.</cmd>
         <info>
-<codeblock>sudo apt install darktable</codeblock>
+          <codeblock>sudo apt install darktable</codeblock>
         </info>
       </step>
           

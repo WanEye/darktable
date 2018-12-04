@@ -5,12 +5,11 @@
   <title>What this book is for</title>
 
   <body>
-    <p>This book is for new users of <term conref="Concepts/c_Overview.dita#c_Overview/product_name"
-      />. You can look up things that you want to do in the table of contents.</p>
+    <p>This book is for new users of <ph conref="conref/conref.dita#conref/prdName"/>. You can look
+      up things that you want to do in the table of contents.</p>
     <p/>
-    <p>After a while, you can find your way in <term
-        conref="Concepts/c_Overview.dita#c_Overview/product_name"/> yourself and discover other
-      stuff that you need. See the <xref format="html"
+    <p>After a while, you can find your way in <ph conref="conref/conref.dita#conref/prdName"/>
+      yourself and discover other stuff that you need. See the <xref format="html"
         href="http://www.darktable.org/usermanual/index.html.php" scope="external">official
         darktable manual on darktable.org</xref> for further reading. </p>
     <p/>

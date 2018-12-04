@@ -9,7 +9,9 @@
         </context>
         <steps>
             <step>
-                <cmd  conref="t_MacOS.dita#task_kdb_kqz_ry/Github"/>
+                <cmd>Locate the newest release at the <xref
+                        conref="../conref/conref.dita#conref/githubUC"/><indexterm
+                        conref="../conref/conref.dita#conref/idx_GitHub"/>.</cmd>
                 <info>For Windows, the extension is EXE.</info>
             </step>
             <step>

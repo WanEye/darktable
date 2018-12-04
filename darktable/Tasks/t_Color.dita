@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
 "task.dtd">
 <task id="t_Color">
@@ -7,16 +7,19 @@
   <taskbody>
     <steps id="steps_yxl_vjc_vy">
       <step>
-        <cmd conref="t_Composition.dita#t_Composition/darkroom_view"/>
+        <cmd><ph conref="../conref/conref.dita#conref/OpenDark"/>.</cmd>
       </step>
       <step>
-        <cmd>Click color group.</cmd>
+        <cmd>Click color group<uicontrol conref="../conref/conref.dita#conref/colorgUI"/><indexterm
+            conref="../conref/conref.dita#conref/colorgIDX"/>.</cmd>
       </step>
       <step>
-        <cmd>Expand <uicontrol>white balance</uicontrol>.</cmd>
+        <cmd>Expand <uicontrol conref="../conref/conref.dita#conref/whiteBalUI"/><indexterm
+            conref="../conref/conref.dita#conref/whiteBalIDX"/>.</cmd>
       </step>
       <step>
-        <cmd>Adjust the <xref href="../Glossary/g_glossary.dita#whitebalance">white balance</xref> through the sliders.</cmd>
+        <cmd>Adjust the <xref href="../Glossary/g_glossary.dita#whitebalance">white
+            balance</xref><indexterm>white balance</indexterm> through the sliders.</cmd>
       </step>
     </steps>
   </taskbody>

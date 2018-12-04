@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><title>XDITA support</title><link rel="stylesheet" type="text/css" href="resources/eclipsehelp.css"></link><meta name="description" content="XMLmind DITA Converter fully supports XDITA, which is basically a very small subset of DITA XML, plus new audio and video elements."></meta><meta name="generator" content="XMLmind DITA Converter 3.3.0"></meta></head><body><div id="xditaSupport" xml:lang="en-US" lang="en-US" class="topic"><h2 class="section1-title">XDITA support</h2><p class="shortdesc">XMLmind DITA Converter fully supports <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-xdita" class="xref" target="_blank">XDITA <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>, which is basically a very small subset of
+  DITA XML, plus <a href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#new-elements-and-attributes" class="xref" target="_blank">new audio and video elements <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</p><div class="body"><div class="p">Template of an XDITA topic (<a href="lwdita_templates/xdita_topic.dita" class="xref" target="_blank">lwdita_templates/xdita_topic.dita <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>):</div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN"
+"lw-topic.dtd"&gt;</span>
+<span class="hl-tag">&lt;topic</span> <span class="hl-attribute">id</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;title&gt;</span><span class="hl-tag">&lt;/title&gt;</span>
+  <span class="hl-tag">&lt;shortdesc&gt;</span><span class="hl-tag">&lt;/shortdesc&gt;</span>
+  <span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+  <span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/topic&gt;</span></pre><div class="p">Template of an XDITA map (<a href="lwdita_templates/xdita_map.ditamap" class="xref" target="_blank">lwdita_templates/xdita_map.dita <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>):</div><pre class="pre language-xml"><span class="hl-directive">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hl-doctype">&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Map//EN"
+"lw-map.dtd"&gt;</span>
+<span class="hl-tag">&lt;map&gt;</span>
+  <span class="hl-tag">&lt;topicmeta&gt;</span>
+    <span class="hl-tag">&lt;navtitle&gt;</span><span class="hl-tag">&lt;/navtitle&gt;</span>
+  <span class="hl-tag">&lt;/topicmeta&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">/&gt;</span>
+  <span class="hl-tag">&lt;/topicref&gt;</span>
+  <span class="hl-tag">&lt;topicref</span> <span class="hl-attribute">href</span>=<span class="hl-value">"???"</span><span class="hl-tag">/&gt;</span>
+<span class="hl-tag">&lt;/map&gt;</span></pre></div></div></body></html>

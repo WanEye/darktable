@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta><title>Fancy code blocks</title><link rel="stylesheet" type="text/css" href="resources/eclipsehelp.css"></link><meta name="description" content="This section explains how you can automatically add line numbers, “expand” tab characters and colorize the source code contained in pre, codeblock or any other element specializing pre."></meta><meta name="generator" content="XMLmind DITA Converter 3.3.0"></meta></head><body><div id="codeblocks" xml:lang="en-US" lang="en-US" class="topic"><h2 class="chapter-title">Fancy code blocks</h2><p class="shortdesc">This section explains how you can automatically add line numbers,
+  “expand” tab characters and colorize the source code contained in
+  <code class="xmlelement">&lt;pre&gt;</code>, <code class="xmlelement">&lt;codeblock&gt;</code> or any
+  other element specializing <code class="xmlelement">&lt;pre&gt;</code>.</p><div class="body"><div class="p">Adding line numbers, “expanding” tab characters and colorizing the
+    source code <a id="codeblocks__I_rirakr_" name="codeblocks__I_rirakr_"></a> contained in
+    <code class="xmlelement">&lt;pre&gt;</code>, <code class="xmlelement">&lt;codeblock&gt;</code> or any
+    other element specializing <code class="xmlelement">&lt;pre&gt;</code> is done by adding
+    one or more of the following classes to the <code class="xmlatt">@outputclass</code>
+    attribute <a id="codeblocks__I_2q10z_" name="codeblocks__I_2q10z_"></a>of
+    this element:</div><dl class="dl"><dt class="dt"><tt class="tt">line-numbers</tt></dt><dt class="dt"><tt class="tt">line-numbers-<i class="i">N</i></tt> (where <i class="i">N</i> is an integer &gt;
+        0)</dt><dt class="dt"><tt class="tt">show-line-numbers</tt></dt><dd class="dd"><div class="p">Give a number to the lines contained in the
+        <code class="xmlelement">&lt;pre&gt;</code> element.</div></dd><dd class="dd"><div class="p">By default, first line number is 1. This first line may be
+        specified using the second form of the <tt class="tt">line-numbers</tt> class,
+        for example, <tt class="tt">line-numbers-100</tt> specifies that lines are to be
+        numbered and that first line number is 100.</div></dd><dd class="dd"><div class="p"><tt class="tt">show-line-numbers</tt>, an alias for
+        <tt class="tt">line-numbers-1</tt>, is also accepted for <a href="http://www.dita-ot.org/3.1/reference/extended-functionality.html" class="xref" target="_blank">compatibility with the DITA-OT <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</div></dd><dt class="dt"><tt class="tt">language-<i class="i">L</i></tt> (where <i class="i">L</i> is language name)</dt><dd class="dd"><div class="p">Colorize the source code contained in the
+        <code class="xmlelement">&lt;pre&gt;</code> element. <i class="i">L</i>, a “programming
+        language” such as <tt class="tt">c</tt>, <tt class="tt">java</tt>, <tt class="tt">css</tt>,
+        <tt class="tt">xml</tt>, specifies how the source code should be
+        colorized.</div></dd><dd class="dd"><div class="p">More information about this feature, commonly called
+        <dfn class="term">syntax highlighting</dfn>, in <a href="syntaxHighlighting.html#syntaxHighlighting" class="xref">next section</a>.</div></dd><dt class="dt"><tt class="tt">tab-width-<i class="i">W</i></tt> (<i class="i">where W</i> is an integer &gt;=
+        0)</dt><dt class="dt"><tt class="tt">normalize-space</tt></dt><dd class="dd"><div class="p">Specifies whether tab characters should be expanded to a number
+        of space characters. <i class="i">W</i> is the maximum number of space
+        characters for an expanded tab character, hence this value specifies
+        the location of “tab stops”. Examples: <tt class="tt">tab-width-4</tt> means:
+        expand tabs to up to 4 space characters; <tt class="tt">tab-width-0</tt> means:
+        do not replace tabs by space characters.</div></dd><dd class="dd"><div class="p">In addition to replacing tab characters by a number of space
+        characters, <tt class="tt">tab-width-<i class="i">W</i></tt> (where <i class="i">W</i> &gt; 0) also
+        removes the space characters which are common to the beginning of all
+        text lines. That is, it removes the superfluous “indentation” in the
+        <code class="xmlelement">&lt;pre&gt;</code> element, if any. See <a href="#codeblocks__tab_width_8_unindents" class="xref">example below</a>.</div></dd><dd class="dd"><div class="p">Moreover <tt class="tt">tab-width-<i class="i">W</i></tt> (where <i class="i">W</i> &gt; 0)
+        also removes the (useless) space characters found just before newline
+        characters.</div><div class="p"><tt class="tt">normalize-space</tt>, an alias for
+        <tt class="tt">tab-width-8</tt>, is also accepted for <a href="http://www.dita-ot.org/3.1/reference/extended-functionality.html" class="xref" target="_blank">compatibility with the DITA-OT <img border="0" src="resources/new_window.png" alt="Opens in new window" width="10" height="10"></img></a>.</div></dd></dl><div class="note"><table class="note-layout"><tr><td class="note-icon"><img src="resources/remember.png" alt="Remember" width="32" height="32"></img></td><td class="note-text"><h5 class="note-head">Remember</h5><div class="note-body"><div class="p">When the <code class="xmlelement">&lt;outputclass&gt;</code>
+    attribute of any element specializing <code class="xmlelement">&lt;pre&gt;</code>
+    contains class <tt class="tt">line-numbers</tt>/<tt class="tt">line-numbers-<i class="i">N</i></tt> and/or
+    class <tt class="tt">language-<i class="i">L</i></tt> , then class <tt class="tt">tab-width-8</tt> is
+    implicitly specified too, that is, whitespace normalization is
+    automatically performed. If this is not what you want, please explicitly
+    add class <tt class="tt">tab-width-0</tt> to <code class="xmlatt">@outputclass</code>.</div></div></td></tr></table></div><div id="codeblocks__I_p29y4v_" class="example"><h3 class="example-title">Example: a simple C program featuring line numbering and
+    syntax highlighting</h3><div class="p">In the following C program, lines are
+    indented using tab characters.</div><div class="table listing-layout"><table class="tgroup listing-table" border="1" width="100%"><colgroup class="colspec listing-numbers-column" width="2.0em"></colgroup><tbody class="tbody listing-table-body"><tr class="row listing-row"><td class="entry listing-numbers-cell"><pre class="codeblock listing-numbers">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="entry listing-lines-cell"><pre class="codeblock language-xml listing-lines"><span class="hl-tag">&lt;pre</span> <span class="hl-attribute">class</span>=<span class="hl-value">"language-c line-numbers tab-width-4"</span><span class="hl-tag">&gt;</span>/* Hello World */
+#include &amp;lt;stdio.h&amp;ght;
+
+int main()
+{
+        printf("Hello World\n");
+        return 0;
+}<span class="hl-tag">&lt;/pre&gt;</span></pre></td></tr></tbody></table></div><div class="p">is rendered as:</div><div class="table listing-layout"><table class="tgroup listing-table" border="1" width="100%"><colgroup class="colspec listing-numbers-column" width="2.0em"></colgroup><tbody class="tbody listing-table-body"><tr class="row listing-row"><td class="entry listing-numbers-cell"><pre class="codeblock listing-numbers">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="entry listing-lines-cell"><pre class="codeblock language-c listing-lines"><span class="hl-comment">/* Hello World */</span>
+<span class="hl-directive">#include &lt;stdio.h&gt;</span>
+
+<span class="hl-keyword">int</span> main()
+{
+    printf(<span class="hl-string">"Hello World\n"</span>);
+    <span class="hl-keyword">return</span> <span class="hl-number">0</span>;
+}</pre></td></tr></tbody></table></div></div><div id="codeblocks__tab_width_8_unindents" class="example"><h3 class="example-title">Example: superfluous
+    indentation is removed by <tt class="tt">tab-width-<i class="i">N</i></tt> (where <i class="i">N</i> &gt;
+    0)</h3><div class="p">Attribute <code class="xmlatt">@outputclass</code> implicitly also
+    contains <tt class="tt">tab-width-8</tt>. First line "<tt class="tt">&nbsp;&nbsp;&nbsp;&nbsp;/tmp/</tt>" starts with
+    4 space characters.</div><div class="table listing-layout"><table class="tgroup listing-table" border="1" width="100%"><colgroup class="colspec listing-numbers-column" width="2.25em"></colgroup><tbody class="tbody listing-table-body"><tr class="row listing-row"><td class="entry listing-numbers-cell"><pre class="pre listing-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="entry listing-lines-cell"><pre class="pre language-xml listing-lines"><span class="hl-tag">&lt;pre</span> <span class="hl-attribute">outputclass</span>=<span class="hl-value">"line-numbers"</span><span class="hl-tag">&gt;</span>    /tmp/
+    /usr/                            
+        bin/
+        lib/
+        <span class="hl-tag">&lt;b&gt;</span>local/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>bin/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>lib/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>src/<span class="hl-tag">&lt;/b&gt;</span>
+        src/
+    /var/                            
+<span class="hl-tag">&lt;/pre&gt;</span></pre></td></tr></tbody></table></div><div class="p">is rendered as:</div><div class="table listing-layout"><table class="tgroup listing-table" border="1" width="100%"><colgroup class="colspec listing-numbers-column" width="2.25em"></colgroup><tbody class="tbody listing-table-body"><tr class="row listing-row"><td class="entry listing-numbers-cell"><pre class="pre listing-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="entry listing-lines-cell"><pre class="pre  listing-lines">/tmp/
+/usr/
+    bin/
+    lib/
+    <b class="b">local/</b>
+            <b class="b">bin/</b>
+            <b class="b">lib/</b>
+            <b class="b">src/</b>
+    src/
+/var/
+</pre></td></tr></tbody></table></div></div></div></div></body></html>

@@ -8,23 +8,26 @@
       filmroll.</context>
     <steps id="steps_ujj_d1h_sy">
       <step>
-        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+        <cmd><ph conref="../conref/conref.dita#conref/OpenLib"/></cmd>
       </step>
       <step>
-        <cmd conref="t_Images.dita#t_Images/cmd_dfc_cyg_sy"/>
+        <cmd>Expand <uicontrol conref="../conref/conref.dita#conref/importUI"/>.</cmd>
       </step>
       <step>
         <cmd>Click <uicontrol>folder</uicontrol>.</cmd>
-        <stepresult>The <wintitle>import image</wintitle> dialog opens.</stepresult>
+        <stepresult>The <wintitle conref="../conref/conref.dita#conref/impImWT"/><indexterm
+            conref="../conref/conref.dita#conref/impImIDX"/> dialog opens.</stepresult>
       </step>
       <step>
-        <cmd>Highlight the folder that you want to import.</cmd>
+        <cmd>Highlight the folder that you want to <ph
+            conref="../conref/conref.dita#conref/importLC"/>.</cmd>
       </step>
       <step>
         <cmd>Click <uicontrol>open</uicontrol>.</cmd>
         <stepresult/>
       </step>
     </steps>
-    <result conref="t_Images.dita#t_Images/result_lighttable" id="result_yfb_ws2_wy"/>
+      <result id="result_lighttable">The photos open in the <uicontrol
+        conref="../conref/conref.dita#conref/lighttLC"/> view.</result>
   </taskbody>
 </task>

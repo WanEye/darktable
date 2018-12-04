@@ -9,10 +9,10 @@
         </context>
         <steps>
             <step>
-                <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+                <cmd><ph conref="../conref/conref.dita#conref/OpenLib"/>.</cmd>
             </step>
             <step>
-                <cmd>Press <uicontrol>Ctrl+z.</uicontrol></cmd>
+                <cmd>Press <uicontrol>Ctrl+Z</uicontrol>.</cmd>
                 <stepresult>You fully zoom into your photo and see the areas that are in focus as
                     rounded rectangles. </stepresult>
             </step>

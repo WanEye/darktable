@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Part I, Chapter 7. Fancy code blocks</title><link href="resources/webhelp.css" rel="stylesheet" type="text/css" /><meta content="This section explains how you can automatically add line numbers, “expand” tab characters and colorize the source code contained in pre, codeblock or any other element specializing pre." name="description" />
+      <meta content="XMLmind DITA Converter 3.3.0" name="generator" />
+   <script charset="UTF-8" defer="defer" src="_wh/snowball_en.min.js" type="text/javascript"></script><link href="_wh/jquery/jquery-ui.css" rel="stylesheet" type="text/css" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+    </script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript">
+    </script><script charset="UTF-8" src="_wh/wh.min.js" type="text/javascript">
+    </script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript">
+    </script><link href="_wh/user/header_footer.css" rel="stylesheet" type="text/css" /></head>
+   
+<body>
+    <div id="wh-header">
+    <table id="page-header" style="border-spacing: 0; width: 100%;">
+      <tr>
+        <td style="vertical-align: middle; width: 110px;"><a href="http://www.xmlmind.com/"><img alt="XMLmind logo" height="50" src="_wh/user/header_footer_files/logo100x50.png" style="border-style: none;" width="100" /></a></td>
+
+        <td style="vertical-align: middle;"><h1 id="page-header-title">XMLmind
+        DITA Converter Manual</h1></td>
+
+        <td style="vertical-align: middle; width: 110px;"> </td>
+      </tr>
+    </table></div>
+
+    <div id="wh-body">
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a href="#wh-toc-pane"><span>Contents</span></a></li>
+          <li id="wh-index-tab"><a href="#wh-index-pane"><span>Index</span></a></li>
+          <li id="wh-search-tab"><a href="#wh-search-pane"><span>Search</span></a></li>
+        </ul>
+        <div id="wh-toc-pane">
+          <div id="wh-toc-form">
+            <span id="wh-toc-control"><a href="#">Collapse 
+            All</a><a href="#">Expand All</a></span>
+            <button id="wh-toc-previous">Previous</button>
+            <button id="wh-toc-next">Next</button>
+            <button id="wh-toc-print">Print</button>
+          </div>
+          <script charset="UTF-8" src="_wh/toc.js" type="text/javascript">
+          </script>
+        </div>
+        <div id="wh-index-pane">
+          <div id="wh-index-form">
+            <input id="wh-index-field" type="text" />
+          </div>
+          <script charset="UTF-8" src="_wh/index.js" type="text/javascript">
+          </script>
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-form">
+            <input id="wh-search-field" type="text" /><button id="wh-search-button">Search</button><span id="wh-highlight-group"><input checked="checked" id="wh-highlight-toggle" type="checkbox" /><label for="wh-highlight-toggle" id="wh-highlight-icon"><span class="ui-icon ui-icon-flag"></span></label></span>
+          </div>
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator">
+      </div>
+      <div id="wh-content">
+      
+      <section class="topic" id="codeblocks" lang="en-US" xml:lang="en-US">
+         <h2 class="chapter-title">Chapter 7. Fancy code blocks <span class="topic-navigation-bar"><a class="navigation-link" href="bgcolor.html#bgcolor" title="Previous topic: Chapter 6. Giving a background color to table cells"><img alt="Previous topic" class="navigation-icon" height="16" src="resources/previous.png" width="16" /></a> <a class="navigation-link" href="manual-3.html#I_it71j3_" title="Parent topic: Part I. Using XMLmind DITA Converter"><img alt="Parent topic" class="navigation-icon" height="16" src="resources/parent.png" width="16" /></a> <a class="navigation-link" href="syntaxHighlighting.html#syntaxHighlighting" title="Child topic: Section 1. Syntax highlighting"><img alt="Child topic" class="navigation-icon" height="16" src="resources/child.png" width="16" /></a> <a class="navigation-link" href="media.html#media" title="Next topic: Chapter 8. Rich media content"><img alt="Next topic" class="navigation-icon" height="16" src="resources/next.png" width="16" /></a></span></h2>
+         <p class="shortdesc">This section explains how you can automatically add line numbers,
+            “expand” tab characters and colorize the source code contained in
+            <code class="xmlelement">&lt;pre&gt;</code>, <code class="xmlelement">&lt;codeblock&gt;</code> or any
+            other element specializing <code class="xmlelement">&lt;pre&gt;</code>.
+         </p>
+         <div class="body">
+            <div class="p">Adding line numbers, “expanding” tab characters and colorizing the
+               source code <a id="codeblocks__I_t37jw5_"></a> contained in
+               <code class="xmlelement">&lt;pre&gt;</code>, <code class="xmlelement">&lt;codeblock&gt;</code> or any
+               other element specializing <code class="xmlelement">&lt;pre&gt;</code> is done by adding
+               one or more of the following classes to the <code class="xmlatt">@outputclass</code>
+               attribute <a id="codeblocks__I_n7zto8_"></a>of
+               this element:
+            </div>
+            <dl class="dl">
+               <dt class="dt"><span class="tt">line-numbers</span></dt>
+               <dt class="dt"><span class="tt">line-numbers-<i class="i">N</i></span> (where <i class="i">N</i> is an integer &gt;
+                  0)
+               </dt>
+               <dt class="dt"><span class="tt">show-line-numbers</span></dt>
+               <dd class="dd">
+                  <div class="p">Give a number to the lines contained in the
+                     <code class="xmlelement">&lt;pre&gt;</code> element.
+                  </div>
+               </dd>
+               <dd class="dd">
+                  <div class="p">By default, first line number is 1. This first line may be
+                     specified using the second form of the <span class="tt">line-numbers</span> class,
+                     for example, <span class="tt">line-numbers-100</span> specifies that lines are to be
+                     numbered and that first line number is 100.
+                  </div>
+               </dd>
+               <dd class="dd">
+                  <div class="p"><span class="tt">show-line-numbers</span>, an alias for
+                     <span class="tt">line-numbers-1</span>, is also accepted for <a class="xref" href="http://www.dita-ot.org/3.1/reference/extended-functionality.html" target="_blank">compatibility with the DITA-OT <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>.
+                  </div>
+               </dd>
+               <dt class="dt"><span class="tt">language-<i class="i">L</i></span> (where <i class="i">L</i> is language name)
+               </dt>
+               <dd class="dd">
+                  <div class="p">Colorize the source code contained in the
+                     <code class="xmlelement">&lt;pre&gt;</code> element. <i class="i">L</i>, a “programming
+                     language” such as <span class="tt">c</span>, <span class="tt">java</span>, <span class="tt">css</span>,
+                     <span class="tt">xml</span>, specifies how the source code should be
+                     colorized.
+                  </div>
+               </dd>
+               <dd class="dd">
+                  <div class="p">More information about this feature, commonly called
+                     <dfn class="term">syntax highlighting</dfn>, in <a class="xref" href="syntaxHighlighting.html#syntaxHighlighting">next section</a>.
+                  </div>
+               </dd>
+               <dt class="dt"><span class="tt">tab-width-<i class="i">W</i></span> (<i class="i">where W</i> is an integer &gt;=
+                  0)
+               </dt>
+               <dt class="dt"><span class="tt">normalize-space</span></dt>
+               <dd class="dd">
+                  <div class="p">Specifies whether tab characters should be expanded to a number
+                     of space characters. <i class="i">W</i> is the maximum number of space
+                     characters for an expanded tab character, hence this value specifies
+                     the location of “tab stops”. Examples: <span class="tt">tab-width-4</span> means:
+                     expand tabs to up to 4 space characters; <span class="tt">tab-width-0</span> means:
+                     do not replace tabs by space characters.
+                  </div>
+               </dd>
+               <dd class="dd">
+                  <div class="p">In addition to replacing tab characters by a number of space
+                     characters, <span class="tt">tab-width-<i class="i">W</i></span> (where <i class="i">W</i> &gt; 0) also
+                     removes the space characters which are common to the beginning of all
+                     text lines. That is, it removes the superfluous “indentation” in the
+                     <code class="xmlelement">&lt;pre&gt;</code> element, if any. See <a class="xref" href="#codeblocks__tab_width_8_unindents">example below</a>.
+                  </div>
+               </dd>
+               <dd class="dd">
+                  <div class="p">Moreover <span class="tt">tab-width-<i class="i">W</i></span> (where <i class="i">W</i> &gt; 0)
+                     also removes the (useless) space characters found just before newline
+                     characters.
+                  </div>
+                  <div class="p"><span class="tt">normalize-space</span>, an alias for
+                     <span class="tt">tab-width-8</span>, is also accepted for <a class="xref" href="http://www.dita-ot.org/3.1/reference/extended-functionality.html" target="_blank">compatibility with the DITA-OT <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>.
+                  </div>
+               </dd>
+            </dl>
+            <div class="note">
+               <table class="note-layout">
+                  <tr>
+                     <td class="note-icon"><img alt="Remember" height="32" src="resources/remember.png" width="32" /></td>
+                     <td class="note-text">
+                        <h5 class="note-head">Remember</h5>
+                        <div class="note-body">
+                           <div class="p">When the <code class="xmlelement">&lt;outputclass&gt;</code>
+                              attribute of any element specializing <code class="xmlelement">&lt;pre&gt;</code>
+                              contains class <span class="tt">line-numbers</span>/<span class="tt">line-numbers-<i class="i">N</i></span> and/or
+                              class <span class="tt">language-<i class="i">L</i></span> , then class <span class="tt">tab-width-8</span> is
+                              implicitly specified too, that is, whitespace normalization is
+                              automatically performed. If this is not what you want, please explicitly
+                              add class <span class="tt">tab-width-0</span> to <code class="xmlatt">@outputclass</code>.
+                           </div>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <section class="example" id="codeblocks__I_usdb3_">
+               <h3 class="example-title">Example: a simple C program featuring line numbering and
+                  syntax highlighting
+               </h3>
+               <div class="p">In the following C program, lines are
+                  indented using tab characters.
+               </div>
+               <div class="table listing-layout">
+                  <table border="1" class="tgroup listing-table" style="width: 100%;">
+                     <colgroup class="colspec listing-numbers-column" style="width: 2.0em;"></colgroup>
+                     <tbody class="tbody listing-table-body">
+                        <tr class="row listing-row">
+                           <td class="entry listing-numbers-cell"><pre class="codeblock listing-numbers">1
+2
+3
+4
+5
+6
+7
+8</pre></td>
+                           <td class="entry listing-lines-cell"><pre class="codeblock language-xml listing-lines"><span class="hl-tag">&lt;pre</span> <span class="hl-attribute">class</span>=<span class="hl-value">&quot;language-c line-numbers tab-width-4&quot;</span><span class="hl-tag">&gt;</span>/* Hello World */
+#include &amp;lt;stdio.h&amp;ght;
+
+int main()
+{
+        printf(&quot;Hello World\n&quot;);
+        return 0;
+}<span class="hl-tag">&lt;/pre&gt;</span></pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">is rendered as:</div>
+               <div class="table listing-layout">
+                  <table border="1" class="tgroup listing-table" style="width: 100%;">
+                     <colgroup class="colspec listing-numbers-column" style="width: 2.0em;"></colgroup>
+                     <tbody class="tbody listing-table-body">
+                        <tr class="row listing-row">
+                           <td class="entry listing-numbers-cell"><pre class="codeblock listing-numbers">1
+2
+3
+4
+5
+6
+7
+8</pre></td>
+                           <td class="entry listing-lines-cell"><pre class="codeblock language-c listing-lines"><span class="hl-comment">/* Hello World */</span>
+<span class="hl-directive">#include &lt;stdio.h&gt;</span>
+
+<span class="hl-keyword">int</span> main()
+{
+    printf(<span class="hl-string">&quot;Hello World\n&quot;</span>);
+    <span class="hl-keyword">return</span> <span class="hl-number">0</span>;
+}</pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </section>
+            <section class="example" id="codeblocks__tab_width_8_unindents">
+               <h3 class="example-title">Example: superfluous
+                  indentation is removed by <span class="tt">tab-width-<i class="i">N</i></span> (where <i class="i">N</i> &gt;
+                  0)
+               </h3>
+               <div class="p">Attribute <code class="xmlatt">@outputclass</code> implicitly also
+                  contains <span class="tt">tab-width-8</span>. First line &quot;<span class="tt">    /tmp/</span>&quot; starts with
+                  4 space characters.
+               </div>
+               <div class="table listing-layout">
+                  <table border="1" class="tgroup listing-table" style="width: 100%;">
+                     <colgroup class="colspec listing-numbers-column" style="width: 2.25em;"></colgroup>
+                     <tbody class="tbody listing-table-body">
+                        <tr class="row listing-row">
+                           <td class="entry listing-numbers-cell"><pre class="pre listing-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td>
+                           <td class="entry listing-lines-cell"><pre class="pre language-xml listing-lines"><span class="hl-tag">&lt;pre</span> <span class="hl-attribute">outputclass</span>=<span class="hl-value">&quot;line-numbers&quot;</span><span class="hl-tag">&gt;</span>    /tmp/
+    /usr/                            
+        bin/
+        lib/
+        <span class="hl-tag">&lt;b&gt;</span>local/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>bin/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>lib/<span class="hl-tag">&lt;/b&gt;</span>
+                <span class="hl-tag">&lt;b&gt;</span>src/<span class="hl-tag">&lt;/b&gt;</span>
+        src/
+    /var/                            
+<span class="hl-tag">&lt;/pre&gt;</span></pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="p">is rendered as:</div>
+               <div class="table listing-layout">
+                  <table border="1" class="tgroup listing-table" style="width: 100%;">
+                     <colgroup class="colspec listing-numbers-column" style="width: 2.25em;"></colgroup>
+                     <tbody class="tbody listing-table-body">
+                        <tr class="row listing-row">
+                           <td class="entry listing-numbers-cell"><pre class="pre listing-numbers">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td>
+                           <td class="entry listing-lines-cell"><pre class="pre  listing-lines">/tmp/
+/usr/
+    bin/
+    lib/
+    <b class="b">local/</b>
+            <b class="b">bin/</b>
+            <b class="b">lib/</b>
+            <b class="b">src/</b>
+    src/
+/var/
+</pre></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    <div id="wh-footer">
+    <p id="page-footer">Web Help generated using <a href="http://www.xmlmind.com/ditac/" target="_blank">XMLmind DITA Converter</a>.</p></div>
+  </body></html>

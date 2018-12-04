@@ -5,10 +5,13 @@
 	<title>Verifying your camera for tethering (UNIX and Linux)</title>
 
 	<abstract>
-		<term conref="../Concepts/c_Overview.dita#c_Overview/product_name"/> uses
-			<indexterm>gphoto2</indexterm>gphoto2. Therefore, gphoto2 must fully support your
-		camera. <p><xref href="../Glossary/g_glossary.dita#tethering">Tethering</xref> is supported only for a limited number of cameras. </p>You need to
-		troubleshoot if you receive the following message in the <xref href="../Glossary/g_glossary.dita#tethering">tethering</xref> view.<p/><msgph>no camera
+		<ph conref="../conref/conref.dita#conref/prdName"/> uses
+		<indexterm>gphoto2</indexterm>gphoto2. Therefore, gphoto2 must fully support your camera.
+			<p>Only a few cameras support <xref conref="../conref/conref.dita#conref/tetheringXREF"
+				/><indexterm conref="../conref/conref.dita#conref/tetheringIDX"/>. Troubleshoot if
+			you receive the following message in the <xref
+				conref="../conref/conref.dita#conref/tetheringXREF"/><indexterm
+				conref="../conref/conref.dita#conref/tetheringIDX"/> view.</p><p/><msgph>no camera
 			with tethering support available for use</msgph></abstract>
 	
 <taskbody>
@@ -32,10 +35,14 @@
   	</step>	  
 	  
 	  
-    <step><cmd>Verify camera remote capture</cmd>
-  	<info><codeblock>env LANG=C gphoto2 --port usb: --capture-image-and-download</codeblock></info>
-  	<stepresult>This step captures an image and download it to your computer if your camera is supported.</stepresult>
-  	</step>
+    <step>
+				<cmd>Verify camera remote capture.</cmd>
+				<info>
+					<codeblock>env LANG=C gphoto2 --port usb: --capture-image-and-download</codeblock>
+				</info>
+				<stepresult>This step captures an image and download it to your computer if your
+					camera is supported.</stepresult>
+			</step>
   	
   	<step><cmd>Verify camera tethered capture </cmd>
      	<info><codeblock> env LANG=C gphoto2 --port usb: --capture-tethered</codeblock></info>

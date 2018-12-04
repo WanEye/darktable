@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_lv2_hj5_5y">
- <title>Integrations</title>
- <shortdesc>Shotwell and Ristretto</shortdesc>
- <conbody>
-  <p>You can open a photo in <term conref="c_Overview.dita#c_Overview/product_name"/> directly from
+  <title>Integrations</title>
+  <shortdesc>Shotwell and Ristretto integrate with <ph conref="../conref/conref.dita#conref/prdName"
+    />.</shortdesc>
+  <conbody>
+    <p>You can open a photo in <ph conref="../conref/conref.dita#conref/prdName"/> directly from
         <xref href="https://wiki.gnome.org/Apps/Shotwell" format="html" scope="external"
         >Shotwell</xref> or <xref
         href="http://linux.softpedia.com/get/Multimedia/Graphics/Ristretto-Xfce-30156.shtml"
         format="html" scope="external">Ristretto Image Viewer</xref>. </p>
-  <p>Shotwell is a photo manager that you can install on <indexterm>Ubuntu</indexterm>Ubuntu and
-    <indexterm>Fedora</indexterm>Fedora. </p>
-  <p>Shotwell ships as the default photo manager from Ubuntu 14.04 (<indexterm>Trusty
-        Tahr</indexterm>Trusty Tahr). You can manage your photos in Shotwell and develop them in
-        <term conref="c_Overview.dita#c_Overview/product_name"/>.</p>
-  <p><indexterm>Ristretto</indexterm> is a open-source lightweight picture viewer for Linux.</p>
- </conbody>
+    <p>Shotwell<indexterm>Shotwell</indexterm> is a photo manager that you can install on
+                <indexterm>Ubuntu</indexterm>Ubuntu and <indexterm>Fedora</indexterm>Fedora. </p>
+    <p>Shotwell<indexterm>Shotwell</indexterm> ships as the default photo manager from
+                Ubuntu<indexterm>Ubuntu</indexterm> 14.04 (<indexterm>Trusty Tahr</indexterm>Trusty
+            Tahr). You can manage your photos in Shotwell<indexterm>Shotwell</indexterm> and develop
+            them in <ph conref="../conref/conref.dita#conref/prdName"/>.</p>
+    <p><indexterm>Ristretto</indexterm>Ristretto is an open-source lightweight picture viewer for
+            Linux.</p>
+  </conbody>
 </concept>

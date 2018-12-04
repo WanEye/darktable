@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<!-- =========================================================================
+| Copyright (c) 2018 XMLmind Software. All rights reserved.
+|
+| Author: Hussein Shafie
+|
+| This file is part of the XMLmind DITA Converter project.
+| For conditions of distribution and use, see the accompanying LEGAL.txt file.
+========================================================================== -->
+
+<project name="ditac-md" basedir="." default="all">
+
+  <property name="lib.dir" value="../lib" />
+
+  <!-- =======================================================================
+       Specify here the location of javac 1.8+. 
+       This is needed because ditac.jar is compatible with Java 1.6+
+       while ditac-md.jar, which builds on flexmark.jar,
+       is compatible with Java 1.8+
+  ======================================================================== -->
+  <property name="javac8" location="/opt/jdk1.8.0_181/bin/javac" />
+
+  <!-- =======================================================================
+       Specify here the location of the directory where .jar files 
+       are to be created.
+  ======================================================================== -->
+  <property name="jar.dir" value="${lib.dir}" />
+
+  <target name="init">
+    <tstamp />
+
+    <mkdir dir="build" />
+  </target>
+
+  <path id="cp">
+    <pathelement location="build" />
+    <pathelement location="${lib.dir}/ditac.jar" />
+    <pathelement location="${lib.dir}/flexmark.jar" />
+  </path>
+
+  <target name="compile" depends="init">
+    <javac executable="${javac8}" fork="yes" source="1.8" target="1.8" 
+           includeantruntime="false" debug="on" debuglevel="source,lines" 
+           deprecation="on" classpathref="cp"
+           destdir="build" srcdir="com">
+      <compilerarg value="-Xlint"/>
+    </javac>
+  </target>
+
+  <target name="ditac-md_jar" depends="compile">
+    <jar jarfile="${jar.dir}/ditac-md.jar" basedir="build">
+      <include name="com/xmlmind/**" />
+
+      <manifest>
+        <attribute name="Class-Path" value="flexmark.jar"/>
+        <attribute name="Implementation-Title" 
+                   value="XMLmind DITA Converter - Markdown Support"/>
+        <attribute name="Implementation-Version" value="1.3.0"/>
+        <attribute name="Implementation-Vendor" value="XMLmind"/>
+        <attribute name="Implementation-Vendor-Id" value="com.xmlmind"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <!-- clean, distclean, realclean ======================================= -->
+
+  <target name="clean">
+    <delete>
+      <fileset dir="." defaultexcludes="no">
+        <patternset>
+          <include name="**/*~" />
+          <include name="**/*.BAK" />
+        </patternset>
+      </fileset>
+    </delete>
+    <delete dir="build" quiet="true" />
+  </target>
+
+  <target name="distclean" depends="clean" />
+
+  <target name="realclean" depends="distclean">
+    <delete>
+      <fileset dir="${jar.dir}" includes="ditac-md.jar"/>
+    </delete>
+  </target>
+
+  <!-- all =============================================================== -->
+
+  <target name="all" depends="ditac-md_jar,clean" />
+
+</project>

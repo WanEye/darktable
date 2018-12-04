@@ -1,26 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
 "concept.dtd">
 <concept id="c_Importing">
-  <title>Importing options</title>
+  <title>Import options</title>
 
   <conbody>
-    <p>You can import files in the following formats.</p>
+    <p>You can <ph conref="../conref/conref.dita#conref/importLC"/> files in the following
+      formats.</p>
 
     <ul>
-      <li><xref href="../Glossary/g_glossary.dita#RAW">RAW</xref></li>
+      <li><xref href="../Glossary/g_glossary.dita#RAW">RAW</xref>.</li>
 
-      <li>JPEG</li>
+      <li><ph conref="../conref/conref.dita#conref/JPEGUC">.</ph>.</li>
     </ul>
 
-    <p>However, under <xref href="../Glossary/g_glossary.dita#RAW">RAW</xref> format, you have more possibilities for manipulating your photo.</p>
+    <p>However, under <xref conref="../conref/conref.dita#conref/RAWLC"/><indexterm
+        conref="../conref/conref.dita#conref/RAW"/> format, you have more possibilities for
+      manipulating your photo.</p>
 
-    <p>You can import photos in the following ways.</p>
+    <p>You can <ph conref="../conref/conref.dita#conref/importLC"/> photos in the following
+      ways.</p>
 
     <ul>
-      <li>As individual files</li>
+      <li>As individual files.</li>
 
-      <li>As contents of an entire folder</li>
+      <li>As contents of an entire folder.</li>
 
       <li>As files from an external storage device, for example an <indexterm>SD card</indexterm>SD
         card in a digital camera that you mounted to your computer.</li>

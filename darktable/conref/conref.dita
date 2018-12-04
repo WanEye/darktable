@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="conref">
+    <title>Conref</title>
+    <body>
+        <p><ph id="prdName">darktable</ph></p>
+
+        <p>
+            <ph id="AddLC">add<indexterm>add</indexterm></ph>
+            <ph id="AddUC">Add<indexterm>add</indexterm></ph>
+            <ph id="CompilLC">compiling a<indexterm>compiling a</indexterm></ph>
+            <ph id="CompilUC">Compiling a<indexterm>compiling a</indexterm></ph>
+            <ph id="DLC">d<indexterm>d</indexterm></ph>
+            <ph id="DUC">D<indexterm>d</indexterm></ph>
+            <ph id="geotagLC">geotag<indexterm>geotag</indexterm></ph>
+            <ph id="geotagUC">Geotag<indexterm>geotag</indexterm></ph>
+            <ph id="githubLC">GitHub darktable download page<indexterm>GitHub darktable download
+                    page</indexterm></ph>
+            <ph id="HDR">HDR<indexterm>HDR</indexterm></ph>
+            <ph id="importLC">import<indexterm>import</indexterm></ph>
+            <ph id="importUC">Import<indexterm>import</indexterm></ph>
+            <ph id="JPEGLC">jpeg<indexterm>JPEG</indexterm></ph>
+            <ph id="JPEGUC">JPEG<indexterm>JPEG</indexterm></ph>
+            <ph id="LLC">l<indexterm>l</indexterm></ph>
+            <ph id="LUC">L<indexterm>l</indexterm></ph>
+            <ph id="macOS">macOS<indexterm>macOS</indexterm></ph>
+            <ph id="mapLC">map<indexterm>map</indexterm></ph>
+            <ph id="mapUC">Map<indexterm>map</indexterm></ph>
+            <ph id="MLC">m<indexterm>m</indexterm></ph>
+            <ph id="MUC">M<indexterm>m</indexterm></ph>
+            <ph id="mountLC">mount<indexterm>mount</indexterm></ph>
+            <ph id="mountUC">Mount<indexterm>mount</indexterm></ph>
+            <ph id="printLC">print<indexterm>print</indexterm></ph>
+            <ph id="printUC">Print<indexterm>print</indexterm></ph>
+            <ph id="slideshowLC">slideshow<indexterm>slideshow</indexterm></ph>
+            <ph id="slideshowUC">Slideshow<indexterm>slideshow</indexterm></ph>
+            <ph id="tetheringLC">tethering<indexterm>slideshow</indexterm></ph>
+            <ph id="OpenDark">Press <uicontrol>D</uicontrol> to open the <uicontrol
+                    conref="#conref/darkroomUI"/><indexterm conref="#conref/darkroomIDX"/>view.</ph>
+            <ph id="OpenLib">Press <uicontrol>L</uicontrol> to open the <uicontrol
+                    conref="#conref/lighttOrLibLC"/> view.</ph>
+            <ph id="OpenMapView">Press <uicontrol>M</uicontrol> to open the <uicontrol
+                    conref="#conref/mapUI"/><indexterm conref="#conref/mapIDX"/> view.</ph>
+            <ph id="OpenPrintView">Press <uicontrol>P</uicontrol> to open the <uicontrol
+                    conref="#conref/printUI"/><indexterm conref="#conref/printIDX"/> view.</ph>
+            <ph id="OpenSlideShowUI">Press <uicontrol>S</uicontrol> to open the <uicontrol
+                    conref="#conref/slideshowUI"/>
+                <indexterm conref="#conref/slideshowIDX"/> view.</ph>
+            <ph id="OpenTethUI">Press <uicontrol>T</uicontrol> to open the <xref
+                    conref="#conref/tetheringXREF"/><indexterm conref="#conref/slideshowIDX"/>
+                view.</ph>
+            <ph id="CtrlE"> Press <uicontrol>Ctrl+E</uicontrol> to
+                    export<indexterm>export</indexterm> your photo</ph>.</p>
+
+        <p>UICONTROLS <uicontrol id="darkroomUI">darkroom</uicontrol>
+            <indexterm id="developmentIDX">development <index-see>darkroom</index-see></indexterm>
+            <indexterm id="darkroomIDX">darkroom</indexterm>
+            <uicontrol id="basicgUI">basic group</uicontrol>
+            <indexterm id="basicGroupUI">basic group</indexterm>
+            <uicontrol id="tonegUI">tone group</uicontrol>
+            <indexterm id="toneGrIDX">tone group</indexterm>
+            <uicontrol id="colorgUI">color group</uicontrol>
+            <indexterm id="colorgIDX">color group</indexterm>
+            <uicontrol id="effectsgUI">effects group</uicontrol>
+            <indexterm id="effectsgIDX">effects group</indexterm>
+            <uicontrol id="printUI">print</uicontrol>
+            <indexterm id="printIDX">print</indexterm>
+            <uicontrol id="correcUI">correction group</uicontrol>
+            <indexterm id="correcIDX">correction group</indexterm>z 
+            <uicontrol id="eqUI">equalizer</uicontrol>
+            <indexterm id="eqIDX">equalizer</indexterm>
+            <uicontrol id="lenscorrUI">lens correction</uicontrol>
+            <indexterm id="lenscorrIDX">lens correction</indexterm>
+            <uicontrol id="contraUI">contrast brightness saturation</uicontrol>
+            <indexterm id="contraIDX">contrast brightness saturation</indexterm>
+            <uicontrol id="mapUI">map</uicontrol>
+            <indexterm id="mapIDX">map</indexterm>
+            <uicontrol id="mapset">map settings</uicontrol>
+            <indexterm id="mapsetUI">map settings</indexterm>
+            <uicontrol id="mapsourceUI">map source</uicontrol>
+            <indexterm id="mapsourceIDX">map source</indexterm>
+            <uicontrol id="createHDR">create </uicontrol><ph conref="#conref/HDR"/>
+            <uicontrol id="importUI">import</uicontrol>
+            <indexterm id="importIDX">import</indexterm>
+            <uicontrol id="lighttLC">lighttable</uicontrol>
+            <indexterm id="lighttableIDX">lighttable</indexterm>
+            <uicontrol id="lighttOrLibLC">lighttable</uicontrol>
+            <uicontrol id="showOSDui">show osd</uicontrol>
+            <indexterm id="showOSDidx">show osd</indexterm>
+            <uicontrol id="slideshowUI">slideshow</uicontrol>
+            <indexterm id="slideshowIDX">slideshow</indexterm>
+            <uicontrol id="tetheringUI">tethering</uicontrol>
+            <uicontrol id="whiteBalUI">white balance</uicontrol>
+        </p>
+        <p>CROSS REFERENCES <xref id="RAWLC" href="../Glossary/g_glossary.dita#RAW">RAW</xref>
+            <indexterm id="RAW">RAW</indexterm>
+            <xref id="chromAbXREF" href="../Glossary/g_glossary.dita#chromaticaberration">chromatic
+                aberration</xref><indexterm id="chromAbIDX">chromatic aberration</indexterm>
+            <xref id="tetheringXREF" href="../Glossary/g_glossary.dita#tethering">tethering</xref>
+            <indexterm id="tetheringIDX">tethering</indexterm>
+            <xref id="whiteBalXREF" href="../Glossary/g_glossary.dita#whitebalance">white balance
+                </xref><indexterm id="whiteBalIDX">white balance</indexterm>
+            <xref id="optDistXREF" href="../Glossary/g_glossary.dita#opticaldistortion">optical
+                distortion</xref>
+            <indexterm id="optDistIDX">Optical distortion</indexterm>
+            <xref id="vignetXREF" href="../Glossary/g_glossary.dita#vignetting">Vignetting</xref>
+            <indexterm id="vignetIDX">vignetting</indexterm>
+            <xref id="githubUC" href="https://github.com/darktable-org/darktable" format="html"
+                scope="external">GitHub darktable page</xref>
+            <indexterm id="idx_GitHub">GitHub darktable page</indexterm>
+        </p>
+        <p>WINTITLES <wintitle id="impImWT">import image</wintitle>
+            <indexterm id="impImIDX">import image</indexterm>
+            <wintitle id="impFromCameraWT">import from images from camera</wintitle>
+            <indexterm id="impFromCameraIDX">import images from camera</indexterm>
+            <wintitle id="impFromWT">import from camera</wintitle>
+            <indexterm id="impFromIDX">import from camera</indexterm>
+        </p>
+    </body>
+</topic>

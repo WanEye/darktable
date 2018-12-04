@@ -10,12 +10,12 @@
 
     <steps>
       <step>
-        <cmd conref="t_Images.dita#t_Images/open_lighttable"/>
+        <cmd conref="t_Images.dita#t_Images/open_lighttable">.</cmd>
         <info id="info_pnj_hhm_ry">You can highlight multiple photos.</info>
       </step>
 
       <step>
-        <cmd>Expand the <uicontrol>metadata editor</uicontrol> at the right panel</cmd>
+        <cmd>Expand the <uicontrol>metadata editor</uicontrol> at the right panel.</cmd>
       </step>
 
       <step>

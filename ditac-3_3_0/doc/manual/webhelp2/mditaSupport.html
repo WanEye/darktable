@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      <title>Appendix B, Section 3. MDITA support</title><link href="resources/webhelp.css" rel="stylesheet" type="text/css" /><meta content="XMLmind DITA Converter fully supports MDITA, which specifies how to write DITA topics and maps in Markdown." name="description" />
+      <meta content="XMLmind DITA Converter 3.3.0" name="generator" />
+   <script charset="UTF-8" defer="defer" src="_wh/snowball_en.min.js" type="text/javascript"></script><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+    </script><script charset="UTF-8" src="_wh/wh.min.js" type="text/javascript">
+    </script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript">
+    </script><link href="_wh/user/header_footer.css" rel="stylesheet" type="text/css" /></head>
+   
+<body>
+    <div id="wh-header">
+    <table id="page-header" style="border-spacing: 0; width: 100%;">
+      <tr>
+        <td style="vertical-align: middle; width: 110px;"><a href="http://www.xmlmind.com/"><img alt="XMLmind logo" height="50" src="_wh/user/header_footer_files/logo100x50.png" style="border-style: none;" width="100" /></a></td>
+
+        <td style="vertical-align: middle;"><h1 id="page-header-title">XMLmind
+        DITA Converter Manual</h1></td>
+
+        <td style="vertical-align: middle; width: 110px;"> </td>
+      </tr>
+    </table></div>
+
+    <div id="wh-body">
+      <div id="wh-navigation">
+        <div id="wh-navigation-form">
+          <span id="wh-search-group">
+            <span id="wh-do-search" title="Search"></span><input id="wh-search-field" placeholder="Search" type="text" /><span id="wh-cancel-search" title="Stop searching"></span>
+          </span>
+        </div>
+        <div id="wh-toc-pane">
+          <script charset="UTF-8" src="_wh/toc.js" type="text/javascript"></script>
+        </div>
+        <div id="wh-search-pane">
+          <div id="wh-search-results">
+          </div>
+        </div>
+      </div>
+      <div id="wh-content">
+      
+      <section class="topic" id="mditaSupport" lang="en-US" xml:lang="en-US">
+         <h2 class="section1-title">3. MDITA support <span class="topic-navigation-bar"><a class="navigation-link" href="hditaSupport.html#hditaSupport" title="Previous topic: Section 2. HDITA support"><img alt="Previous topic" class="navigation-icon" height="16" src="resources/previous.png" width="16" /></a> <a class="navigation-link" href="lwditaSupport.html#lwditaSupport" title="Parent topic: Appendix B. Lightweight DITA support"><img alt="Parent topic" class="navigation-icon" height="16" src="resources/parent.png" width="16" /></a> <a class="navigation-link" href="markdownExtensions.html#Markdown_extensions" title="Child topic: Section 3.1. Markdown extensions"><img alt="Child topic" class="navigation-icon" height="16" src="resources/child.png" width="16" /></a> <img alt="Next topic" class="navigation-icon-disabled" height="16" src="resources/next_disabled.png" title="Next topic" width="16" /></span></h2>
+         <p class="shortdesc">XMLmind DITA Converter fully supports <a class="xref" href="http://docs.oasis-open.org/dita/LwDITA/v1.0/cn01/LwDITA-v1.0-cn01.html#what-is-mdita" target="_blank">MDITA <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>, which specifies how to write DITA topics and maps in <a class="xref" href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>.
+         </p>
+         <div class="body">
+            <div class="p">Template of an MDITA topic <a class="xref" href="../lwdita_templates/mdita_topic.md" target="_blank">lwdita_templates/mdita_topic.md <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>:
+            </div><pre class="pre">---
+id: ???
+---
+
+# Topic title here
+
+Short description here.
+
+Topic body starts here.
+</pre><div class="p">Template of an MDITA map <a class="xref" href="../lwdita_templates/mdita_map.md" target="_blank">lwdita_templates/mdita_map.md <img alt="Opens in new window" height="10" src="resources/new_window.png" style="border-style: none;" width="10" /></a>:
+            </div><pre class="pre"># Map title here {.map}
+   
+- [???](???)
+  - [???](???)
+  - [???](???)
+- [???](???)
+</pre><div class="p">Notice the <code class="codeph">{.map}</code> <code class="codeph">class</code> attribute added to the title of the map. Without it, the above template would be
+               translated to a DITA <code class="codeph">topic</code>.
+            </div>
+            <section class="section" id="mditaSupport__I_cbztau_">
+               <h3 class="section-title">Implementation specificities</h3>
+               <ul class="ul">
+                  <li class="li">
+                     
+                     <div class="p">Adding a <code class="codeph">{.concept}</code> <code class="codeph">class</code> attribute to the title of an MDITA topic may be used to generate a DITA concept rather
+                        than a DITA topic.
+                     </div>
+                     
+                  </li>
+                  <li class="li">
+                     
+                     <div class="p">Out of the box, ditac supports the so-called <i class="i">Extended Profile</i>.
+                     </div>
+                     
+                     <div class="p">This Extended Profile may be customized by the means of <a class="xref" href="commandLine.html#commandLine__load_params"><code class="codeph">-p load.mdita.XXX</code> parameters</a>. These <code class="codeph">load.mdita.XXX</code> parameters are documented <a class="xref" href="#mditaSupport__load_params">below</a>.
+                     </div>
+                     
+                  </li>
+               </ul>
+            </section>
+            <section class="section" id="mditaSupport__I_7gfohk_">
+               <h3 class="section-title">Limitations</h3>
+               <ul class="ul">
+                  <li class="li">Without a <code class="codeph">{.map}</code> <code class="codeph">class</code> attribute added to the title of an MDITA map, this map is confused with a topic.
+                  </li>
+               </ul>
+            </section>
+            <section class="section" id="mditaSupport__I_dmdcwd_">
+               <h3 class="section-title"><code class="codeph">load.mdita.XXX</code> parameters
+               </h3>
+               <div class="p" id="mditaSupport__load_params">Parameter <code class="codeph">-p load.mdita.extended-profile true</code> is implicitely passed to <code class="codeph">ditac</code>. This parameter is simply a shorthand for:
+               </div><pre class="pre">-p load.mdita.abbreviation true
+-p load.mdita.admonition true
+-p load.mdita.attributes true
+-p load.mdita.definition true
+-p load.mdita.footnotes true
+-p load.mdita.gfm-strikethrough true
+-p load.mdita.ins true
+-p load.mdita.superscript true
+-p load.mdita.tables true
+-p load.mdita.typographic true
+-p load.mdita.yaml-front-matter true
+</pre><div class="p">where abbreviation, admonition, attributes, etc, are all <i class="i">Markdown extensions</i>, documented in <a class="xref" href="markdownExtensions.html#Markdown_extensions">Markdown extensions</a>.
+               </div>
+               <div class="p">If for example, you don’t like the stock Extended Profile and prefer to use a simpler
+                  one, plus the <code class="codeph">autolink</code> Markdown extension<a class="fn-link" href="#mditaSupport____FN1"><sup class="fn-callout">(1)</sup></a>, then pass:
+               </div><pre class="pre">-p load.mdita.core-profile true
+-p load.mdita.autolink true
+</pre><div class="p">to <code class="codeph">ditac</code>.
+               </div>
+               <div class="p">Parameter <code class="codeph">-p load.mdita.core-profile true</code> is simply a shorthand for:
+               </div><pre class="pre">-p load.mdita.gfm-strikethrough true
+-p load.mdita.tables true
+-p load.mdita.yaml-front-matter true
+</pre><div class="div"></div>
+            </section>
+         </div>
+      </section>
+      <hr class="footnote-separator" />
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(1)</sup></td>
+            <td class="fn" id="mditaSupport____FN1" style="vertical-align: baseline;">Turns plain text URLs and email addresses into <code class="codeph">&lt;xref href=&quot;...&quot;&gt;</code> elements.
+            </td>
+         </tr>
+      </table>
+   </div>
+    </div>
+
+    <div id="wh-footer">
+    <p id="page-footer">Web Help generated using <a href="http://www.xmlmind.com/ditac/" target="_blank">XMLmind DITA Converter</a>.</p></div>
+  </body></html>

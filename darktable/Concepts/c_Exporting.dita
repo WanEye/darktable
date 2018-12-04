@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_Exporting">
- <title>Exporting</title>
- 
- <conbody>
-  <p>When you're done with processing your photo, you can export your photo to another file.  <ph
-    keyref="product_name"/> retains your original file and writes the processed photo into a new
-   file. </p>
-  <p><ph keyref="product_name"> supports the following formats.</ph><ul id="ul_gdm_ymj_ry">
-    <li>JPEG</li>
-    <li>PDF</li>
-    <li>TIFF</li>
-    <li>PNG</li>
-   </ul></p>
-  <p>The default format is JPEG, but you can set other formats in the lighttable view
-    under<uicontrol>format options</uicontrol> on the right pane of the view.</p>
- </conbody>
+  <title>Exporting</title>
+
+  <conbody>
+    <p>When you're done with processing your photo, you can export your photo to another file. <ph
+        conref="../conref/conref.dita#conref/prdName"/> retains your original file and writes the
+      processed photo into a new file. </p>
+    <p><ph conref="../conref/conref.dita#conref/prdName"/> supports the following formats.<ul
+        id="ul_gdm_ymj_ry">
+        <li><ph conref="../conref/conref.dita#conref/JPEGUC"/></li>
+        <li>PDF</li>
+        <li>TIFF</li>
+        <li>PNG</li>
+      </ul></p>
+    <p>The default format is <ph conref="../conref/conref.dita#conref/JPEGLC"/>, but you can set
+      other formats in the <uicontrol conref="../conref/conref.dita#conref/lighttLC"/> view
+        under<uicontrol>format options</uicontrol> on the right pane of the view.</p>
+  </conbody>
 </concept>
